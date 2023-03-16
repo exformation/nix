@@ -11,10 +11,10 @@
     #   url = "github:hyprwm/Hyprland";
     #   # inputs.nixpkgs.follows = "nixpkgs";
     # };
-    # neovim = {
-    #   url = "github:neovim/neovim?dir=contrib";
-    #   # inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    neovim = {
+      url = "github:neovim/neovim?dir=contrib";
+      # inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs = { self, nixpkgs, ... }@attrs: {
     nixosConfigurations.exform = nixpkgs.lib.nixosSystem {
