@@ -3,17 +3,22 @@
   package = a.neovim.packages.${a.pkgs.system}.default;
   # extraConfig = "luafile ~/.config/nvim/config.lua";
   extraPackages = with a.pkgs; [
-    tree-sitter
+    # tree-sitter
+    # nodePackages.neovim
+    # nodePackages.npm
+    # sumneko-lua-language-server
+    # clangs-tools
+    # cppcheck
     # nodePackages.pyright
     # rust-analyzer
   ];
   plugins = with a.pkgs.vimPlugins; [
+    nvim-treesitter.withAllGrammars
 
   #   # 
   #   nvim-lspconfig
 
   #   # 
-  nvim-treesitter
 
   #   # 
   #   telescope-nvim
