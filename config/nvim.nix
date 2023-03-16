@@ -7,13 +7,13 @@
     # nodePackages.pyright
     # rust-analyzer
   ];
-  # plugins = with a.pkgs.vimPlugins; [
+  plugins = with a.pkgs.vimPlugins; [
 
   #   # 
   #   nvim-lspconfig
 
   #   # 
-  #   nvim-treesitter
+  nvim-treesitter
 
   #   # 
   #   telescope-nvim
@@ -64,7 +64,7 @@
   #   # telescope-file-browser-nvim
   #   # gitsigns-nvim
   #   # neogit
-  # ];
+  ];
 }
 
 
