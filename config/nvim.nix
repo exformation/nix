@@ -1,6 +1,6 @@
 { a }: {
   enable = true;
-  # package = a.neovim.packages.${a.pkgs.system}.default;
+  package = a.neovim.packages.${a.pkgs.system}.default;
   # extraConfig = "luafile ~/.config/nvim/config.lua";
   extraPackages = with a.pkgs; [
     tree-sitter
