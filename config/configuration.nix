@@ -95,11 +95,13 @@
     shells = with pkgs; [ zsh ];
     systemPackages = with pkgs; [
       (python3.withPackages
-        (ps: with ps; [ numpy more-itertools pyserial pillow ]))
+        (ps: with ps; [ numpy more-itertools pyserial pillow python-lsp-server ]))
       bat
       brightnessctl
       bspwm
       clang
+      nodejs
+      luarocks
       gimp
       cmake
       stylua
@@ -147,12 +149,17 @@
       anki
       vlc
       qmk
+      emacsGcc
     ];
   };
 
   hardware = {
     opengl.enable = true;
   };
+
+  nixpkgs.overlays = [
+    (import (builtins.fetchTarball https://github.com/nix-community/emacs-overlay/archive/master.tar.gz))
+  ];
 
   nix = {
     gc = {

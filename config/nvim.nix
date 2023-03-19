@@ -1,9 +1,12 @@
 { a }: {
   enable = true;
+  withPython3 = true;
   package = a.neovim.packages.${a.pkgs.system}.default;
   # extraConfig = "luafile ~/.config/nvim/config.lua";
   extraPackages = with a.pkgs; [
     # tree-sitter
+    # tree-sitter-python
+    # tree-sitter-cpp
     # nodePackages.neovim
     # nodePackages.npm
     # sumneko-lua-language-server
@@ -14,13 +17,12 @@
   ];
   plugins = with a.pkgs.vimPlugins; [
     nvim-treesitter.withAllGrammars
-
-  #   # 
-  #   nvim-lspconfig
-
-  #   # 
-
-  #   # 
+    # (nvim-treesitter.withPlugins (p: [
+    #   p.tree-sitter-query
+    #   p.tree-sitter-python
+    #   p.python
+    # ]))
+    # nvim-lspconfig
   #   telescope-nvim
 
   #   # COMPLETION
