@@ -150,6 +150,7 @@
       vlc
       qmk
       # emacsGcc
+      acpi
     ];
   };
 
