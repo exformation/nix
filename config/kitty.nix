@@ -2,7 +2,7 @@
   enable = true;
   theme = "One Dark";
   keybindings = {
-    # "ctrl+z" = "signal_child SIGTERM";
+    # "ctrl+z" = "signal_child SIGTERM"; # this is a shell thing (used zsh for it)
   };
   settings = {
     font_size = "22.0";

@@ -21,6 +21,6 @@
   };
   initExtra = ''
     bindkey '^ ' autosuggest-accept
-    bindkey '^z' fg
+    bindkey -s '^Z' 'fg^M'
   '';
 }
