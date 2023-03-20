@@ -105,6 +105,7 @@
       gimp
       cmake
       stylua
+      spotify
       coreutils
       ffmpeg
       unzip
