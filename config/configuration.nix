@@ -105,6 +105,7 @@
       gimp
       cmake
       stylua
+      lf
       spotify
       coreutils
       ffmpeg

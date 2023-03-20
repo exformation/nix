@@ -1,6 +1,6 @@
 { a }: {
   enable = true;
-  autocd = true;
+  autocd = false;
   enableAutosuggestions = true;
   enableCompletion = true;
   # defaultKeymap = "viins";
