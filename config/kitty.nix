@@ -1,9 +1,11 @@
 { a }: {
   enable = true;
   theme = "One Dark";
-  # keybindings = "";
+  keybindings = {
+    # "ctrl+z" = "signal_child SIGTERM";
+  };
   settings = {
-    font_size = "25.0";
+    font_size = "22.0";
     font_family = a.style.mono-font;
     bold_font = "auto";
     italic_font = "auto";

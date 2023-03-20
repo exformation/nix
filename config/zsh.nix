@@ -21,5 +21,6 @@
   };
   initExtra = ''
     bindkey '^ ' autosuggest-accept
+    bindkey '^z' fg
   '';
 }
