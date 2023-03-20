@@ -44,6 +44,7 @@
           enable = true;
           luaModules = with pkgs.luaPackages; [
             luarocks
+            # lain
             luadbi-mysql
           ];
         };
