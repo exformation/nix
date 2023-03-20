@@ -7,39 +7,24 @@
     #   source = ./nvim;
     #   recursive = true;
     # };
-    # manual.manpages.enable = false;
     # home.file.".config/kitty/startup.conf".source = ./kitty-startup.conf;
     programs = {
       git = (import ./git.nix) { inherit a; };
       zsh = (import ./zsh.nix) { inherit a; };
       kitty = (import ./kitty.nix) { inherit a; };
       neovim = (import ./nvim.nix) { inherit a; };
-  #     fzf = {
-  #       enable = true;
-  #       enableZshIntegration = true;
-  #     };
-  #     direnv = {
-  #       enable = false;
-  #       nix-direnv.enable = true;
-  #     };
-  #     bat = {
-  #       enable = true;
-  #       config.theme = a.style.bat-theme;
-  #     };
+      fzf = {
+        enable = true;
+        enableZshIntegration = true;
+      };
+      direnv = {
+        enable = false;
+        nix-direnv.enable = true;
+      };
+      bat = {
+        enable = true;
+        config.theme = "base16";
+      };
     };
-  #   services = {
-  #     sxhkd = {
-  #       enable = false;
-  #       extraConfig = builtins.readFile ./sxhkdrc;
-  #     };
-  #   };
-  #   xsession = {
-  #     windowManager = {
-  #       bspwm = {
-  #         enable = false;
-  #         extraConfig = builtins.readFile ./bspwmrc;
-  #       };
-  #     };
-  #   };
   };
 }

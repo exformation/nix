@@ -2,7 +2,6 @@
 { lib }:
 let transparentify = color: "#99${lib.strings.removePrefix "#" color}";
 in rec {
-  kitty-theme = "One Dark";
   bat-theme = "base16";
 
   mono-font = "SourceCodePro Nerd Font";
