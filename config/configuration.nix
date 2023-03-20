@@ -121,6 +121,7 @@
       kitty
       kitty-themes
       lf
+      # lua.withPackages (ps: with ps; [ lain ])
       lua
       luarocks
       maim
