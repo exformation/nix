@@ -110,6 +110,7 @@
       unzip
       discord
       dmenu
+      pamixer
       dunst
       zip
       exa
