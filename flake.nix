@@ -7,15 +7,13 @@
       url = "github:nix-community/home-manager/"; #/release-22.05 /
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # hyprland = {
-    #   url = "github:hyprwm/Hyprland";
-    #   # inputs.nixpkgs.follows = "nixpkgs";
-    # };
     neovim = {
       url = "github:neovim/neovim?dir=contrib";
       # inputs.nixpkgs.follows = "nixpkgs";
     };
   };
+  # TODO: use a HM flake instead of a nixosSystem flake?
+  # TODO: manage style more cleanly
   outputs = { self, nixpkgs, ... }@attrs: {
     nixosConfigurations.exform = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
