@@ -1,4 +1,5 @@
 # nixos-rebuild switch --flake '/home/exform/nix#exform'
+# TODO: firefox login, bookmarks, tabs, extensions
 
 {
   inputs = {

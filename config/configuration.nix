@@ -154,10 +154,6 @@
     opengl.enable = true;
   };
 
-  # nixpkgs.overlays = [
-  #   (import (builtins.fetchTarball https://github.com/nix-community/emacs-overlay/archive/master.tar.gz))
-  # ];
-
   nix = {
     gc = {
       automatic = true;
