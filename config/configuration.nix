@@ -3,8 +3,6 @@
 
   home-manager = import ./home.nix { inherit a; };
 
-  # TODO: try out wayland with hyprland
-
   sound.enable = true;
   hardware = {
     pulseaudio.enable = false;
@@ -24,8 +22,6 @@
         efiSysMountPoint = "/boot/efi";
       };
     };
-    # Laptop shenanigans
-    # kernelParams = [ "module_blacklist=i915" ];
   };
 
   networking = {
@@ -96,64 +92,61 @@
     systemPackages = with pkgs; [
       (python3.withPackages
         (ps: with ps; [ numpy more-itertools pyserial pillow python-lsp-server ]))
+      acpi
+      anki
       bat
       brightnessctl
       bspwm
       clang
-      nodejs
-      luarocks
-      gimp
       cmake
-      stylua
-      lf
-      spotify
       coreutils
-      ffmpeg
-      unzip
       discord
       dmenu
-      pamixer
       dunst
-      zip
       exa
       fd
       feh
+      ffmpeg
       file
-      xorg.xinit
+      firefox
       fish
       fzf
-      zoxide
       gh
-      gnumake
-      # neovim
-      # sqlite
+      gimp
       git
-      firefox
+      gnumake
       gotop
       jq
       killall
       kitty
       kitty-themes
+      lf
       lua
+      luarocks
       maim
+      mpv
       neofetch
       nixfmt
+      nodejs
+      pamixer
+      qmk
       ripgrep
       rofi
+      spotify
+      stylua
       thefuck
       tldr
+      unzip
+      vlc
       vscode
       wget
       wmctrl
       xclip
       xdotool
+      xorg.xinit
+      zip
+      zoxide
       zsh
-      mpv
-      anki
-      vlc
-      qmk
-      # emacsGcc
-      acpi
     ];
   };
 
