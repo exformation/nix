@@ -93,6 +93,8 @@
     systemPackages = with pkgs; [
       (python3.withPackages
         (ps: with ps; [ numpy more-itertools pyserial pillow python-lsp-server ]))
+      kanata
+      # kaldi
       acpi
       anki
       bat
