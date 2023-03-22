@@ -91,10 +91,13 @@
     };
     shells = with pkgs; [ zsh ];
     systemPackages = with pkgs; [
-      (python3.withPackages
-        (ps: with ps; [ numpy more-itertools pyserial pillow python-lsp-server ]))
+      (python310.withPackages
+        (ps: with ps; [ pip numpy more-itertools pyserial pillow python-lsp-server ])) #vosk
       kanata
+      pulseaudioFull
       # kaldi
+      openai-whisper
+      obs-studio
       acpi
       anki
       bat
