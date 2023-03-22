@@ -9,6 +9,7 @@
     # tree-sitter-cpp
     # nodePackages.neovim
     # nodePackages.npm
+    lua-language-server
     # sumneko-lua-language-server
     # clangs-tools
     # cppcheck
