@@ -1,4 +1,29 @@
-{ config, lib, pkgs, user, version, ... }@a: {
+{ config, lib, pkgs, user, version, ... }@a:
+let
+  python-libs = p:
+    with p; [
+      numpy
+      more-itertools
+      pyserial
+      pillow
+      python-lsp-server
+      nix-prefetch-github
+      (buildPythonPackage rec {
+        pname = "vosk";
+        version = "0.3.45";
+        src = fetchPypi {
+          inherit pname version;
+          # sha256 = "AbvE+fV0Bb0semAjQ3kHvRU+KGYE+FyqVZz3rjV5g4A=";
+          sha256 = "25e025093c4399d7278f543568ed8cc5460ac3a4bf48c23673ace1e25d26619f";
+        };
+        doCheck = false;
+        propagatedBuildInputs = [
+          # Specify dependencies
+          # pkgs.python3Packages.numpy
+        ];
+      })
+    ];
+in {
   imports = [ ./hardware-configuration.nix a.home-manager.nixosModule ];
 
   home-manager = import ./home.nix { inherit a; };
@@ -39,8 +64,8 @@
       layout = "us";
       xkbVariant = "";
       libinput.enable = true;
-      windowManager = { 
-        awesome = { 
+      windowManager = {
+        awesome = {
           enable = true;
           luaModules = with pkgs.luaPackages; [
             luarocks
@@ -90,9 +115,22 @@
       BROWSER = "firefox";
     };
     shells = with pkgs; [ zsh ];
+    # TODO: get vosk python package working so I can nerd-dictation so I can have STT binds 
+    # TODO: add both vosk and nerd-dictation to nixpkgs
     systemPackages = with pkgs; [
-      (python310.withPackages
-        (ps: with ps; [ pip numpy more-itertools pyserial pillow python-lsp-server ])) #vosk
+      (python310.withPackages (ps:
+        with ps;
+        [
+          numpy
+          more-itertools
+          pyserial
+          pillow
+          python-lsp-server
+          nix-prefetch-github
+        ]))
+      # (python39.withPackages python-libs)
+      # TODO: add REP key to altGr, MEH key to burgerkey, ESC to caps
+      # TODO: don't allow repeats within certain ms to reduce double presses
       kanata
       pulseaudioFull
       # kaldi
@@ -157,9 +195,7 @@
     ];
   };
 
-  hardware = {
-    opengl.enable = true;
-  };
+  hardware = { opengl.enable = true; };
 
   nix = {
     gc = {
