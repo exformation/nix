@@ -8,12 +8,12 @@ let
       pillow
       python-lsp-server
       nix-prefetch-github
+      # https://pypi.org/project/vosk/#copy-hash-modal-0be01fd6-9e74-4cd0-a21f-1109352df8f5
       (buildPythonPackage rec {
         pname = "vosk";
         version = "0.3.45";
         src = fetchPypi {
           inherit pname version;
-          # sha256 = "AbvE+fV0Bb0semAjQ3kHvRU+KGYE+FyqVZz3rjV5g4A=";
           sha256 = "25e025093c4399d7278f543568ed8cc5460ac3a4bf48c23673ace1e25d26619f";
         };
         doCheck = false;
