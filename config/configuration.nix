@@ -122,6 +122,7 @@ in {
       SHELL = "zsh";
       PAGER = "less";
       BROWSER = "firefox";
+      CHROME_EXECUTABLE = "google-chrome-stable";
     };
     shells = with pkgs; [ zsh ];
     # TODO: get vosk python package working so I can nerd-dictation so I can have STT binds 
@@ -141,6 +142,8 @@ in {
       # TODO: add REP key to altGr, MEH key to burgerkey, ESC to caps
       # TODO: don't allow repeats within certain ms to reduce double presses
       kanata
+      android-tools
+      android-studio
       pulseaudioFull
       # kaldi
       openai-whisper
@@ -154,6 +157,7 @@ in {
       cmake
       coreutils
       discord
+      flutter
       dmenu
       dunst
       exa
