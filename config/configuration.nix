@@ -127,6 +127,9 @@ in {
       BROWSER = "firefox";
       CHROME_EXECUTABLE = "google-chrome-stable";
       JAVA_HOME = pkgs.jdk17;
+      ANDROID_JAVA_HOME = pkgs.jdk.home;
+      ANDROID_HOME = pkgs.android-studio.unwrapped;
+      FLUTTER_SDK = pkgs.flutter.unwrapped;
       # ANDROID_HOME = "${android.androidsdk}/libexec/android-sdk";
 
     };
@@ -154,6 +157,7 @@ in {
       android-tools
       jdk17
       jre17_minimal
+      # adb
 
       pulseaudioFull
       # kaldi
