@@ -113,6 +113,7 @@ in {
   services.gnome.gnome-keyring.enable = true;
 
   nixpkgs.config.allowUnfree = true;
+  # programs.java = { enable = true; package = pkgs.oraclejre; };
 
   environment = {
     variables = {
