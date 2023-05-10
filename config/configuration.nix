@@ -106,9 +106,11 @@ in {
     defaultUserShell = pkgs.zsh;
     users."${user}" = {
       isNormalUser = true;
-      extraGroups = [ "networkmanager" "wheel" ];
+      extraGroups = [ "networkmanager" "wheel" "adbusers" ];
     };
   };
+
+  programs.adb.enable = true;
 
   services.gnome.gnome-keyring.enable = true;
 
@@ -124,6 +126,9 @@ in {
       PAGER = "less";
       BROWSER = "firefox";
       CHROME_EXECUTABLE = "google-chrome-stable";
+      JAVA_HOME = pkgs.jdk17;
+      # ANDROID_HOME = "${android.androidsdk}/libexec/android-sdk";
+
     };
     shells = with pkgs; [ zsh ];
     # TODO: get vosk python package working so I can nerd-dictation so I can have STT binds 
@@ -143,10 +148,13 @@ in {
       # TODO: add REP key to altGr, MEH key to burgerkey, ESC to caps
       # TODO: don't allow repeats within certain ms to reduce double presses
       kanata
-      android-tools
+
+      # flutter????
       android-studio
+      android-tools
       jdk17
       jre17_minimal
+
       pulseaudioFull
       # kaldi
       openai-whisper

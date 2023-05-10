@@ -21,7 +21,7 @@
       specialArgs = attrs // {
         user = "exform";
         email = "mmillwood256@gmail.com";
-        version = "22.11"; # 22.05 22.11
+        version = "23.05"; # 22.05 22.11
         style = (import ./config/style.nix) { lib = self.lib; };
       };
       modules = [
