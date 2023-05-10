@@ -95,6 +95,12 @@ in {
     sudo.wheelNeedsPassword = false;
   };
 
+#   programs.gpg.enable = true;
+# services.gpg-agent = {
+#   enable = true;
+#   enableSshSupport = true;
+#   };
+
   # sudo nmcli dev wifi connect "..." password "..."
   users = {
     defaultUserShell = pkgs.zsh;
