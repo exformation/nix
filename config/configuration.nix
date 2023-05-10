@@ -95,6 +95,7 @@ in {
     sudo.wheelNeedsPassword = false;
   };
 
+  # sudo nmcli dev wifi connect "..." password "..."
   users = {
     defaultUserShell = pkgs.zsh;
     users."${user}" = {
