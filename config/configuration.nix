@@ -144,6 +144,8 @@ in {
       kanata
       android-tools
       android-studio
+      jdk17
+      jre17_minimal
       pulseaudioFull
       # kaldi
       openai-whisper
