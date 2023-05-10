@@ -154,6 +154,7 @@ in {
       ffmpeg
       file
       firefox
+      google-chrome-stable
       fish
       fzf
       gh
