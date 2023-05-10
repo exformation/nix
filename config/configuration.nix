@@ -110,6 +110,8 @@ in {
     };
   };
 
+  services.gnome.gnome-keyring.enable = true;
+
   nixpkgs.config.allowUnfree = true;
 
   environment = {
