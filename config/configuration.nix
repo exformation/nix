@@ -198,6 +198,7 @@ in {
   };
 
   hardware = { opengl.enable = true; };
+  programs.zsh.enable = true;
 
   nix = {
     gc = {
