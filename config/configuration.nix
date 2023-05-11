@@ -110,7 +110,7 @@ in {
     };
   };
 
-  # programs.adb.enable = true;
+  programs.adb.enable = true;
 
   services.gnome.gnome-keyring.enable = true;
 
