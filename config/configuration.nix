@@ -110,7 +110,7 @@ in {
     };
   };
 
-  programs.adb.enable = true;
+  # programs.adb.enable = true;
 
   services.gnome.gnome-keyring.enable = true;
 
@@ -125,11 +125,14 @@ in {
       SHELL = "zsh";
       PAGER = "less";
       BROWSER = "firefox";
-      CHROME_EXECUTABLE = "google-chrome-stable";
-      JAVA_HOME = pkgs.jdk17;
-      ANDROID_JAVA_HOME = pkgs.jdk.home;
-      ANDROID_HOME = pkgs.android-studio.unwrapped;
-      FLUTTER_SDK = pkgs.flutter.unwrapped;
+      # CHROME_EXECUTABLE = "google-chrome-stable";
+      # JAVA_HOME = pkgs.jdk17; # change whether either of these have .home or not?
+      # ANDROID_JAVA_HOME = pkgs.jdk17;
+      # no ANDROID_HOME -> breaks flutter run, but flutter doctor says the Android toolchain is good
+      # ANDROID_HOME = pkgs.android-tools; #tools?
+      # ANDROID_HOME = "/home/exform/Android"; # flutter doctor doesn't like this?
+      # ANDROID_SDK_ROOT = "/home/exform/Android/Sdk";
+      # FLUTTER_SDK = pkgs.flutter.unwrapped;
       # ANDROID_HOME = "${android.androidsdk}/libexec/android-sdk";
 
     };
@@ -153,10 +156,10 @@ in {
       kanata
 
       # flutter????
-      android-studio
-      android-tools
-      jdk17
-      jre17_minimal
+      # android-studio
+      # android-tools
+      # jdk17
+      # jre17_minimal
       # adb
 
       pulseaudioFull
