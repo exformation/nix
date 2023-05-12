@@ -155,6 +155,8 @@ in {
       # TODO: don't allow repeats within certain ms to reduce double presses
       kanata
 
+      direnv
+
       # flutter????
       # android-studio
       # android-tools
@@ -175,7 +177,7 @@ in {
       cmake
       coreutils
       discord
-      flutter
+      # flutter
       dmenu
       dunst
       exa

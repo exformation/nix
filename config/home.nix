@@ -13,13 +13,15 @@
       zsh = (import ./zsh.nix) { inherit a; };
       kitty = (import ./kitty.nix) { inherit a; };
       neovim = (import ./nvim.nix) { inherit a; };
+      direnv = {
+        enable = true;
+        enableZshIntegration = true;
+        enableBashIntegration = true;
+        nix-direnv.enable = true;
+      };
       fzf = {
         enable = true;
         enableZshIntegration = true;
-      };
-      direnv = {
-        enable = false;
-        nix-direnv.enable = true;
       };
       bat = {
         enable = true;
