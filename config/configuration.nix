@@ -107,13 +107,24 @@ in {
     defaultUserShell = pkgs.zsh;
     users."${user}" = {
       isNormalUser = true;
-      extraGroups = [ "networkmanager" "wheel" "adbusers" ];
+      extraGroups = [ "networkmanager" "wheel" "adbusers" ]; # "uinput" "input" ];
     };
   };
 
   programs.adb.enable = true;
 
   services.gnome.gnome-keyring.enable = true;
+
+  systemd.services.kanata = {
+    description = "Start kanata pls";
+    wantedBy = [ "default.target" ];
+    after = [ "graphical-session.target" ];
+    restartIfChanged = false;
+    serviceConfig = {
+      Restart = "on-failure";
+      ExecStart = "${pkgs.kanata}/bin/kanata -c /home/${user}/.config/kanata/kanata.kbd";
+    };
+  };
 
 
 
