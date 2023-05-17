@@ -1,4 +1,4 @@
-{ config, lib, pkgs, user, version, ... }@a:
+{ config, lib, pkgs, user, version, home-manager, ...}@a:
 let
   python-libs = p:
     with p; [
@@ -24,7 +24,7 @@ let
       })
     ];
 in {
-  imports = [ ./hardware-configuration.nix a.home-manager.nixosModule ];
+  imports = [ ./hardware-configuration.nix home-manager.nixosModule ];
 
   home-manager = import ./home.nix { inherit a; };
 
@@ -52,6 +52,7 @@ in {
   networking = {
     hostName = "nixos";
     networkmanager.enable = true;
+    useDHCP = false;
   };
 
   time.timeZone = "America/Chicago";
@@ -113,6 +114,8 @@ in {
   programs.adb.enable = true;
 
   services.gnome.gnome-keyring.enable = true;
+
+
 
   nixpkgs.config.allowUnfree = true;
   # programs.java = { enable = true; package = pkgs.oraclejre; };
