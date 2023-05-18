@@ -181,6 +181,7 @@ in {
       pulseaudioFull
       # kaldi
       openai-whisper
+      xkbset
       obs-studio
       acpi
       anki
