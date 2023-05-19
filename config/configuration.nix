@@ -1,4 +1,4 @@
-{ config, lib, pkgs, user, version, home-manager, ...}@a:
+{ config, lib, pkgs, user, version, home-manager, ... }@a:
 let
   python-libs = p:
     with p; [
@@ -14,7 +14,8 @@ let
         version = "0.3.45";
         src = fetchPypi {
           inherit pname version;
-          sha256 = "25e025093c4399d7278f543568ed8cc5460ac3a4bf48c23673ace1e25d26619f";
+          sha256 =
+            "25e025093c4399d7278f543568ed8cc5460ac3a4bf48c23673ace1e25d26619f";
         };
         doCheck = false;
         propagatedBuildInputs = [
@@ -96,18 +97,19 @@ in {
     sudo.wheelNeedsPassword = false;
   };
 
-#   programs.gpg.enable = true;
-# services.gpg-agent = {
-#   enable = true;
-#   enableSshSupport = true;
-#   };
+  #   programs.gpg.enable = true;
+  # services.gpg-agent = {
+  #   enable = true;
+  #   enableSshSupport = true;
+  #   };
 
   # sudo nmcli dev wifi connect "..." password "..."
   users = {
     defaultUserShell = pkgs.zsh;
     users."${user}" = {
       isNormalUser = true;
-      extraGroups = [ "networkmanager" "wheel" "adbusers" ]; # "uinput" "input" ];
+      extraGroups =
+        [ "networkmanager" "wheel" "adbusers" ]; # "uinput" "input" ];
     };
   };
 
@@ -128,8 +130,6 @@ in {
   # };
 
   services.xserver.displayManager.sessionCommands = "xkbset bo 50";
-
-
 
   nixpkgs.config.allowUnfree = true;
   # programs.java = { enable = true; package = pkgs.oraclejre; };
@@ -158,8 +158,7 @@ in {
     # TODO: add both vosk and nerd-dictation to nixpkgs
     systemPackages = with pkgs; [
       (python310.withPackages (ps:
-        with ps;
-        [
+        with ps; [
           numpy
           more-itertools
           pyserial
@@ -198,6 +197,8 @@ in {
       # flutter
       dmenu
       dunst
+      nil
+      rnix-lsp
       exa
       fd
       feh

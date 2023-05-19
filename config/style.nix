@@ -1,7 +1,8 @@
 # Credit: https://github.com/sherubthakur/dotfiles
 { lib }:
 let transparentify = color: "#99${lib.strings.removePrefix "#" color}";
-in rec {
+in
+rec {
   bat-theme = "base16";
 
   mono-font = "SourceCodePro Nerd Font";

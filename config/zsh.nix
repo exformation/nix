@@ -16,8 +16,7 @@
   oh-my-zsh = {
     enable = true;
     theme = "robbyrussell";
-    plugins =
-      [ "thefuck" "command-not-found" "git" "history" "sudo" ];
+    plugins = [ "thefuck" "command-not-found" "git" "history" "sudo" ];
   };
   initExtra = ''
     bindkey '^ ' autosuggest-accept
