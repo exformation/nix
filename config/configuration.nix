@@ -193,7 +193,7 @@ in {
       clang
       cmake
       coreutils
-      discord
+      # discord
       # flutter
       dmenu
       dunst
