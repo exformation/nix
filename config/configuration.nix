@@ -109,9 +109,11 @@ in {
     users."${user}" = {
       isNormalUser = true;
       extraGroups =
-        [ "networkmanager" "wheel" "adbusers" "input" ]; # "uinput" "input" ];
+        [ "networkmanager" "wheel" "adbusers" "input" "uinput"]; # "uinput" "input" ];
     };
   };
+
+  hardware.uinput.enable  = true;
 
   programs.adb.enable = true;
 
