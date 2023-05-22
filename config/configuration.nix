@@ -109,7 +109,7 @@ in {
     users."${user}" = {
       isNormalUser = true;
       extraGroups =
-        [ "networkmanager" "wheel" "adbusers" ]; # "uinput" "input" ];
+        [ "networkmanager" "wheel" "adbusers" "input" ]; # "uinput" "input" ];
     };
   };
 
