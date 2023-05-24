@@ -108,12 +108,17 @@ in {
     defaultUserShell = pkgs.zsh;
     users."${user}" = {
       isNormalUser = true;
-      extraGroups =
-        [ "networkmanager" "wheel" "adbusers" "input" "uinput"]; # "uinput" "input" ];
+      extraGroups = [
+        "networkmanager"
+        "wheel"
+        "adbusers"
+        "input"
+        "uinput"
+      ]; # "uinput" "input" ];
     };
   };
 
-  hardware.uinput.enable  = true;
+  hardware.uinput.enable = true;
 
   programs.adb.enable = true;
 
@@ -238,6 +243,18 @@ in {
       unzip
       vlc
       vscode
+      ((vscode.override { isInsiders = true; }).overrideAttrs (oldAttrs: rec {
+        src = (builtins.fetchTarball {
+          url =
+            "https://code.visualstudio.com/sha/download?build=insider&os=linux-x64";
+          sha256 =
+            "1nvmnf4w2894v21zcmh1xzcxzzilc10qsqhz2i5hqvrn2vcw0ivv";
+        });
+        version = "latest";
+        # import base64
+        # text = b'1nvmnf4w2894v21zcmh1xzcxzzilc10qsqhz2i5hqvrn2vcw0ivv'
+        # print(base64.decodebytes(text).hex())
+      }))
       wget
       wmctrl
       xclip
