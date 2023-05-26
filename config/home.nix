@@ -12,7 +12,7 @@
       git = (import ./git.nix) { inherit a; };
       zsh = (import ./zsh.nix) { inherit a; };
       kitty = (import ./kitty.nix) { inherit a; };
-      neovim = (import ./nvim.nix) { inherit a; };
+      # neovim = (import ./nvim.nix) { inherit a; };
       direnv = {
         enable = true;
         enableZshIntegration = true;

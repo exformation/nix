@@ -136,7 +136,7 @@ in {
   #   };
   # };
 
-  services.xserver.displayManager.sessionCommands = "xkbset bo 50";
+  # services.xserver.displayManager.sessionCommands = "xkbset bo 50";
 
   nixpkgs.config.allowUnfree = true;
   # programs.java = { enable = true; package = pkgs.oraclejre; };
@@ -209,6 +209,7 @@ in {
       fd
       feh
       ffmpeg
+      libnotify
       file
       firefox
       google-chrome
@@ -243,18 +244,15 @@ in {
       unzip
       vlc
       vscode
-      ((vscode.override { isInsiders = true; }).overrideAttrs (oldAttrs: rec {
-        src = (builtins.fetchTarball {
-          url =
-            "https://code.visualstudio.com/sha/download?build=insider&os=linux-x64";
-          sha256 =
-            "1nvmnf4w2894v21zcmh1xzcxzzilc10qsqhz2i5hqvrn2vcw0ivv";
-        });
-        version = "latest";
-        # import base64
-        # text = b'1nvmnf4w2894v21zcmh1xzcxzzilc10qsqhz2i5hqvrn2vcw0ivv'
-        # print(base64.decodebytes(text).hex())
-      }))
+      # ((vscode.override { isInsiders = true; }).overrideAttrs (oldAttrs: rec {
+      #   src = (builtins.fetchTarball {
+      #     url =
+      #       "https://code.visualstudio.com/sha/download?build=insider&os=linux-x64";
+      #     sha256 =
+      #       "1nvmnf4w2894v21zcmh1xzcxzzilc10qsqhz2i5hqvrn2vcw0ivv";
+      #   });
+      #   version = "latest";
+      # }))
       wget
       wmctrl
       xclip

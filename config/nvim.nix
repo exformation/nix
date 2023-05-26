@@ -1,7 +1,8 @@
 { a }: {
   enable = true;
   withPython3 = true;
-  package = a.neovim.packages.${a.pkgs.system}.default;
+  package = a.pkgs.neovim;
+  # package = a.neovim.packages.${a.pkgs.system}.default;
   # extraConfig = "luafile ~/.config/nvim/config.lua";
   extraPackages = with a.pkgs;
     [
@@ -10,7 +11,7 @@
       # tree-sitter-cpp
       # nodePackages.neovim
       # nodePackages.npm
-      lua-language-server
+      # lua-language-server
       # sumneko-lua-language-server
       # clangs-tools
       # cppcheck
@@ -19,7 +20,7 @@
     ];
   plugins = with a.pkgs.vimPlugins;
     [
-      nvim-treesitter.withAllGrammars
+      # nvim-treesitter.withAllGrammars
       # (nvim-treesitter.withPlugins (p: [
       #   p.tree-sitter-query
       #   p.tree-sitter-python
