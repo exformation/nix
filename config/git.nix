@@ -10,5 +10,6 @@
     i = "init";
     d = "diff";
     p = "push origin main";
+    ignore = "rm --cached -r . ";
   };
 }
