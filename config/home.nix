@@ -1,31 +1,23 @@
-{ ... } @ inputs: {
-  imports = [ ./git.nix ./zsh.nix ./kitty.nix ];
+{ user, version, ... } @ inputs: {
+  imports = [ ./git.nix ./zsh.nix ./kitty.nix ./programs.nix ];
   home-manager = {
     useGlobalPkgs = true;
-    users."${inputs.user}" = {
-      home.stateVersion = inputs.version;
+    users."${user}" = {
+      home = {
+        stateVersion = version;
+      };
       # home.file.".config/nvim/init.lua".source = ./nvim/init.lua;
       # xdg.configFile.nvim = {
       #   source = ./nvim;
       #   recursive = true;
       # };
       # home.file.".config/kitty/startup.conf".source = ./kitty-startup.conf;
-      programs = {
-        direnv = {
-          enable = true;
-          enableZshIntegration = true;
-          enableBashIntegration = true;
-          nix-direnv.enable = true;
-        };
-        fzf = {
-          enable = true;
-          enableZshIntegration = true;
-        };
-        bat = {
-          enable = true;
-          config.theme = "base16";
-        };
-      };
     };
   };
 }
+
+# If you want to configure Firefox (consult Home Manager's docs for options):
+# programs.firefox.enable = true;
+
+# If you don't want to configure Firefox:
+# home.packages = with pkgs; [ firefox ];
