@@ -1,14 +1,13 @@
 { config, lib, pkgs, user, version, home-manager, ... }@inputs: {
-  imports = [ ./hardware-configuration.nix ];
-  home-manager = import ./home.nix { inherit inputs; };
+  imports =
+    [ ./hardware-configuration.nix ./packages.nix ./home.nix ./services.nix ];
 
-  sound.enable = true;
+  sound = { enable = true; };
   hardware = {
     pulseaudio.enable = false;
     bluetooth.enable = true;
     opengl.enable = true;
   };
-
   boot = {
     loader = {
       timeout = 5;
@@ -19,57 +18,17 @@
       };
     };
   };
-
   networking = {
     hostName = "nixos";
     networkmanager.enable = true;
     useDHCP = false;
   };
-
   time = { timeZone = "America/Chicago"; };
   i18n = { defaultLocale = "en_US.utf8"; };
-
-  services = {
-    gnome.gnome-keyring.enable = true;
-    blueman.enable = true;
-    printing.enable = true;
-    xserver = {
-      enable = true;
-      layout = "us";
-      xkbVariant = "";
-      libinput.enable = true;
-      windowManager = {
-        awesome = {
-          enable = true;
-          luaModules = with pkgs.luaPackages; [
-            luarocks
-            # lain
-            luadbi-mysql
-          ];
-        };
-      };
-      displayManager = {
-        defaultSession = "none+awesome";
-        autoLogin = {
-          enable = true;
-          user = "${user}";
-        };
-        # sessionCommands = "xkbset bo 50";
-      };
-    };
-    pipewire = {
-      enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
-      pulse.enable = true;
-    };
-  };
-
   security = {
     rtkit.enable = true;
     sudo.wheelNeedsPassword = false;
   };
-
   # sudo nmcli dev wifi connect "..." password "..."
   users = {
     defaultUserShell = pkgs.zsh;
@@ -85,14 +44,11 @@
       ];
     };
   };
-
   programs = {
-    adb.enable = true;
+    # adb.enable = true;
     zsh.enable = true;
   };
-
   nixpkgs.config.allowUnfree = true;
-
   environment = {
     variables = {
       EDITOR = "nvim";
@@ -103,7 +59,6 @@
       BROWSER = "firefox";
     };
     shells = with pkgs; [ zsh ];
-    systemPackages = (import ./packages.nix { inherit inputs; }).systemPackages;
   };
 
   nix = {
