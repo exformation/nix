@@ -1,7 +1,7 @@
-{ a }: {
+{ inputs }: {
   useGlobalPkgs = true;
-  users."${a.user}" = {
-    home.stateVersion = a.version;
+  users."${inputs.user}" = {
+    home.stateVersion = inputs.version;
     # home.file.".config/nvim/init.lua".source = ./nvim/init.lua;
     # xdg.configFile.nvim = {
     #   source = ./nvim;
@@ -9,9 +9,9 @@
     # };
     # home.file.".config/kitty/startup.conf".source = ./kitty-startup.conf;
     programs = {
-      git = (import ./git.nix) { inherit a; };
-      zsh = (import ./zsh.nix) { inherit a; };
-      kitty = (import ./kitty.nix) { inherit a; };
+      git = (import ./git.nix) { inherit inputs; };
+      zsh = (import ./zsh.nix) { inherit inputs; };
+      kitty = (import ./kitty.nix) { inherit inputs; };
       # neovim = (import ./nvim.nix) { inherit a; };
       direnv = {
         enable = true;

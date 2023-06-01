@@ -1,7 +1,7 @@
-{ a }: {
+{ inputs }: {
   enable = true;
-  userName = "${a.user}";
-  userEmail = "${a.email}";
+  userName = "${inputs.user}";
+  userEmail = "${inputs.email}";
   extraConfig = { init.defaultBranch = "main"; };
   aliases = {
     c = "commit -am";

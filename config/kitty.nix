@@ -1,4 +1,4 @@
-{ a }: {
+{ inputs }: {
   enable = true;
   theme = "One Dark";
   keybindings = {
@@ -6,7 +6,7 @@
   };
   settings = {
     font_size = "22.0";
-    font_family = a.style.mono-font;
+    # font_family = a.style.mono-font;
     bold_font = "auto";
     italic_font = "auto";
     bold_italic_font = "auto";
