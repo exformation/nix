@@ -1,6 +1,6 @@
 { config, lib, pkgs, user, version, home-manager, ... }@inputs: {
   imports =
-    [ ./hardware-configuration.nix ./packages.nix ./home.nix ./services.nix ];
+    [ ./hardware-configuration.nix ./packages.nix ./home/home.nix ./services.nix ];
 
   sound = { enable = true; };
   hardware = {
