@@ -13,23 +13,22 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: 
-  let pkgs = nixpkgs.legacyPackages.x86_64-linux.pkgs;
+  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+    let pkgs = nixpkgs.legacyPackages.x86_64-linux.pkgs;
     in {
-    nixosConfigurations.exform = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = inputs // {
-        user = "exform";
-        email = "mmillwood256@gmail.com";
-        version = "23.05";
-      };
-      modules = [
-        ./config/nixos/configuration.nix
-        home-manager.nixosModules.home-manager
-      ];
-    };
-      devShells.x86_64-linux.default = pkgs.mkShell {
-        buildInputs = with pkgs; [nixfmt nil];
+      nixosConfigurations.exform = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = inputs // {
+          user = "exform";
+          email = "mmillwood256@gmail.com";
+          version = "23.05";
         };
-  };
+        modules = [
+          ./config/nixos/configuration.nix
+          home-manager.nixosModules.home-manager
+        ];
+      };
+      devShells.x86_64-linux.default =
+        pkgs.mkShell { buildInputs = with pkgs; [ nixfmt nil ]; };
+    };
 }
