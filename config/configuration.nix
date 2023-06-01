@@ -1,6 +1,10 @@
 { config, lib, pkgs, user, version, home-manager, ... }@inputs: {
-  imports =
-    [ ./hardware-configuration.nix ./packages.nix ./home/home.nix ./services.nix ];
+  imports = [
+    ./hardware-configuration.nix
+    ./packages.nix
+    ./services.nix
+    ./home/home.nix
+  ];
 
   sound = { enable = true; };
   hardware = {
@@ -37,8 +41,9 @@
       extraGroups = [
         "networkmanager"
         "wheel"
+        # TODO: only active during flutter development? 
         "adbusers"
-        # TODO: remove
+        # TODO: only active for pedd user?
         "input"
         "uinput"
       ];
@@ -48,7 +53,7 @@
     # adb.enable = true;
     zsh.enable = true;
   };
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs = { config.allowUnfree = true; };
   environment = {
     variables = {
       EDITOR = "nvim";
@@ -60,7 +65,6 @@
     };
     shells = with pkgs; [ zsh ];
   };
-
   nix = {
     gc = {
       automatic = true;
@@ -73,7 +77,6 @@
     '';
     settings = { auto-optimise-store = true; };
   };
-
   system.stateVersion = "${version}";
 
   # systemd.services.bouncekeys = {
