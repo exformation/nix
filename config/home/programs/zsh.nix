@@ -10,18 +10,17 @@
       v = "nvim";
       l =
         "exa --long --header --icons --git --group-directories-first --color-scale --color=always --sort=modified --reverse --tree";
-      h = "gh";
       c = "code .";
       tree = "exa --tree --level=5 .";
       nrs =
-        "sudo nixos-rebuild switch --flake '/home/${user}/nix#${user}'";
+        "g a && sudo nixos-rebuild switch --flake '/home/${user}/nix#${user}'";
       nrsu = "nix flake update && nrs && reboot";
       gg = "g a && g c 'boop' && g p";
     };
     oh-my-zsh = {
       enable = true;
       theme = "robbyrussell";
-      plugins = [ "thefuck" "command-not-found" "git" "history" "sudo" ];
+      plugins = [ "command-not-found" "git" "history" ];
     };
     initExtra = ''
       bindkey '^ ' autosuggest-accept

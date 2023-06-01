@@ -1,4 +1,5 @@
 { user, ... }@inputs: {
+  imports = [ ./git.nix ./zsh.nix ./kitty.nix ];
   home-manager.users."${user}".programs = {
     direnv = {
       enable = true;

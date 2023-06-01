@@ -1,5 +1,5 @@
 { user, version, pkgs, ... }@inputs: {
-  imports = [ ./git.nix ./zsh.nix ./kitty.nix ./programs.nix ];
+  imports = [ ./programs/programs.nix ];
   home-manager = {
     useGlobalPkgs = true;
     users."${user}" = {
