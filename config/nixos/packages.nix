@@ -13,6 +13,7 @@
     firefox
     fzf
     gh
+    # TODO: tools like nixfmt should just be in shells
     nixfmt
     gimp
     git

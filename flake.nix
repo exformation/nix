@@ -1,4 +1,5 @@
 # nixos-rebuild switch --flake '/home/exform/nix#exform'
+# TODO: add theming back now that you understand modules
 {
   inputs = {
     nixpkgs = {

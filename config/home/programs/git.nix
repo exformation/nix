@@ -1,8 +1,8 @@
-{ user, ... } @ inputs: {
+{ user, email, ... } @ inputs: {
   home-manager.users."${user}".programs.git = {
     enable = true;
-    userName = "${inputs.user}";
-    userEmail = "${inputs.email}";
+    userName = user;
+    userEmail = email;
     extraConfig = { init.defaultBranch = "main"; };
     aliases = {
       c = "commit -am";
