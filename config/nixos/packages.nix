@@ -13,8 +13,6 @@
     firefox
     fzf
     gh
-    # TODO: tools like nixfmt should just be in shells
-    # nixfmt
     gimp
     google-chrome
     jq
@@ -26,7 +24,6 @@
     maim
     mpv
     neofetch
-    # nil
     obs-studio
     pulseaudioFull
     ripgrep
