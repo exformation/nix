@@ -14,9 +14,8 @@
     fzf
     gh
     # TODO: tools like nixfmt should just be in shells
-    nixfmt
+    # nixfmt
     gimp
-    git
     google-chrome
     jq
     killall
@@ -27,7 +26,7 @@
     maim
     mpv
     neofetch
-    nil
+    # nil
     obs-studio
     pulseaudioFull
     ripgrep
