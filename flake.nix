@@ -22,7 +22,7 @@
         version = "23.05";
       };
       modules = [
-        ./config/configuration.nix
+        ./config/nixos/configuration.nix
         home-manager.nixosModules.home-manager
       ];
     };

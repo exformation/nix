@@ -3,7 +3,7 @@
     ./hardware-configuration.nix
     ./packages.nix
     ./services.nix
-    ./home/home.nix
+    ../home/home.nix
   ];
 
   sound = { enable = true; };
