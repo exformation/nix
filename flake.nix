@@ -21,6 +21,7 @@
           user = "exform";
           email = "mmillwood256@gmail.com";
           version = "23.05";
+          theme = import ./config/util/theme.nix;
         };
         modules = [
           ./config/nixos/configuration.nix

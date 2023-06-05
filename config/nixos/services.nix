@@ -45,7 +45,7 @@
   #     # ExecStart = "${pkgs.kanata}/bin/kanata -c /home/${user}/.config/kanata/kanata.kbd";
   #     # ExecStart = "${pkgs.kanata}/bin/xkbset bo 50";
   #     ExecStart =
-  #       "${pkgs.python310} /home/${user}/pedd/examples/tinkering/__init__.py";
+  #       "${pkgs.python310} /home/${user}/.config/pedd/main.py";
   #   };
   # };
 }

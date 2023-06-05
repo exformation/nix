@@ -1,7 +1,7 @@
-{ user, ... } @ inputs: {
+{ user, theme, ... }@inputs: {
   home-manager.users."${user}".programs.kitty = {
     enable = true;
-    theme = "One Dark";
+    theme = theme.kitty-theme;
     keybindings = {
       # "ctrl+z" = "signal_child SIGTERM"; # this is a shell thing (used zsh for it)
     };
