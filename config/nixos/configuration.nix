@@ -11,6 +11,7 @@
     pulseaudio.enable = false;
     bluetooth.enable = true;
     opengl.enable = true;
+    uinput.enable = true;
   };
   boot = {
     loader = {

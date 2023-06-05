@@ -1,6 +1,5 @@
 # nixos-rebuild switch --flake '/home/exform/nix#exform'
 # TODO: add theming back now that you understand modules
-# TODO: make this a shell with access to nixfmt, nil, etc. for development
 {
   inputs = {
     nixpkgs = { url = "github:nixos/nixpkgs/nixos-unstable"; };
