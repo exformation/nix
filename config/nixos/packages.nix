@@ -12,7 +12,6 @@
     file
     firefox
     fzf
-    gh
     gimp
     google-chrome
     jq
