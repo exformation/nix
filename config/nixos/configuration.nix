@@ -78,16 +78,4 @@
     settings = { auto-optimise-store = true; };
   };
   system.stateVersion = "${version}";
-
-  # systemd.services.bouncekeys = {
-  #   description = "Fix chatter on laptop";
-  #   wantedBy = [ "default.target" ];
-  #   after = [ "graphical-session.target" ];
-  #   restartIfChanged = false;
-  #   serviceConfig = {
-  #     Restart = "on-failure";
-  #     # ExecStart = "${pkgs.kanata}/bin/kanata -c /home/${user}/.config/kanata/kanata.kbd";
-  #     ExecStart = "${pkgs.kanata}/bin/xkbset bo 50";
-  #   };
-  # };
 }
