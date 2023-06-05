@@ -1,7 +1,7 @@
 {
   inputs = {
     nixpkgs = { url = "github:nixos/nixpkgs/nixos-unstable"; };
-    home-manager = {
+    hm = {
       url = "github:nix-community/home-manager/";
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -12,7 +12,7 @@
       flake = false;
     };
   };
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, hm, ... }@inputs:
     let pkgs = nixpkgs.legacyPackages.x86_64-linux.pkgs;
     in {
       nixosConfigurations.exform = nixpkgs.lib.nixosSystem {
@@ -25,7 +25,7 @@
         };
         modules = [
           ./config/nixos/configuration.nix
-          home-manager.nixosModules.home-manager
+          hm.nixosModules.home-manager
         ];
       };
       devShells.x86_64-linux.default =

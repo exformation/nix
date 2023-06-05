@@ -1,6 +1,6 @@
 {
   "nodes": {
-    "home-manager": {
+    "hm": {
       "inputs": {
         "nixpkgs": [
           "nixpkgs"
@@ -54,7 +54,7 @@
     },
     "root": {
       "inputs": {
-        "home-manager": "home-manager",
+        "hm": "hm",
         "lspconfig": "lspconfig",
         "nixpkgs": "nixpkgs"
       }

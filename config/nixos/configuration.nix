@@ -1,4 +1,4 @@
-{ config, lib, pkgs, user, version, home-manager, ... }@inputs: {
+{ config, pkgs, user, version, ... }@inputs: {
   imports = [
     ./hardware-configuration.nix
     ./packages.nix
