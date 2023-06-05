@@ -15,5 +15,12 @@
       enable = true;
       config.theme = theme.bat-theme;
     };
+    exa = {
+      enable = true;
+      git = true;
+      icons = true;
+      extraOptions = "--long --header --group-directories-first --sort=modified --reverse";
+      config.theme = theme.exa-theme;
+    };
   };
 }

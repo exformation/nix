@@ -25,6 +25,7 @@
           pv = "pr view";
         };
         # TODO: why doesn't this install them?
+        # TODO: why doesn't eco work?
         extensions = with pkgs; [ gh-dash gh-eco ];
       };
     };

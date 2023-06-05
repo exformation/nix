@@ -8,12 +8,11 @@
     shellAliases = {
       g = "git";
       v = "nvim";
-      l =
-        "exa --long --header --icons --git --group-directories-first --color-scale --color=always --sort=modified --reverse --tree";
+      l = "exa";
       c = "code .";
       tree = "exa --tree --level=5 .";
       nrs =
-        "g a && sudo nixos-rebuild switch --flake '/home/${user}/nix#${user}'";
+        "g a && sudo nixos-rebuild switch --flake '/home/${user}/nix'";
       nrsu = "nix flake update && nrs && reboot";
       gg = "g a && g c 'boop' && g p";
     };
