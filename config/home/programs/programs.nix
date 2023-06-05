@@ -29,28 +29,31 @@
     };
     neovim = {
       enable = true;
-      plugins = with pkgs.vimPlugins; [
-        # Binding
-        which-key-nvim
-        # Navigation
-        # Modification
-        # Visual
-        # Text Objects
-        # Search
-        telescope-nvim
-        # Git
-        # TS 
-        nvim-treesitter.withAllGrammars
-        # LSP
-        nvim-lspconfig
-        # CMP
-        # Snippets
-        # DAP
-        # Sessions
-        # AI
+      plugins = with pkgs.vimPlugins;
+        [
+          # Binding
+          # which-key-nvim
+          # Navigation
+          # Modification
+          # Visual
+          # Text Objects
+          # Search
+          # telescope-nvim
+          # Git
+          # TS 
+          # nvim-treesitter.withAllGrammars
+          # LSP
+          # nvim-lspconfig
+          # CMP
+          # Snippets
+          # DAP
+          # Sessions
+          # AI
 
-        vim-nix
-      ];
+          # vim-nix
+        ];
+      # put these here for package dependences?? don't think so 
+      # extraPackages = with pkgs; [ ripgrep fd ];
     };
   };
 }

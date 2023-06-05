@@ -36,10 +36,44 @@
         "type": "github"
       }
     },
+    "nvim-lspconfig": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1685926136,
+        "narHash": "sha256-+lq+a5Fk481W/TbUZrhxwwGJue4PTZ7m7j2zaSgyQDg=",
+        "owner": "neovim",
+        "repo": "nvim-lspconfig",
+        "rev": "664de12a7816dfa348bb475607edfa4fe0122025",
+        "type": "github"
+      },
+      "original": {
+        "owner": "neovim",
+        "repo": "nvim-lspconfig",
+        "type": "github"
+      }
+    },
+    "nvim-treesitter": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1685926356,
+        "narHash": "sha256-1XgLhazIxdqirHjYGh/yQKdh1cIV1vUNwHhZRcM+vdc=",
+        "owner": "nvim-treesitter",
+        "repo": "nvim-treesitter",
+        "rev": "9ec2a6bbdae426fc093b71805e7929158ac09411",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-treesitter",
+        "repo": "nvim-treesitter",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "nvim-lspconfig": "nvim-lspconfig",
+        "nvim-treesitter": "nvim-treesitter"
       }
     }
   },
