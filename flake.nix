@@ -15,7 +15,7 @@
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let pkgs = nixpkgs.legacyPackages.x86_64-linux.pkgs;
     in {
-      nixosConfigurations.default = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.exform = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = inputs // {
           user = "exform";

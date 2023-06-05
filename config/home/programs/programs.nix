@@ -19,8 +19,7 @@
       enable = true;
       git = true;
       icons = true;
-      extraOptions = "--long --header --group-directories-first --sort=modified --reverse";
-      config.theme = theme.exa-theme;
+      extraOptions = ["--long" "--header" "--group-directories-first" "--sort=modified" "--reverse"];
     };
   };
 }
