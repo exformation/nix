@@ -41,6 +41,7 @@
   #   after = [ "graphical-session.target" ];
   #   restartIfChanged = false;
   #   serviceConfig = {
+  #     User = "${user}";
   #     WorkingDirectory = "/home/${user}/.config/pedd";
   #     ExecStart = "${pkgs.nix}/bin/nix run";
   #   };

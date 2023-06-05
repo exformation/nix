@@ -1,4 +1,4 @@
-{ pkgs, user, theme, ... }@inputs: {
+{ pkgs, user, theme, lspconfig, ... }@inputs: {
   imports = [ ./git.nix ./zsh.nix ./kitty.nix ];
   home-manager.users."${user}".programs = {
     direnv = {
@@ -43,7 +43,18 @@
           # TS 
           # nvim-treesitter.withAllGrammars
           # LSP
-          # nvim-lspconfig
+
+          # (buildVimPluginFrom2Nix {
+          #   pname = lspconfig.name;
+          #   version = lspconfig.version;
+          #   src = fetchFromGitHub {
+          #     owner = lspconfig.owner;
+          #     repo = lspconfig.repo;
+          #     rev = lspconfig.rev;
+          #     sha256 = lspconfig.narhash;
+          #   };
+          #   # meta.homepage = lspconfig.url;
+          # })
           # CMP
           # Snippets
           # DAP

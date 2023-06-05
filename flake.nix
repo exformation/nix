@@ -5,14 +5,12 @@
       url = "github:nix-community/home-manager/";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # nvim-lspconfig = {
-    #   url = "github:neovim/nvim-lspconfig";
-    #   flake = false;
-    # };
-    # nvim-treesitter = {
-    #   url = "github:nvim-treesitter/nvim-treesitter";
-    #   flake = false;
-    # };
+    lspconfig = {
+      type = "github";
+      owner = "neovim";
+      repo = "nvim-lspconfig";
+      flake = false;
+    };
   };
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let pkgs = nixpkgs.legacyPackages.x86_64-linux.pkgs;
@@ -34,3 +32,7 @@
         pkgs.mkShell { buildInputs = with pkgs; [ nixfmt nil ]; };
     };
 }
+
+# nix repl
+# :lf .
+# inputs.<tab>
