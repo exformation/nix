@@ -1,5 +1,3 @@
-# nixos-rebuild switch --flake '/home/exform/nix#exform'
-# TODO: add theming back now that you understand modules
 {
   inputs = {
     nixpkgs = { url = "github:nixos/nixpkgs/nixos-unstable"; };
@@ -7,10 +5,10 @@
       url = "github:nix-community/home-manager/";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    neovim = {
-      url = "github:neovim/neovim?dir=contrib";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # neovim = {
+    #   url = "github:neovim/neovim?dir=contrib";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let pkgs = nixpkgs.legacyPackages.x86_64-linux.pkgs;
