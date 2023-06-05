@@ -35,16 +35,17 @@
     };
   };
 
-    systemd.services.pedl = {
-    description = "Programmable Event Device Layer";
-    wantedBy = [ "default.target" ];
-    after = [ "graphical-session.target" ];
-    restartIfChanged = false;
-    serviceConfig = {
-      # Restart = "on-failure";
-      # ExecStart = "${pkgs.kanata}/bin/kanata -c /home/${user}/.config/kanata/kanata.kbd";
-      # ExecStart = "${pkgs.kanata}/bin/xkbset bo 50";
-      ExecStart = "${pkgs.python} /home/${user}/pedl/examples/tinkering/__init__.py";
-    };
-  };
+  # systemd.services.pedd = {
+  #   description = "Programmable Event Device Layer";
+  #   wantedBy = [ "default.target" ];
+  #   after = [ "graphical-session.target" ];
+  #   restartIfChanged = false;
+  #   serviceConfig = {
+  #     # Restart = "on-failure";
+  #     # ExecStart = "${pkgs.kanata}/bin/kanata -c /home/${user}/.config/kanata/kanata.kbd";
+  #     # ExecStart = "${pkgs.kanata}/bin/xkbset bo 50";
+  #     ExecStart =
+  #       "${pkgs.python310} /home/${user}/pedd/examples/tinkering/__init__.py";
+  #   };
+  # };
 }
