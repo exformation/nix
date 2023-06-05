@@ -38,15 +38,9 @@
     defaultUserShell = pkgs.zsh;
     users."${user}" = {
       isNormalUser = true;
-      extraGroups = [
-        "networkmanager"
-        "wheel"
-        # TODO: only active during flutter development? 
-        "adbusers"
-        # TODO: only active for pedd user?
-        "input"
-        "uinput"
-      ];
+      # TODO: only active during flutter development? 
+      # TODO: only active for pedd user?
+      extraGroups = [ "networkmanager" "wheel" "adbusers" "input" "uinput" ];
     };
   };
   programs = {
