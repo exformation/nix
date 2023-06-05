@@ -41,11 +41,8 @@
   #   after = [ "graphical-session.target" ];
   #   restartIfChanged = false;
   #   serviceConfig = {
-  #     # Restart = "on-failure";
-  #     # ExecStart = "${pkgs.kanata}/bin/kanata -c /home/${user}/.config/kanata/kanata.kbd";
-  #     # ExecStart = "${pkgs.kanata}/bin/xkbset bo 50";
-  #     ExecStart =
-  #       "${pkgs.python310} /home/${user}/.config/pedd/main.py";
+  #     WorkingDirectory = "/home/${user}/.config/pedd";
+  #     ExecStart = "${pkgs.nix}/bin/nix run";
   #   };
   # };
 }

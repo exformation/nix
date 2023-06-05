@@ -9,6 +9,7 @@
     fd
     feh
     ffmpeg
+    warpd
     file
     firefox
     fzf
