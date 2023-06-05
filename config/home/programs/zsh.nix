@@ -1,10 +1,10 @@
-{ user, ... } @ inputs: {
+{ user, theme, ... }@inputs: {
   home-manager.users."${user}".programs.zsh = {
     enable = true;
     autocd = false;
     enableAutosuggestions = true;
     enableCompletion = true;
-    # defaultKeymap = "viins";
+    enableSyntaxHighlighting = true;
     shellAliases = {
       g = "git";
       v = "nvim";
@@ -19,7 +19,7 @@
     };
     oh-my-zsh = {
       enable = true;
-      theme = "robbyrussell";
+      theme = theme.zsh-theme;
       plugins = [ "command-not-found" "git" "history" ];
     };
     initExtra = ''

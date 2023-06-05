@@ -11,7 +11,7 @@
       i = "init";
       d = "diff";
       p = "push origin main";
-      ignore = "rm --cached -r .";
+      ig = "rm --cached -r .";
     };
   };
 }

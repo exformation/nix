@@ -1,4 +1,4 @@
-{ user, ... }@inputs: {
+{ user, theme, ... }@inputs: {
   imports = [ ./git.nix ./zsh.nix ./kitty.nix ];
   home-manager.users."${user}".programs = {
     direnv = {
@@ -13,7 +13,7 @@
     };
     bat = {
       enable = true;
-      config.theme = "base16";
+      config.theme = theme.bat-theme;
     };
   };
 }
