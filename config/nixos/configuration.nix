@@ -60,6 +60,12 @@
     };
     shells = with pkgs; [ zsh ];
   };
+  fonts.fonts = with pkgs; [
+    noto-fonts
+    noto-fonts-cjk
+    noto-fonts-emoji
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+  ];
   nix = {
     gc = {
       automatic = true;
