@@ -23,8 +23,8 @@
       persistence-nvim
       better-escape-nvim
       vim-fugitive
-      ChatGPT-nvim
       comment-nvim
+      # ChatGPT-nvim
       # copilot-lua copilot-cmp
       # copilot-vim cmp-copilot
 
@@ -54,14 +54,6 @@
       # telescope-file-browser-nvim
       # gitsigns-nvim
       # neogit
-    ];
-    # shouldn't this be handled entirely by the devshell???
-    # TODO: nvim-lspconfig.withServers (p: with p; [ c cpp java rust python lua toml json ])
-    extraPackages = with pkgs; [
-      # nil
-      # lua-language-server
-      # nodePackages.pyright
-      # rust-analyzer
     ];
   };
 }
