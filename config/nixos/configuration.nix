@@ -47,11 +47,11 @@
   programs = {
     # adb.enable = true;
     zsh.enable = true;
-    gnupg.agent = {
-      enable = true;
-      # pinentryFlavor = "curses";
-      enableSSHSupport = true;
-    };
+    # gnupg.agent = {
+    #   enable = true;
+    #   pinentryFlavor = "curses";
+    #   enableSSHSupport = true;
+    # };
   };
   nixpkgs = { config.allowUnfree = true; };
   environment = {

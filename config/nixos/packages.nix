@@ -25,8 +25,8 @@
     mpv
     neofetch
     obs-studio
-    pinentry
-    pinentry-curses
+    # pinentry
+    # pinentry-curses
     pulseaudioFull
     ripgrep
     rofi
