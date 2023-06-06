@@ -9,11 +9,11 @@
     fd
     feh
     ffmpeg
-    warpd
     file
     firefox
     fzf
     gimp
+    # gnupg
     google-chrome
     jq
     killall
@@ -25,6 +25,8 @@
     mpv
     neofetch
     obs-studio
+    pinentry
+    pinentry-curses
     pulseaudioFull
     ripgrep
     rofi
@@ -32,6 +34,7 @@
     unzip
     vlc
     vscode
+    warpd
     wget
     wmctrl
     xclip

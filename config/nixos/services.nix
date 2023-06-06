@@ -1,6 +1,7 @@
 { pkgs, user, ... }: {
   services = {
     gnome.gnome-keyring.enable = true;
+    pcscd.enable = true;
     blueman.enable = true;
     printing.enable = true;
     xserver = {
