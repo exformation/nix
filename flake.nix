@@ -5,18 +5,6 @@
       url = "github:nix-community/home-manager/";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nvim-lspconfig = {
-      url = "github:neovim/nvim-lspconfig";
-      flake = false;
-    };
-    nvim-telescope = {
-      url = "github:nvim-telescope/telescope.nvim";
-      flake = false;
-    };
-    nvim-plenary = {
-      url = "github:nvim-lua/plenary.nvim";
-      flake = false;
-    };
   };
   outputs = { self, nixpkgs, hm, ... }@inputs:
     let pkgs = nixpkgs.legacyPackages.x86_64-linux.pkgs;

@@ -36,61 +36,10 @@
         "type": "github"
       }
     },
-    "nvim-lspconfig": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1686055547,
-        "narHash": "sha256-h5Cl2xdfUPqFZ+8XvkLIMfypAKW3nbsmodLN6NTllGg=",
-        "owner": "neovim",
-        "repo": "nvim-lspconfig",
-        "rev": "00d7063cdca8d39eb4e3308277cc21eae7bb44f7",
-        "type": "github"
-      },
-      "original": {
-        "owner": "neovim",
-        "repo": "nvim-lspconfig",
-        "type": "github"
-      }
-    },
-    "nvim-plenary": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1685508880,
-        "narHash": "sha256-5qtGxspjtCnkuoaE2gDnti58U4r34O1bBvjvUdTgKmU=",
-        "owner": "nvim-lua",
-        "repo": "plenary.nvim",
-        "rev": "499e0743cf5e8075cd32af68baa3946a1c76adf1",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nvim-lua",
-        "repo": "plenary.nvim",
-        "type": "github"
-      }
-    },
-    "nvim-telescope": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1684993479,
-        "narHash": "sha256-FIAN3NQrD7PhrtCKnlrr//bZ259qcvGogL45nC8tLpw=",
-        "owner": "nvim-telescope",
-        "repo": "telescope.nvim",
-        "rev": "6d3fbffe426794296a77bb0b37b6ae0f4f14f807",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nvim-telescope",
-        "repo": "telescope.nvim",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
         "hm": "hm",
-        "nixpkgs": "nixpkgs",
-        "nvim-lspconfig": "nvim-lspconfig",
-        "nvim-plenary": "nvim-plenary",
-        "nvim-telescope": "nvim-telescope"
+        "nixpkgs": "nixpkgs"
       }
     }
   },
