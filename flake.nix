@@ -1,14 +1,20 @@
 {
   inputs = {
-    nixpkgs = { url = "github:nixos/nixpkgs/nixos-unstable"; };
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     hm = {
       url = "github:nix-community/home-manager/";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    lspconfig = {
-      type = "github";
-      owner = "neovim";
-      repo = "nvim-lspconfig";
+    nvim-lspconfig = {
+      url = "github:neovim/nvim-lspconfig";
+      flake = false;
+    };
+    nvim-telescope = {
+      url = "github:nvim-telescope/telescope.nvim";
+      flake = false;
+    };
+    nvim-plenary = {
+      url = "github:nvim-lua/plenary.nvim";
       flake = false;
     };
   };
@@ -23,10 +29,8 @@
           version = "23.05";
           theme = import ./config/util/theme.nix;
         };
-        modules = [
-          ./config/nixos/configuration.nix
-          hm.nixosModules.home-manager
-        ];
+        modules =
+          [ ./config/nixos/configuration.nix hm.nixosModules.home-manager ];
       };
       devShells.x86_64-linux.default =
         pkgs.mkShell { buildInputs = with pkgs; [ nixfmt nil ]; };

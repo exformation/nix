@@ -1,99 +1,56 @@
 { user, pkgs, lib, ... }@inputs:
+with builtins;
 let
-  # installs a vim plugin from git with a given tag / branch
-  pluginGit = rev: owner: repo: sha256:
-    pkgs.vimUtils.buildVimPluginFrom2Nix {
-      pname = repo;
-      version = rev;
-      src = pkgs.fetchFromGitHub {
-        rev = rev;
-        owner = owner;
-        repo = repo;
-        sha256 = sha256;
-      };
-    };
-  plugin = pluginGit "HEAD";
+  nvim-plugin-names = filter (p: substring 0 4 p == "nvim") (attrNames inputs);
+  plugins = map (p: ({ name = p; } // inputs."${p}")) nvim-plugin-names;
 in {
   home-manager.users."${user}".programs.neovim = {
     enable = true;
+    plugins = plugins;
     # package = neovim.packages.${pkgs.system}.default;
-    # extraConfig = "luafile ~/.config/nvim/config.lua";
-    extraPackages = with pkgs;
-      [
-        # tree-sitter
-        # tree-sitter-python
-        # tree-sitter-cpp
-        # nodePackages.neovim
-        # nodePackages.npm
-        # lua-language-server
-        # sumneko-lua-language-server
-        # clangs-tools
-        # cppcheck
-        # nodePackages.pyright
-        # rust-analyzer
-      ];
-    plugins = with pkgs.vimPlugins;
-      [
-        (plugin "neovim" "nvim-lspconfig"
-          "sha256-+lq+a5Fk481W/TbUZrhxwwGJue4PTZ7m7j2zaSgyQDg=")
-        # (pluginGit "branch" "own" "repo" "sha256")
-        
-        # nvim-treesitter.withAllGrammars
-        # (nvim-treesitter.withPlugins (p: [
-        #   p.tree-sitter-query
-        #   p.tree-sitter-python
-        #   p.python
-        # ]))
-        # nvim-lspconfig
-        #   telescope-nvim
+    # plugins = with pkgs.vimPlugins;
+    #   with inputs;
+    #   [
+    # TODO: I want to just provide a link to the repo and have it install the latest version
+    # "https://github.com/neovim/nvim-lspconfig" 
 
-        #   # COMPLETION
-        #   nvim-cmp
-        #   cmp-buffer
-        #   cmp-path
-        #   cmp-cmdline
-        #   cmp-nvim-lsp
-        #   cmp-nvim-lua
-        #   cmp-spell
-        #   # cmp-rg
-        #   # cmp-zsh
-        #   # cmp-copilot
-        #   # cmp-dap
-        #   # cmp-emoji
-        #   cmp_luasnip
+    # nvchad
+    # nvchad-ui
+    # nvchad-extensions
 
-        #   # SNIPPETS
-        #   luasnip
-        #   friendly-snippets
+    # (plugin "lspconfig" lspconfig)
+    # builtins.attrNames inputs -> [ "hm" "lspconfig" "nixpkgs" ]
 
-        #   # 
-        #   surround
-
-        #   # 
-        #   vim-easymotion
-
-        #   # 
-        #   which-key-nvim
-
-        #   #
-        #   nvim-ts-rainbow
-
-        #   # THEME
-        #   onedark-nvim
-
-        #   # UTILITY
-        #   plenary-nvim
-
-        #   # LANGUAGES
-        #   vim-nix
-
-        #   # FORMATTING
-
-        #   # delimitMate
-        #   # telescope-file-browser-nvim
-        #   # gitsigns-nvim
-        #   # neogit
-      ];
+    # nvim-treesitter.withAllGrammars
+    # nvim-lspconfig
+    # telescope-nvim
+    # nvim-cmp
+    # cmp-buffer
+    # cmp-path
+    # cmp-cmdline
+    # cmp-nvim-lsp
+    # cmp-nvim-lua
+    # cmp-spell
+    # cmp-rg
+    # cmp-zsh
+    # cmp-copilot
+    # cmp-dap
+    # cmp-emoji
+    # cmp_luasnip
+    # luasnip
+    # friendly-snippets
+    # surround
+    # vim-easymotion
+    # which-key-nvim
+    # nvim-ts-rainbow
+    # onedark-nvim
+    # plenary-nvim
+    # vim-nix
+    # delimitMate
+    # telescope-file-browser-nvim
+    # gitsigns-nvim
+    # neogit
+    # ];
   };
 }
 
@@ -138,3 +95,18 @@ in {
 # put these here for package dependences?? don't think so 
 # extraPackages = with pkgs; [ ripgrep fd ];
 # };
+
+# extraPackages = with pkgs;
+#   [
+#     # tree-sitter
+#     # tree-sitter-python
+#     # tree-sitter-cpp
+#     # nodePackages.neovim
+#     # nodePackages.npm
+#     # lua-language-server
+#     # sumneko-lua-language-server
+#     # clangs-tools
+#     # cppcheck
+#     # nodePackages.pyright
+#     # rust-analyzer
+#   ];
