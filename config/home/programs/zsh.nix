@@ -15,6 +15,7 @@
         "g a && sudo nixos-rebuild switch --flake '/home/${user}/nix#${user}'";
       nrsu = "nix flake update && nrs && reboot";
       gg = "g a && g c 'boop' && g p";
+      r = "cd $(cd ~ && fd -atd '^.git$' --hidden -E '.local/share' --max-depth=3 --exec dirname | rofi -dmenu)";
     };
     oh-my-zsh = {
       enable = true;

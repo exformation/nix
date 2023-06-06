@@ -24,6 +24,7 @@
       better-escape-nvim
       vim-fugitive
       comment-nvim
+      nvim-tree-lua
       # ChatGPT-nvim
       # copilot-lua copilot-cmp
       # copilot-vim cmp-copilot
