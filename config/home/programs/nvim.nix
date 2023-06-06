@@ -22,9 +22,13 @@
       luasnip
       persistence-nvim
       better-escape-nvim
+      vim-fugitive
+      ChatGPT-nvim
+      comment-nvim
+      # copilot-lua copilot-cmp
+      # copilot-vim cmp-copilot
 
       # todo-comments-nvim
-      # comment-nvim
       # lualine-nvim
       # nvchad
       # nvchad-ui
@@ -40,6 +44,7 @@
       # cmp-copilot
       # cmp-dap
       # cmp-emoji
+      # cmp-copilot
       # cmp_luasnip
       # friendly-snippets
       # surround
