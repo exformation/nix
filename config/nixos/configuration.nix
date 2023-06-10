@@ -1,10 +1,5 @@
 { config, pkgs, user, version, ... }@inputs: {
-  imports = [
-    ./hardware-configuration.nix
-    ./packages.nix
-    ./services.nix
-    ../home/home.nix
-  ];
+  imports = [ ./hardware-configuration.nix ./packages.nix ./services.nix ../home/home.nix ];
 
   sound = { enable = true; };
   hardware = {
@@ -52,6 +47,10 @@
     #   pinentryFlavor = "curses";
     #   enableSSHSupport = true;
     # };
+    # hyprland = {
+    #   enable = true;
+    # };
+
   };
   nixpkgs = { config.allowUnfree = true; };
   environment = {
@@ -81,7 +80,13 @@
     extraOptions = ''
       experimental-features = nix-command flakes
     '';
-    settings = { auto-optimise-store = true; };
+    settings = {
+      auto-optimise-store = true;
+      # if you use a cache like cachix, hyperland's input should follow nixpkgs in the flake
+      # substituters = ["https://hyprland.cachix.org"];
+      # trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+    };
+
   };
   system.stateVersion = "${version}";
 }

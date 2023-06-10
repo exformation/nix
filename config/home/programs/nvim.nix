@@ -25,6 +25,9 @@
       vim-fugitive
       comment-nvim
       nvim-tree-lua
+
+      project-nvim
+      telescope-project-nvim
       # ChatGPT-nvim
       # copilot-lua copilot-cmp
       # copilot-vim cmp-copilot

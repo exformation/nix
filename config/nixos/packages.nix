@@ -27,6 +27,7 @@
     obs-studio
     # pinentry
     # pinentry-curses
+    pamixer
     pulseaudioFull
     ripgrep
     rofi
