@@ -44,6 +44,7 @@
       #   ];
       # };
       devShells.x86_64-linux.default =
+        # TODO: nixd can complete packages
         pkgs.mkShell { buildInputs = with pkgs; [ nixfmt nil ]; };
     };
 }
