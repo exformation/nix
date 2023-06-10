@@ -28,6 +28,9 @@
       lualine-nvim
       auto-pairs
       nvim-surround
+      friendly-snippets
+      hop-nvim
+      nvim-ts-rainbow2
 
       # project-nvim
       # telescope-project-nvim
@@ -47,9 +50,6 @@
       cmp-dap
       cmp-emoji
       cmp_luasnip
-      friendly-snippets
-      hop-nvim
-      # delimitMate
     ];
   };
 }
