@@ -25,15 +25,15 @@
       vim-fugitive
       comment-nvim
       nvim-tree-lua
+      lualine-nvim
 
-      project-nvim
-      telescope-project-nvim
+      # project-nvim
+      # telescope-project-nvim
       # ChatGPT-nvim
       # copilot-lua copilot-cmp
       # copilot-vim cmp-copilot
 
       # todo-comments-nvim
-      # lualine-nvim
       # nvchad
       # nvchad-ui
       # nvchad-extensions
