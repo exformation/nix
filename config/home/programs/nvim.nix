@@ -26,38 +26,30 @@
       comment-nvim
       nvim-tree-lua
       lualine-nvim
+      auto-pairs
+      nvim-surround
 
       # project-nvim
       # telescope-project-nvim
+      
       # ChatGPT-nvim
       # copilot-lua copilot-cmp
       # copilot-vim cmp-copilot
 
-      # todo-comments-nvim
-      # nvchad
-      # nvchad-ui
-      # nvchad-extensions
-      # cmp-buffer
-      # cmp-path
-      # cmp-cmdline
-      # cmp-nvim-lsp
-      # cmp-nvim-lua
-      # cmp-spell
-      # cmp-rg
-      # cmp-zsh
-      # cmp-copilot
-      # cmp-dap
-      # cmp-emoji
-      # cmp-copilot
-      # cmp_luasnip
-      # friendly-snippets
-      # surround
-      # vim-easymotion
-      # vim-nix
+      cmp-buffer
+      cmp-path
+      cmp-cmdline
+      cmp-nvim-lsp
+      cmp-nvim-lua
+      cmp-spell
+      cmp-zsh
+      cmp-copilot
+      cmp-dap
+      cmp-emoji
+      cmp_luasnip
+      friendly-snippets
+      hop-nvim
       # delimitMate
-      # telescope-file-browser-nvim
-      # gitsigns-nvim
-      # neogit
     ];
   };
 }
