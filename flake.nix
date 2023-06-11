@@ -36,24 +36,11 @@
           hm.nixosModules.home-manager
           stylix.nixosModules.stylix
           hyprland.nixosModules.default
-          { programs.hyprland.enable = true; }
-          # hyprland.homeManagerModules.default
-          # {
-          #   wayland.windowManager.hyprland = {
-          #     enable = true;
-          #     extraConfig = ''
-          #       bind = SUPER, Return, exec, kitty
-          #     '';
-          #   };
-          # }
+          {
+            programs.hyprland.enable = true;
+          }
         ];
       };
-      # homeConfigurations."${args.user}" = hm.lib.homeManagerConfiguration {
-      #   inherit pkgs;
-      #   modules = [
-      #     # TODO: how on earth do I move this to another file? 
-      #   ];
-      # };
       devShells.x86_64-linux.default =
         # TODO: nixd can complete packages
         pkgs.mkShell { buildInputs = with pkgs; [ nixfmt nil ]; };

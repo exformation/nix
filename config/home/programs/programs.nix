@@ -28,6 +28,7 @@
       ];
     };
     rofi.enable = true;
+    wofi.enable = true;
     ripgrep.enable = true;
     firefox.enable = true;
     google-chrome.enable = true;

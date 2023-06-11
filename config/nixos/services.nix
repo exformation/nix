@@ -1,22 +1,33 @@
-{ pkgs, user, ... }: {
+{ pkgs, user, lib, hyprland, ... }: {
   services = {
+    greetd = {
+      enable = true;
+      settings = rec {
+        initial_session = {
+          inherit user;
+          command = lib.getExe hyprland.packages.${pkgs.system}.default;
+        };
+        default_session = initial_session;
+      };
+    };
     gnome.gnome-keyring.enable = true;
     # pcscd.enable = true;
     blueman.enable = true;
     printing.enable = true;
     xserver = {
-      enable = true;
+      enable = false;
       layout = "us";
       xkbVariant = "";
       libinput.enable = true;
       windowManager = {
         awesome = {
           enable = true;
-          luaModules = with pkgs.luaPackages; [
-            luarocks
-            # lain
-            # luadbi-mysql
-          ];
+          luaModules = with pkgs.luaPackages;
+            [
+              luarocks
+              # lain
+              # luadbi-mysql
+            ];
         };
       };
       displayManager = {

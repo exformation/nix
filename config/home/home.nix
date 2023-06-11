@@ -1,23 +1,24 @@
-{ user, version, ... }: {
+{ user, version, stylix, hyprland, ... }: {
   imports = [ ./packages.nix ./programs/programs.nix ];
   home-manager = {
     sharedModules = [{
       stylix.targets.vim.enable = false;
-      # wayland.windowManager.hyprland = {
-      #   enable = true;
-      #   extraConfig = ''
-      #     bind = SUPER, Return, exec, kitty
-      #   '';
-      # };
     }];
     useGlobalPkgs = true;
     users."${user}" = {
-      # wayland.windowManager.hyprland = {
-      #   enable = true;
-      #   hyprland.extraConfig = ''
-      #     bind = SUPER, Return, exec, kitty
-      #   '';
-      # };
+      imports = [
+        # why doesn't this work for stylix? says things are already set
+        # stylix.homeManagerModules.stylix
+        hyprland.homeManagerModules.default
+      ];
+      # stylix.targets.vim.enable = false;
+      wayland.windowManager.hyprland = {
+        enable = true;
+        extraConfig = builtins.readFile ./hypr.conf;
+        # extraConfig = ''
+        #   bind = SUPER, Return, exec, kitty
+        # '';
+      };
       home = {
         stateVersion = version;
         # home.file.".config/nvim/init.lua".source = ./nvim/init.lua;
