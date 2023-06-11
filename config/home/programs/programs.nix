@@ -1,4 +1,4 @@
-{ pkgs, user, theme, lspconfig, ... }@inputs: {
+{ pkgs, user, ... }@inputs: {
   imports = [ ./git.nix ./zsh.nix ./kitty.nix ./nvim.nix ];
   home-manager.users."${user}".programs = {
     direnv = {
@@ -27,5 +27,15 @@
         "--reverse"
       ];
     };
+    rofi = { enable = true; };
+    ripgrep.enable = true;
+    firefox.enable = true;
+    google-chrome.enable = true;
+    jq.enable = true;
+    lf.enable = true;
+    # fd.enable = true;
+    # neofetch.enable = true;
+    # tldr.enable = true;
+
   };
 }

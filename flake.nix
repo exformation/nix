@@ -23,7 +23,7 @@
         user = "exform";
         email = "mmillwood256@gmail.com";
         version = "23.05";
-        theme = import ./config/util/theme.nix;
+        # theme = import ./config/util/theme.nix;
       };
     in {
       nixosConfigurations.exform = nixpkgs.lib.nixosSystem {

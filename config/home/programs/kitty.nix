@@ -1,4 +1,4 @@
-{ user, theme, ... }@inputs: {
+{ user, ... }@inputs: {
   home-manager.users."${user}".programs.kitty = {
     enable = true;
     # theme = theme.kitty-theme;

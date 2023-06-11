@@ -1,8 +1,9 @@
 { user, version, pkgs, stylix, ... }@inputs: {
-  imports = [ ./programs/programs.nix ];
+  imports = [ ./packages.nix ./programs/programs.nix ];
   home-manager = {
     sharedModules = [{ 
       stylix = { 
+        autoEnable = true;
         targets = { 
           vim.enable = false; 
           # stuff ...

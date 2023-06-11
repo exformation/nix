@@ -5,20 +5,20 @@
     brightnessctl
     direnv
     discord
-    exa
+    # exa
     fd
     feh
     ffmpeg
     file
-    firefox
+    # firefox
     fzf
     gimp
-    google-chrome
-    jq
+    # google-chrome
+    # jq
     killall
-    kitty
-    kitty-themes
-    lf
+    # kitty
+    # kitty-themes
+    # lf
     libnotify
     maim
     mpv
@@ -26,8 +26,8 @@
     nodejs_20
     obs-studio
     pulseaudioFull
-    ripgrep
-    rofi
+    # ripgrep
+    # rofi
     tldr
     unzip
     vlc

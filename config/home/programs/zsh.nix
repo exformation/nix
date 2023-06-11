@@ -1,4 +1,4 @@
-{ user, theme, ... }@inputs: {
+{ user, ... }@inputs: {
   home-manager.users."${user}".programs.zsh = {
     enable = true;
     autocd = false;
@@ -19,7 +19,7 @@
     };
     oh-my-zsh = {
       enable = true;
-      # theme = theme.zsh-theme;
+      theme = "robbyrussell";
       plugins = [ "command-not-found" "git" "history" ];
     };
     initExtra = ''
