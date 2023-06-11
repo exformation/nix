@@ -47,9 +47,9 @@
     #   pinentryFlavor = "curses";
     #   enableSSHSupport = true;
     # };
-    hyprland = {
-      enable = true;
-    };
+    # hyprland = {
+    #   enable = true;
+    # };
 
   };
   nixpkgs = { config.allowUnfree = true; };

@@ -1,17 +1,23 @@
 { user, version, ... }: {
   imports = [ ./packages.nix ./programs/programs.nix ];
   home-manager = {
-    sharedModules = [{ 
-      stylix = { 
-        targets = { 
-          vim.enable = false; 
-          # stuff ...
-        };
-        # stuff ...
-      };
+    sharedModules = [{
+      stylix.targets.vim.enable = false;
+      # wayland.windowManager.hyprland = {
+      #   enable = true;
+      #   extraConfig = ''
+      #     bind = SUPER, Return, exec, kitty
+      #   '';
+      # };
     }];
     useGlobalPkgs = true;
     users."${user}" = {
+      # wayland.windowManager.hyprland = {
+      #   enable = true;
+      #   hyprland.extraConfig = ''
+      #     bind = SUPER, Return, exec, kitty
+      #   '';
+      # };
       home = {
         stateVersion = version;
         # home.file.".config/nvim/init.lua".source = ./nvim/init.lua;
