@@ -1,6 +1,15 @@
-{ user, version, pkgs, ... }@inputs: {
+{ user, version, pkgs, stylix, ... }@inputs: {
   imports = [ ./programs/programs.nix ];
   home-manager = {
+    sharedModules = [{ 
+      stylix = { 
+        targets = { 
+          vim.enable = false; 
+          # stuff ...
+        };
+        # stuff ...
+      };
+    }];
     useGlobalPkgs = true;
     users."${user}" = {
       home = {
