@@ -2,6 +2,7 @@
   # TODO: how many of these can be moved to home.nix? and why?
   environment.systemPackages = with pkgs; [
     acpi
+    nodejs_20
     brightnessctl
     direnv
     discord
