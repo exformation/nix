@@ -1,4 +1,4 @@
-{ user, version, pkgs, stylix, ... }@inputs: {
+{ user, version, ... }: {
   imports = [ ./packages.nix ./programs/programs.nix ];
   home-manager = {
     sharedModules = [{ 

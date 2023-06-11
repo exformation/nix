@@ -23,7 +23,6 @@
         user = "exform";
         email = "mmillwood256@gmail.com";
         version = "23.05";
-        # theme = import ./config/util/theme.nix;
       };
     in {
       nixosConfigurations.exform = nixpkgs.lib.nixosSystem {
@@ -33,18 +32,8 @@
           ./config/nixos/configuration.nix
           hm.nixosModules.home-manager
           stylix.nixosModules.stylix
-          # hyprland.nixosModules.default
-          # { programs.hyprland.enable = false; }
         ];
       };
-      # homeConfigurations."${args.user}@nixos" = hm.lib.homeManagerConfiguration {
-      #   pkgs = pkgs;
-      #   modules = [
-      #     stylix.homeManagerModules.stylix
-      #     hyprland.homeManagerModules.default
-      #     { wayland.windowManager.hyprland.enable = false; }
-      #   ];
-      # };
       devShells.x86_64-linux.default =
         # TODO: nixd can complete packages
         pkgs.mkShell { buildInputs = with pkgs; [ nixfmt nil ]; };

@@ -1,4 +1,4 @@
-{ user, pkgs, lib, ... }@inputs:
+{ user, pkgs, ... }:
 # with builtins;
 # let
 #   # i'm a genius 

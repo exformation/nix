@@ -1,4 +1,4 @@
-{ pkgs, user, email, ... }@inputs: {
+{ pkgs, user, email, ... }: {
   home-manager.users."${user}".programs = {
     git = {
       enable = true;

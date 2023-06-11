@@ -1,4 +1,4 @@
-{ pkgs, user, ... }@inputs: {
+{ user, ... }: {
   imports = [ ./git.nix ./zsh.nix ./kitty.nix ./nvim.nix ];
   home-manager.users."${user}".programs = {
     direnv = {
@@ -27,7 +27,7 @@
         "--reverse"
       ];
     };
-    rofi = { enable = true; };
+    rofi.enable = true;
     ripgrep.enable = true;
     firefox.enable = true;
     google-chrome.enable = true;
