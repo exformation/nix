@@ -18,6 +18,7 @@
       which-key-nvim
       onedark-nvim
       nvim-dap
+      nvim-dap-ui
       luasnip
       persistence-nvim
       better-escape-nvim
@@ -30,12 +31,13 @@
       friendly-snippets
       hop-nvim
       nvim-ts-rainbow2
+      flutter-tools-nvim
 
       # project-nvim
       # telescope-project-nvim
       
       # ChatGPT-nvim
-      # copilot-lua copilot-cmp
+      copilot-lua copilot-cmp
       # copilot-vim cmp-copilot
 
       cmp-buffer
