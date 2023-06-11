@@ -1,5 +1,5 @@
 { config, pkgs, user, version, ... }@inputs: {
-  imports = [ ./hardware-configuration.nix ./packages.nix ./services.nix ../home/home.nix ];
+  imports = [ ./hardware-configuration.nix ./stylix.nix ./packages.nix ./services.nix ../home/home.nix ];
 
   sound = { enable = true; };
   hardware = {

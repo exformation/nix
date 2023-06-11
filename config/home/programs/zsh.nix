@@ -19,7 +19,7 @@
     };
     oh-my-zsh = {
       enable = true;
-      theme = theme.zsh-theme;
+      # theme = theme.zsh-theme;
       plugins = [ "command-not-found" "git" "history" ];
     };
     initExtra = ''

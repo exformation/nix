@@ -13,7 +13,7 @@
     };
     bat = {
       enable = true;
-      config.theme = theme.bat-theme;
+      # config.theme = theme.bat-theme;
     };
     exa = {
       enable = true;
