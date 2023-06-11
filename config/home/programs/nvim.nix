@@ -40,17 +40,18 @@
       copilot-lua copilot-cmp
       # copilot-vim cmp-copilot
 
-      cmp-buffer
-      cmp-path
-      cmp-cmdline
+      cmp-copilot
+      cmp_luasnip
+      # cmp-buffer
+      # cmp-path
+      # cmp-cmdline
       cmp-nvim-lsp
       cmp-nvim-lua
-      cmp-spell
-      cmp-zsh
-      cmp-copilot
-      cmp-dap
-      cmp-emoji
-      cmp_luasnip
+      # cmp-spell
+      # cmp-zsh
+      # cmp-dap
+      # cmp-emoji
+      neodev-nvim
     ];
   };
 }
