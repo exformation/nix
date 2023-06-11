@@ -11,7 +11,6 @@
     # package = neovim.packages.${pkgs.system}.default;
     plugins = with pkgs.vimPlugins; [
       nvim-treesitter.withAllGrammars
-      nvim-ts-rainbow
       nvim-lspconfig
       telescope-nvim
       plenary-nvim
