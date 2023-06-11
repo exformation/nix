@@ -2,7 +2,6 @@
   # TODO: how many of these can be moved to home.nix? and why?
   environment.systemPackages = with pkgs; [
     acpi
-    nodejs_20
     brightnessctl
     direnv
     discord
@@ -14,7 +13,6 @@
     firefox
     fzf
     gimp
-    # gnupg
     google-chrome
     jq
     killall
@@ -25,10 +23,8 @@
     maim
     mpv
     neofetch
+    nodejs_20
     obs-studio
-    # pinentry
-    # pinentry-curses
-    pamixer
     pulseaudioFull
     ripgrep
     rofi
