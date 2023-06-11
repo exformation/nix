@@ -37,7 +37,14 @@
           stylix.nixosModules.stylix
           hyprland.nixosModules.default
           {
-            programs.hyprland.enable = true;
+            programs.hyprland = {
+              enable = true;
+              xwayland = {
+                enable = true;
+                hidpi = true;
+              };
+              nvidiaPatches = false;
+            };
           }
         ];
       };

@@ -36,6 +36,7 @@
     wget
     wmctrl
     xclip
+    xdg-desktop-portal-hyprland
     xdotool
     xkbset
     xorg.xinit
