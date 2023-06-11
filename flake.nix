@@ -13,12 +13,12 @@
     #   url = "github:neovim/neovim?dir=contrib";
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
-    # hyprland = {
-    #   url = "github:hyprwm/Hyprland";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
-  outputs = { self, nixpkgs, hm, stylix, ... }@inputs:
+  outputs = { self, nixpkgs, hm, stylix, hyprland, ... }@inputs:
     let
       pkgs = nixpkgs.legacyPackages.x86_64-linux.pkgs;
       system = "x86_64-linux";
@@ -29,12 +29,13 @@
       };
     in {
       nixosConfigurations.exform = nixpkgs.lib.nixosSystem {
-        inherit system; 
+        inherit system;
         specialArgs = inputs // args;
         modules = [
           ./config/nixos/configuration.nix
           hm.nixosModules.home-manager
           stylix.nixosModules.stylix
+          hyprland.nixosModules.default
         ];
       };
       devShells.x86_64-linux.default =
