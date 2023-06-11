@@ -3,7 +3,6 @@
   home-manager = {
     sharedModules = [{ 
       stylix = { 
-        autoEnable = true;
         targets = { 
           vim.enable = false; 
           # stuff ...
