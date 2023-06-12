@@ -26,6 +26,7 @@
     nodejs_20
     obs-studio
     pulseaudioFull
+    pamixer
     # ripgrep
     # rofi
     tldr
@@ -34,6 +35,7 @@
     vscode
     warpd
     wget
+    wl-clipboard
     wmctrl
     xclip
     xdg-desktop-portal-hyprland
