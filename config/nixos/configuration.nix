@@ -54,10 +54,14 @@
     #   pinentryFlavor = "curses";
     #   enableSSHSupport = true;
     # };
-    # hyprland = {
-    #   enable = true;
-    # };
-
+    hyprland = {
+      enable = true;
+      xwayland = {
+        enable = true;
+        hidpi = true;
+      };
+      nvidiaPatches = false;
+    };
   };
   nixpkgs = { config.allowUnfree = true; };
   environment = {
@@ -81,7 +85,7 @@
     gc = {
       automatic = true;
       dates = "weekly";
-      options = "--delete-older-than 30d";
+      options = "--delete-older-than 7d";
     };
     package = pkgs.nixVersions.unstable;
     extraOptions = ''

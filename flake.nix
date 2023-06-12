@@ -36,16 +36,6 @@
           hm.nixosModules.home-manager
           stylix.nixosModules.stylix
           hyprland.nixosModules.default
-          {
-            programs.hyprland = {
-              enable = true;
-              xwayland = {
-                enable = true;
-                hidpi = true;
-              };
-              nvidiaPatches = false;
-            };
-          }
         ];
       };
       devShells.x86_64-linux.default =
