@@ -1,4 +1,4 @@
-{ user, ... }: {
+{ user, pkgs, ... }: {
   imports = [ ./git.nix ./zsh.nix ./kitty.nix ./nvim.nix ];
   home-manager.users."${user}".programs = {
     direnv = {
@@ -27,7 +27,10 @@
         "--reverse"
       ];
     };
-    rofi.enable = true;
+    rofi = {
+      enable = true;
+      package = pkgs.rofi-wayland.override { plugins = [ ]; };
+    };
     wofi.enable = true;
     ripgrep.enable = true;
     firefox.enable = true;
