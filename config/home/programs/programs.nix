@@ -34,6 +34,7 @@
     google-chrome.enable = true;
     jq.enable = true;
     lf.enable = true;
+    waybar.enable = true;
     # mako.enable = true;
     # fd.enable = true;
     # neofetch.enable = true;
