@@ -36,6 +36,9 @@
     warpd
     wget
     wl-clipboard
+    # wl-clip-persists
+    grim
+    slurp
     wmctrl
     xclip
     xdg-desktop-portal-hyprland
