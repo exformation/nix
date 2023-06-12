@@ -2,6 +2,7 @@
   # TODO: how many of these can be moved to home.nix? and why?
   environment.systemPackages = with pkgs; [
     clipman
+    wev
     dunst
     mako
     acpi

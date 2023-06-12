@@ -3,7 +3,7 @@
     # /etc/stylix/palette.html 
     # ~/.config/stylix/palette.html
     # https://github.com/tinted-theming/base16-schemes
-    image = ../util/bg.png;
+    image = ../../images/bg.png;
     polarity = "dark";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/onedark.yaml";
 
