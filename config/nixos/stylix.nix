@@ -8,24 +8,24 @@
     base16Scheme = "${pkgs.base16-schemes}/share/themes/onedark.yaml";
 
     fonts = let
-      f = (pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; });
+      # f = (pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; });
       fs = 12;
     in {
       serif = {
-        package = f;
-        name = "FiraCode Nerd Font";
+        package = pkgs.dejavu_fonts;
+        name = "DejaVu Serif";
       };
       sansSerif = {
-        package = f;
-        name = "FiraCode Nerd Font";
+        package = pkgs.dejavu_fonts;
+        name = "DejaVu Sans";
       };
       monospace = {
-        package = f;
-        name = "FiraCode Nerd Font";
+        package = pkgs.dejavu_fonts;
+        name = "DejaVu Sans Mono";
       };
       emoji = {
-        package = f;
-        name = "FiraCode Nerd Font";
+        package = pkgs.noto-fonts-emoji;
+        name = "Noto Color Emoji";
       };
       sizes = {
         applications = fs;
