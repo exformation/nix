@@ -34,7 +34,7 @@
     google-chrome.enable = true;
     jq.enable = true;
     lf.enable = true;
-    mako.enable = true;
+    # mako.enable = true;
     # fd.enable = true;
     # neofetch.enable = true;
     # tldr.enable = true;
