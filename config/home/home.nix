@@ -1,6 +1,7 @@
 { user, version, stylix, hyprland, ... }: {
   imports = [ ./packages.nix ./programs/programs.nix ];
   home-manager = {
+    # why do I need to do this???
     sharedModules = [{ stylix.targets.vim.enable = false; }];
     useGlobalPkgs = true;
     users."${user}" = {config, ...}: {
@@ -9,7 +10,6 @@
         # stylix.homeManagerModules.stylix
         hyprland.homeManagerModules.default
       ];
-      # stylix.targets.vim.enable = false;
       wayland.windowManager.hyprland = {
         enable = true;
         extraConfig = builtins.readFile ../../conf/hyprland.conf;

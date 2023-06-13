@@ -29,7 +29,7 @@
       };
     in {
       nixosConfigurations."${specialArgs.user}" = nixpkgs.lib.nixosSystem {
-        inherit system specialArgs; 
+        inherit system specialArgs;
         modules = [
           ./config/nixos/configuration.nix
           ./config/home/home.nix
