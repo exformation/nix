@@ -22,15 +22,14 @@
     let
       pkgs = nixpkgs.legacyPackages.x86_64-linux.pkgs;
       system = "x86_64-linux";
-      args = {
+      specialArgs = inputs // {
         user = "exform";
         email = "mmillwood256@gmail.com";
         version = "23.05";
       };
     in {
-      nixosConfigurations."${args.user}" = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = inputs // args;
+      nixosConfigurations."${specialArgs.user}" = nixpkgs.lib.nixosSystem {
+        inherit system specialArgs; 
         modules = [
           ./config/nixos/configuration.nix
           ./config/home/home.nix
