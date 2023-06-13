@@ -12,7 +12,7 @@
       c = "code .";
       tree = "exa --tree --level=5 .";
       nrs =
-        "g a && sudo nixos-rebuild switch --flake '/home/${user}/nix#${user}'";
+        "g a && sudo nixos-rebuild switch --flake '/home/${user}/repos/nix#${user}'";
       nrsu = "nix flake update && nrs && reboot";
       gg = "g a && g c 'boop' && g p";
       r = "cd $(cd ~ && fd -atd '^.git$' --hidden -E '.local/share' --max-depth=3 --exec dirname | rofi -dmenu)";
