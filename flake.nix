@@ -33,6 +33,7 @@
         specialArgs = inputs // args;
         modules = [
           ./config/nixos/configuration.nix
+          ./config/home/home.nix
           hm.nixosModules.home-manager
           stylix.nixosModules.stylix
           hyprland.nixosModules.default

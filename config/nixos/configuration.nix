@@ -1,12 +1,6 @@
-{ pkgs, user, version, hyprland, ... }: {
-  imports = [
-    ./hardware-configuration.nix
-    ./stylix.nix
-    ./packages.nix
-    ./services.nix
-    ../home/home.nix
-    # hyprland.homeManagerModules.default
-  ];
+{ pkgs, user, version, ... }: {
+  imports =
+    [ ./hardware-configuration.nix ./stylix.nix ./packages.nix ./services.nix ];
 
   sound = { enable = true; };
   hardware = {
