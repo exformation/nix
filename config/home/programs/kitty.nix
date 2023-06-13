@@ -12,7 +12,7 @@
       # italic_font = "auto";
       # bold_italic_font = "auto";
       allow_remote_control = true;
-      # startup_session = "startup.conf";
+      startup_session = "kitty.conf";
       confirm_os_window_close = "0";
     };
   };

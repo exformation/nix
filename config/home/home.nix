@@ -4,7 +4,7 @@
     # why do I need to do this???
     sharedModules = [{ stylix.targets.vim.enable = false; }];
     useGlobalPkgs = true;
-    users."${user}" = {config, ...}: {
+    users."${user}" = { config, ... }: {
       imports = [
         # why doesn't this work for stylix? says things are already set
         # stylix.homeManagerModules.stylix
@@ -14,13 +14,12 @@
         enable = true;
         extraConfig = builtins.readFile ../../conf/hyprland.conf;
       };
-      home = {
-        stateVersion = version;
-      };
+      home = { stateVersion = version; };
       xdg.configFile.nvim = {
         source = config.lib.file.mkOutOfStoreSymlink /home/${user}/repos/nvim;
         recursive = true;
       };
+      home.file.".config/kitty/startup.conf".source = ../../conf/kitty.conf;
     };
   };
 }
