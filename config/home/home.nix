@@ -12,7 +12,7 @@
       # stylix.targets.vim.enable = false;
       wayland.windowManager.hyprland = {
         enable = true;
-        extraConfig = builtins.readFile ./hypr.conf;
+        extraConfig = builtins.readFile ../../conf/hyprland.conf;
       };
       home = {
         stateVersion = version;
