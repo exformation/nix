@@ -9,7 +9,7 @@
 
     fonts = let
       # f = (pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; });
-      fs = 12;
+      fs = 10;
     in {
       serif = {
         package = pkgs.dejavu_fonts;

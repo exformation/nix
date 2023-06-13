@@ -25,7 +25,7 @@
     initExtra = ''
       bindkey '^ ' autosuggest-accept
       bindkey -s '^Z' 'fg^M'
-      cd ~/repos
+      # cd ~/repos
     '';
   };
 }
