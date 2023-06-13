@@ -12,6 +12,7 @@
       # italic_font = "auto";
       # bold_italic_font = "auto";
       allow_remote_control = true;
+      # TODO: create this programmatically for all your tabs by looping through the projects and ~/repos 
       startup_session = "startup.conf";
       confirm_os_window_close = "0";
     };
