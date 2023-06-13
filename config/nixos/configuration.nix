@@ -1,7 +1,6 @@
 { pkgs, user, version, ... }: {
   imports =
     [ ./hardware-configuration.nix ./stylix.nix ./packages.nix ./services.nix ];
-
   sound = { enable = true; };
   hardware = {
     pulseaudio.enable = false;
@@ -35,19 +34,19 @@
     defaultUserShell = pkgs.zsh;
     users."${user}" = {
       isNormalUser = true;
-      # TODO: only active during flutter development? 
-      # TODO: only active for pedd user?
+      # TODO: only have adbusers for flutter development
+      # TODO: only have input and uinput for the user that's using an evdev thing 
       extraGroups = [ "networkmanager" "wheel" "adbusers" "input" "uinput" ];
     };
   };
   programs = {
     # adb.enable = true;
-    zsh.enable = true;
     # gnupg.agent = {
     #   enable = true;
     #   pinentryFlavor = "curses";
     #   enableSSHSupport = true;
     # };
+    zsh.enable = true;
     hyprland = {
       enable = true;
       xwayland = {
@@ -69,12 +68,6 @@
     };
     shells = with pkgs; [ zsh ];
   };
-  fonts.fonts = with pkgs; [
-    noto-fonts
-    noto-fonts-cjk
-    noto-fonts-emoji
-    (nerdfonts.override { fonts = [ "FiraCode" ]; })
-  ];
   nix = {
     gc = {
       automatic = true;
@@ -93,5 +86,5 @@
     };
 
   };
-  system.stateVersion = "${version}";
+  system.stateVersion = version;
 }
