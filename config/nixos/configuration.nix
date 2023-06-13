@@ -68,6 +68,13 @@
     };
     shells = with pkgs; [ zsh ];
   };
+  # why do I need this for waybar if I have stylix?????
+  fonts.fonts = with pkgs; [
+    noto-fonts
+    noto-fonts-cjk
+    noto-fonts-emoji
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+  ];
   nix = {
     gc = {
       automatic = true;
