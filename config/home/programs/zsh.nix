@@ -5,6 +5,7 @@
     enableAutosuggestions = true;
     enableCompletion = true;
     enableSyntaxHighlighting = true;
+    sessionVariables = { DIRENV_LOG_FORMAT = ""; };
     shellAliases = {
       g = "git";
       v = "nvim";
@@ -15,7 +16,8 @@
         "g a && sudo nixos-rebuild switch --flake '/home/${user}/repos/nix#${user}'";
       nrsu = "nix flake update && nrs && reboot";
       gg = "g a && g c 'boop' && g p";
-      r = "cd $(cd ~ && fd -atd '^.git$' --hidden -E '.local/share' --max-depth=3 --exec dirname | rofi -dmenu)";
+      r =
+        "cd $(cd ~ && fd -atd '^.git$' --hidden -E '.local/share' --max-depth=3 --exec dirname | rofi -dmenu)";
     };
     oh-my-zsh = {
       enable = true;
