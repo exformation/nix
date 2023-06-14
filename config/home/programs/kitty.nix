@@ -1,22 +1,23 @@
 # TODO: make a bind for easily switching between the windows
 # youu could just override your normal one if you're focused on kitty
 { user, ... }: {
-  home-manager.users."${user}".programs.kitty = {
+  home-manager.users."${user}".programs.kitty = let
+    repos = [ "nix" "nvim" "osu" "pedd" "epsilon" "qmk_firmware" ];
+    process = repo: ''
+      new_tab ${repo}
+      layout horizontal
+      cd ~/repos/${repo}
+      launch direnv exec . zsh
+
+    '';
+    startup = builtins.toFile "startup.conf"
+      (builtins.concatStringsSep "\n" (map process repos));
+  in {
     enable = true;
-    # theme = theme.kitty-theme;
-    keybindings = {
-      # "ctrl+z" = "signal_child SIGTERM"; # this is a shell thing (used zsh for it)
-    };
+    keybindings = { };
     settings = {
-      # font_size = "24.0";
-      # font_family = a.style.mono-font;
-      # bold_font = "auto";
-      # italic_font = "auto";
-      # bold_italic_font = "auto";
       allow_remote_control = true;
-      # TODO: create this programmatically for all your tabs by looping through the projects and ~/repos 
-      # hmmm that way if people don't even have a repos folder it can still make a valid config
-      startup_session = "startup.conf";
+      startup_session = startup;
       confirm_os_window_close = "0";
     };
   };

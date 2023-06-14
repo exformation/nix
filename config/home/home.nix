@@ -19,7 +19,6 @@
         source = config.lib.file.mkOutOfStoreSymlink /home/${user}/repos/nvim;
         recursive = true;
       };
-      home.file.".config/kitty/startup.conf".source = ../../conf/kitty.conf;
     };
   };
 }
