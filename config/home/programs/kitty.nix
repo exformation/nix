@@ -5,20 +5,23 @@
     repos = [ "nix" "nvim" "pedd" "epsilon" "qmk_firmware" "nixpkgs" "osu" ];
     process = repo: ''
       new_tab ${repo}
-      layout horizontal
       cd ~/repos/${repo}
       launch direnv exec . zsh
+      launch direnv exec . nvim
 
     '';
     startup = builtins.toFile "startup.conf"
       (builtins.concatStringsSep "\n" (map process repos));
   in {
     enable = true;
-    keybindings = { };
+    keybindings = {
+      "alt+tab" = "next_window";
+    };
     settings = {
       allow_remote_control = true;
       startup_session = startup;
       confirm_os_window_close = "0";
+      enabled_layouts = "stack";
     };
   };
 }
