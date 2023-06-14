@@ -2,7 +2,7 @@
 # youu could just override your normal one if you're focused on kitty
 { user, ... }: {
   home-manager.users."${user}".programs.kitty = let
-    repos = [ "nix" "nvim" "osu" "pedd" "epsilon" "qmk_firmware" ];
+    repos = [ "nix" "nvim" "pedd" "epsilon" "qmk_firmware" "nixpkgs" "osu" ];
     process = repo: ''
       new_tab ${repo}
       layout horizontal
