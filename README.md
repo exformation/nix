@@ -10,3 +10,6 @@ git clone https://github.com/exformation/nix.git ~/nix \
 - TODO: more binds, better bar, etc. 
 
 ![showcase](images/showcase.png)
+
+
+This config will not work on your machine as-is, but it may be useful as a reference.
