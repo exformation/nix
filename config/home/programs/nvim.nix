@@ -6,6 +6,7 @@
 #   plugins = map (p: ({ name = p; } // inputs."${p}")) nvim-plugin-names;
 # in
 {
+
   home-manager.users."${user}".programs.neovim = {
     enable = true;
     # whether I'm using the flake or not
@@ -13,6 +14,7 @@
     plugins = with pkgs.vimPlugins; [
       nvim-treesitter.withAllGrammars
       nvim-lspconfig
+      null-ls-nvim
       telescope-nvim
       plenary-nvim
       nvim-cmp
@@ -33,12 +35,14 @@
       hop-nvim
       nvim-ts-rainbow2
       flutter-tools-nvim
+      trouble-nvim
 
       # project-nvim
       # telescope-project-nvim
-      
+
       # ChatGPT-nvim
-      copilot-lua copilot-cmp
+      copilot-lua
+      copilot-cmp
       # copilot-vim cmp-copilot
 
       cmp-copilot
