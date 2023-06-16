@@ -17,6 +17,7 @@
         efiSysMountPoint = "/boot/efi";
       };
     };
+    kernelModules = [ "amdgpu" ];
   };
   networking = {
     hostName = "nixos";

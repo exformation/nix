@@ -3,7 +3,7 @@
 { user, ... }: {
   home-manager.users."${user}".programs.kitty = let
     repos =
-      [ "nix" "nvim" "pedd"];# "epsilon" "qmk_firmware" "nixpkgs" "osu" ];
+      [ "nix" "nvim" "pedd" "osu"];# "epsilon" "qmk_firmware" "nixpkgs" "osu" ];
     process = repo: ''
       ${if repo != "nix" then "new_os_window" else ""}
       os_window_class ${repo}
