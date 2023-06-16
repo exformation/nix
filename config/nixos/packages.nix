@@ -46,19 +46,11 @@
     wmctrl
     xclip
     xdg-desktop-portal-hyprland
+    xdg-utils
     xdotool
     xkbset
     xorg.xinit
     zip
     zsh
-    # ((vscode.override { isInsiders = true; }).overrideAttrs (oldAttrs: rec {
-    #   src = (builtins.fetchTarball {
-    #     url =
-    #       "https://code.visualstudio.com/sha/download?build=insider&os=linux-x64";
-    #     sha256 =
-    #       "1nvmnf4w2894v21zcmh1xzcxzzilc10qsqhz2i5hqvrn2vcw0ivv";
-    #   });
-    #   version = "latest";
-    # }))
   ];
 }
