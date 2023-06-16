@@ -9,6 +9,7 @@
     shellAliases = {
       g = "git";
       v = "nvim";
+      vio = "nvim --cmd 'set rtp+=/home/${user}/repos/nvim-iobuffers'";
       l = "exa";
       c = "code .";
       tree = "exa --tree --level=5 .";
