@@ -5,7 +5,11 @@
   hardware = {
     pulseaudio.enable = false;
     bluetooth.enable = true;
-    opengl.enable = true;
+    opengl = {
+      enable = true;
+      driSupport = true;
+      driSupport32Bit = true;
+    };
     uinput.enable = true;
   };
   boot = {
