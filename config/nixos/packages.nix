@@ -34,6 +34,9 @@
     # ripgrep
     # rofi
     tldr
+    osu-lazer
+    # amdgpu-pro
+    # linuxKernel.packages.linux_zen.amdgpu-pro
     unzip
     vlc
     vscode
