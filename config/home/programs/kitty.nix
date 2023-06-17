@@ -2,8 +2,17 @@
 # youu could just override your normal one if you're focused on kitty
 { user, ... }: {
   home-manager.users."${user}".programs.kitty = let
-    repos =
-      [ "nix" "nvim" "pedd" "osu"];# "epsilon" "qmk_firmware" "nixpkgs" "osu" ];
+    repos = [
+      "nix"
+      "nvim"
+      "pedd"
+      "osu"
+      "nvim-iobuffers"
+      # "nvim-quicktree"
+      # "epsilon"
+      # "qmk_firmware"
+      # "nixpkgs"
+    ];
     process = repo: ''
       ${if repo != "nix" then "new_os_window" else ""}
       os_window_class ${repo}

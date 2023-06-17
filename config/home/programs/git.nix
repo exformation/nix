@@ -5,6 +5,7 @@
       userName = user;
       userEmail = email;
       extraConfig = { init.defaultBranch = "main"; };
+      ignores = [ "shell.nix" "flake.nix" ".envrc" ".direnv/" ];
       aliases = {
         c = "commit -am";
         s = "status";
