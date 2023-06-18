@@ -28,7 +28,17 @@
     initExtra = ''
       bindkey '^ ' autosuggest-accept
       bindkey -s '^Z' 'fg^M'
+      setopt HIST_IGNORE_ALL_DUPS
+      setopt HIST_FIND_NO_DUPS
+      setopt HIST_SAVE_NO_DUPS
       # cd ~/repos
     '';
+    # TODO: how to have history contained in a develop/direnv shell? it's annoying seeing 'nrs' in history of other projects, for example
+    history = {
+      ignoreDups = true;
+      share = false;
+      extended = false;
+      expireDuplicatesFirst = true;
+    };
   };
 }
