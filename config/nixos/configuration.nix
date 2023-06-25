@@ -28,6 +28,11 @@
     networkmanager.enable = true;
     useDHCP = false;
   };
+
+  # virtualization
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "${user}" ];
+
   time = { timeZone = "America/Chicago"; };
   i18n = { defaultLocale = "en_US.utf8"; };
   security = {
