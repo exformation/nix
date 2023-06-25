@@ -14,6 +14,7 @@
     # pcscd.enable = true;
     blueman.enable = true;
     printing.enable = true;
+    # disabled for now but leaving for an exmaple 
     xserver = {
       enable = false;
       layout = "us";

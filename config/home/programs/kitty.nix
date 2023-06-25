@@ -8,6 +8,7 @@
       "pedd"
       "osu"
       "nvim-iobuffers"
+      "tutoring"
       # "nvim-quicktree"
       # "epsilon"
       # "qmk_firmware"
