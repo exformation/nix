@@ -1,5 +1,3 @@
-# TODO: make a bind for easily switching between the windows
-# youu could just override your normal one if you're focused on kitty
 { user, ... }: {
   home-manager.users."${user}".programs.kitty = let
     repos = [
