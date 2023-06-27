@@ -9,6 +9,7 @@
       "osu"
       "nvim-iobuffers"
       "tutoring"
+      "journal"
       # "nvim-quicktree"
       # "epsilon"
       # "qmk_firmware"
