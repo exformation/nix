@@ -53,7 +53,7 @@
     after = [ "network.target" ];
     wantedBy = [ "multi-user.target" ];
     serviceConfig = {
-      User = "${user}";
+      User = user;
       WorkingDirectory = "/home/${user}/repos/discord-bot";
       ExecStart = lib.getExe discord-bot.packages.${pkgs.system}.default;
     };
