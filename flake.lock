@@ -28,11 +28,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1688835589,
-        "narHash": "sha256-GUCm9WL5SJ2sdoBZnQqDxT1U/6SpSUjciWk33hEoHxE=",
+        "lastModified": 1688838457,
+        "narHash": "sha256-qj1/f3nQKRWwZhc6CRNqdM3V+Dwr472VwvsijpfIK60=",
         "owner": "exformation",
         "repo": "discord-bot",
-        "rev": "2743ca1d1872067dff0a70093bec78c1ed8cb4a3",
+        "rev": "ef688b451f2639e3a9c3c397333d32610a203b09",
         "type": "github"
       },
       "original": {
