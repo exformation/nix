@@ -1,4 +1,4 @@
-{ discord-bot, pkgs, user, lib, hyprland, ... }: {
+{ pkgs, user, lib, hyprland, discord-bot, ... }: {
   services = {
     greetd = {
       enable = true;
@@ -55,7 +55,7 @@
     serviceConfig = {
       User = "${user}";
       WorkingDirectory = "/home/${user}/repos/discord-bot";
-      ExecStart = lib.getExe discord-bot.packages.${pkgs.system}.discord-bot;
+      ExecStart = lib.getExe discord-bot.packages.${pkgs.system}.default;
     };
   };
 
