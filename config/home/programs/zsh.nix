@@ -4,7 +4,7 @@
     autocd = false;
     enableAutosuggestions = true;
     enableCompletion = true;
-    enableSyntaxHighlighting = true;
+    syntaxHighlighting = { enable = true; };
     sessionVariables = { DIRENV_LOG_FORMAT = ""; };
     shellAliases = {
       g = "git";

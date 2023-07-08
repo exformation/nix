@@ -8,6 +8,7 @@
       "nvim-iobuffers"
       "tutoring"
       "journal"
+      "discord-bot"
       # "nvim-quicktree"
       # "epsilon"
       # "qmk_firmware"
