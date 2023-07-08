@@ -17,6 +17,10 @@
       url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    discord-bot = {
+      url = "github:exformation/discord-bot";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs = { self, nixpkgs, hm, stylix, hyprland, ... }@inputs:
     let

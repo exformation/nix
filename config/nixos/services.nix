@@ -1,4 +1,4 @@
-{ pkgs, user, lib, hyprland, ... }: {
+{ discord-bot, pkgs, user, lib, hyprland, ... }: {
   services = {
     greetd = {
       enable = true;
@@ -45,6 +45,17 @@
       alsa.enable = true;
       alsa.support32Bit = true;
       pulse.enable = true;
+    };
+  };
+
+  systemd.services.discord-bot = {
+    description = "Discord Bot";
+    after = [ "network.target" ];
+    wantedBy = [ "multi-user.target" ];
+    serviceConfig = {
+      User = "${user}";
+      WorkingDirectory = "/home/${user}/repos/discord-bot";
+      ExecStart = lib.getExe discord-bot.packages.${pkgs.system}.discord-bot;
     };
   };
 
