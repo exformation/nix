@@ -38,6 +38,7 @@
     jq.enable = true;
     lf.enable = true;
     waybar.enable = true;
+    # spotify.enable = true;
     # mako.enable = true;
     # fd.enable = true;
     # neofetch.enable = true;
