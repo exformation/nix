@@ -9,9 +9,9 @@
       "tutoring"
       "journal"
       "discord-bot"
+      "qmk_firmware"
       # "nvim-quicktree"
       # "epsilon"
-      # "qmk_firmware"
       # "nixpkgs"
     ];
     process = repo: ''
