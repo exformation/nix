@@ -28,7 +28,6 @@
           tooltip-format-ethernet = "{ifname} ";
           tooltip-format-disconnected = "Disconnected";
           max-length = 50;
-          padding = 10;
         };
         "battery" = {
           interval = 60;
@@ -77,9 +76,13 @@
       };
     };
     style = ''
-      * {
-        border: 3px solid white;
+      #temperature, #pulseaudio, #backlight, #battery, #clock, #network, #bluetooth {
+        border-right: 1px solid white;
+        border-left: 1px solid white;
         padding: 0 10;
+      }
+      #battery.critical {
+        color: #e06c75;
       }
     '';
   };

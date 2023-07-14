@@ -19,8 +19,8 @@
       os_window_class ${repo}
       new_tab ${repo}
       cd ~/repos/${repo}
-      launch direnv exec . zsh
-      launch direnv exec . nvim
+      launch --title ${repo} direnv exec . zsh
+      launch --title ${repo} direnv exec . nvim
 
     '';
     startup = builtins.toFile "startup.conf"
