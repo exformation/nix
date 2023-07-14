@@ -10,9 +10,9 @@
         modules-left = [ "hyprland/window" ];
         modules-center = [ "tray" ];
         modules-right = [
+          "temperature"
           "pulseaudio"
           "backlight"
-          "temperature"
           "battery"
           "clock"
           "network"
@@ -31,7 +31,6 @@
           padding = 10;
         };
         "battery" = {
-          bat = "BAT2";
           interval = 60;
           states = {
             "warning" = 30;
@@ -41,7 +40,32 @@
           format-icons = [ "" "" "" "" "" ];
           max-length = 25;
         };
-        "clock" = { format-alt = "{:%a, %d. %b  %H:%M}"; };
+        "backlight" = {
+          format = "{percent}% {icon}";
+          format-icons = [ "" "" ];
+        };
+        "clock" = {
+          interval = 60;
+          format = "{:%H:%M}";
+          max-length = 25;
+        };
+        "pulseaudio" = {
+          format = "{volume}% {icon}";
+          format-bluetooth = "{volume}% {icon}";
+          format-muted = "";
+          format-icons = {
+            "headphone" = "";
+            "hands-free" = "";
+            "headset" = "";
+            "phone" = "";
+            "portable" = "";
+            "car" = "";
+            "default" = [ "" "" ];
+          };
+          scroll-step = 1;
+          on-click = "pavucontrol";
+          ignored-sinks = [ "Easy Effects Sink" ];
+        };
         "custom/hello-from-waybar" = {
           format = "hello {}";
           max-length = 40;
@@ -54,8 +78,7 @@
     };
     style = ''
       * {
-        border: none;
-        border-radius: 0;
+        border: 3px solid white;
         padding: 0 10;
       }
     '';
