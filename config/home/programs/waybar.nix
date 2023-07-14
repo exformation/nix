@@ -30,6 +30,17 @@
           max-length = 50;
           padding = 10;
         };
+        "battery" = {
+          bat = "BAT2";
+          interval = 60;
+          states = {
+            "warning" = 30;
+            "critical" = 15;
+          };
+          format = "{capacity}% {icon}";
+          format-icons = [ "" "" "" "" "" ];
+          max-length = 25;
+        };
         "clock" = { format-alt = "{:%a, %d. %b  %H:%M}"; };
         "custom/hello-from-waybar" = {
           format = "hello {}";
@@ -45,7 +56,7 @@
       * {
         border: none;
         border-radius: 0;
-        padding: 10;
+        padding: 0 10;
       }
     '';
   };
