@@ -1,6 +1,10 @@
 { pkgs, ... }: {
   # TODO: how many of these can be moved to home.nix? and why?
   environment.systemPackages = with pkgs; [
+    (lutris.override {
+      # extraLibraries = [ ];
+      # extraPkgs = [ ];
+    })
     spotify
     clipman
     wev
