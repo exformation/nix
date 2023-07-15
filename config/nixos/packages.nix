@@ -5,6 +5,7 @@
       # extraLibraries = [ ];
       # extraPkgs = [ ];
     })
+    gamemode
     spotify
     clipman
     wev
