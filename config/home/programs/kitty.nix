@@ -4,6 +4,7 @@
       "nix"
       "nvim"
       "pedd"
+      "pedd-config"
       "osu"
       "nvim-iobuffers"
       "tutoring"
