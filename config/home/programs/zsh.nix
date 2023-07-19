@@ -13,12 +13,15 @@
       l = "exa";
       c = "code .";
       tree = "exa --tree --level=5 .";
+      nr = "nix run";
       nrs =
         "g a && sudo nixos-rebuild switch --flake '/home/${user}/repos/nix#${user}'";
-      nrsu = "nix flake update && nrs && reboot";
+      nfu = "nix flake update";
+      nfurs = "nfu && nrs && reboot";
       gg = "g a && g c 'boop' && g p";
       r =
         "cd $(cd ~ && fd -atd '^.git$' --hidden -E '.local/share' --max-depth=3 --exec dirname | rofi -dmenu)";
+      pi="kitty +kitten ssh pi@192.168.1.90";
     };
     oh-my-zsh = {
       enable = true;
