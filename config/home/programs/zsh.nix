@@ -21,12 +21,20 @@
       gg = "g a && g c 'boop' && g p";
       r =
         "cd $(cd ~ && fd -atd '^.git$' --hidden -E '.local/share' --max-depth=3 --exec dirname | rofi -dmenu)";
-      pi="kitty +kitten ssh pi@192.168.1.90";
+      pi = "kitty +kitten ssh pi@192.168.1.90";
     };
-    oh-my-zsh = {
+    zplug = {
       enable = true;
-      theme = "robbyrussell";
-      plugins = [ "command-not-found" "git" "history" ];
+      plugins = [
+        { name = "zsh-users/zsh-autosuggestions"; } # Simple plugin installation
+        # { name = "starship/starship"; }
+        { name = "MichaelAquilina/zsh-auto-notify"; }
+        { name = "marlonrichert/zsh-autocomplete"; }
+        {
+          name = "romkatv/powerlevel10k";
+          tags = [ "as:theme" "depth:1" ];
+        } # Installations with additional options. For the list of options, please refer to Zplug README.
+      ];
     };
     initExtra = ''
       bindkey '^ ' autosuggest-accept
@@ -34,7 +42,7 @@
       setopt HIST_IGNORE_ALL_DUPS
       setopt HIST_FIND_NO_DUPS
       setopt HIST_SAVE_NO_DUPS
-      # cd ~/repos
+      source ~/.p10k.zsh
     '';
     # TODO: how to have history contained in a develop/direnv shell? it's annoying seeing 'nrs' in history of other projects, for example
     history = {
