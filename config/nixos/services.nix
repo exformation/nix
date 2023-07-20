@@ -48,16 +48,16 @@
     };
   };
 
-  systemd.services.discord-bot = {
-    description = "Discord Bot";
-    after = [ "network.target" ];
-    wantedBy = [ "multi-user.target" ];
-    serviceConfig = {
-      User = user;
-      WorkingDirectory = "/home/${user}/repos/discord-bot";
-      ExecStart = lib.getExe discord-bot.packages.${pkgs.system}.default;
-    };
-  };
+  # systemd.services.discord-bot = {
+  #   description = "Discord Bot";
+  #   after = [ "network.target" ];
+  #   wantedBy = [ "multi-user.target" ];
+  #   serviceConfig = {
+  #     User = user;
+  #     WorkingDirectory = "/home/${user}/repos/discord-bot";
+  #     ExecStart = lib.getExe discord-bot.packages.${pkgs.system}.default;
+  #   };
+  # };
 
   # systemd.services.pedd = {
   #   description = "Programmable Event Device Layer";
