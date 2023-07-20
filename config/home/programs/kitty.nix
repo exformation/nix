@@ -11,6 +11,7 @@
       "journal"
       "discord-bot"
       "qmk_firmware"
+      "layout-analysis"
       # "nvim-quicktree"
       # "epsilon"
       # "nixpkgs"
