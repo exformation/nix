@@ -18,26 +18,6 @@
         "type": "github"
       }
     },
-    "discord-bot": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1688840738,
-        "narHash": "sha256-D6g0a0xLZx6tr7W4e19PCw4sVvc/UOM+cEEylip1j/w=",
-        "owner": "exformation",
-        "repo": "discord-bot",
-        "rev": "7a9e9c235c39dd6a857cc82a86b5c007b21f097f",
-        "type": "github"
-      },
-      "original": {
-        "owner": "exformation",
-        "repo": "discord-bot",
-        "type": "github"
-      }
-    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -173,7 +153,6 @@
     },
     "root": {
       "inputs": {
-        "discord-bot": "discord-bot",
         "hm": "hm",
         "hyprland": "hyprland",
         "nixpkgs": "nixpkgs",

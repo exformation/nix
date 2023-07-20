@@ -26,7 +26,7 @@
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
   };
-  outputs = { self, nixpkgs, hm, stylix, hyprland, discord-bot, ... }@inputs:
+  outputs = { self, nixpkgs, hm, stylix, hyprland, ... }@inputs:
     let
       pkgs = nixpkgs.legacyPackages.x86_64-linux.pkgs;
       system = "x86_64-linux";
