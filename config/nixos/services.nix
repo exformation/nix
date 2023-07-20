@@ -60,14 +60,13 @@
   # };
 
   # systemd.services.pedd = {
-  #   description = "Programmable Event Device Layer";
+  #   description = "Programmable Event Device Daemon";
   #   wantedBy = [ "default.target" ];
   #   after = [ "graphical-session.target" ];
-  #   restartIfChanged = false;
   #   serviceConfig = {
-  #     User = "${user}";
-  #     WorkingDirectory = "/home/${user}/.config/pedd";
-  #     ExecStart = "${pkgs.nix}/bin/nix run";
+  #     User = user;
+  #     WorkingDirectory = "/home/${user}/repos/pedd-config";
+  #     ExecStart = lib.getExe pedd.packages.${pkgs.system}.default;
   #   };
   # };
 }
