@@ -5,6 +5,7 @@
       # extraLibraries = [ ];
       # extraPkgs = [ ];
     })
+    dolphin
     gamemode
     spotify
     clipman
