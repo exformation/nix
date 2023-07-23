@@ -6,6 +6,7 @@
       # extraPkgs = [ ];
     })
     dolphin
+    usbutils
     gamemode
     spotify
     clipman

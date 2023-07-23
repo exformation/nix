@@ -27,13 +27,18 @@
       enable = true;
       plugins = [
         { name = "zsh-users/zsh-autosuggestions"; } # Simple plugin installation
-        # { name = "starship/starship"; }
-        { name = "MichaelAquilina/zsh-auto-notify"; }
-        { name = "marlonrichert/zsh-autocomplete"; }
         {
-          name = "romkatv/powerlevel10k";
+          name = "starship/starship";
           tags = [ "as:theme" "depth:1" ];
-        } # Installations with additional options. For the list of options, please refer to Zplug README.
+        }
+        { name = "MichaelAquilina/zsh-auto-notify"; }
+        {
+          name = "marlonrichert/zsh-autocomplete";
+        }
+        # {
+        #   name = "romkatv/powerlevel10k";
+        #   tags = [ "as:theme" "depth:1" ];
+        # } # Installations with additional options. For the list of options, please refer to Zplug README.
       ];
     };
     initExtra = ''
@@ -42,7 +47,7 @@
       setopt HIST_IGNORE_ALL_DUPS
       setopt HIST_FIND_NO_DUPS
       setopt HIST_SAVE_NO_DUPS
-      source ~/.p10k.zsh
+      #source ~/.p10k.zsh
     '';
     # TODO: how to have history contained in a develop/direnv shell? it's annoying seeing 'nrs' in history of other projects, for example
     history = {
