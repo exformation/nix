@@ -7,6 +7,7 @@
     })
     dolphin
     usbutils
+    lsof
     gamemode
     spotify
     clipman
