@@ -23,23 +23,28 @@
         "cd $(cd ~ && fd -atd '^.git$' --hidden -E '.local/share' --max-depth=3 --exec dirname | rofi -dmenu)";
       pi = "kitty +kitten ssh pi@192.168.1.90";
     };
-    zplug = {
+    # zplug = {
+    #   enable = true;
+    #   plugins = [
+    #     { name = "zsh-users/zsh-autosuggestions"; } # Simple plugin installation
+    #     {
+    #       name = "starship/starship";
+    #       tags = [ "as:theme" "depth:1" ];
+    #     }
+    #     { name = "MichaelAquilina/zsh-auto-notify"; }
+    #     {
+    #       name = "marlonrichert/zsh-autocomplete";
+    #     }
+    #     # {
+    #     #   name = "romkatv/powerlevel10k";
+    #     #   tags = [ "as:theme" "depth:1" ];
+    #     # } # Installations with additional options. For the list of options, please refer to Zplug README.
+    #   ];
+    # };
+    oh-my-zsh = {
       enable = true;
-      plugins = [
-        { name = "zsh-users/zsh-autosuggestions"; } # Simple plugin installation
-        {
-          name = "starship/starship";
-          tags = [ "as:theme" "depth:1" ];
-        }
-        { name = "MichaelAquilina/zsh-auto-notify"; }
-        {
-          name = "marlonrichert/zsh-autocomplete";
-        }
-        # {
-        #   name = "romkatv/powerlevel10k";
-        #   tags = [ "as:theme" "depth:1" ];
-        # } # Installations with additional options. For the list of options, please refer to Zplug README.
-      ];
+      theme = "robbyrussell";
+      plugins = [ "command-not-found" "git" "history" ];
     };
     initExtra = ''
       bindkey '^ ' autosuggest-accept
