@@ -6,6 +6,7 @@
       # extraPkgs = [ ];
     })
     dolphin
+    gotop
     usbutils
     lsof
     gamemode
