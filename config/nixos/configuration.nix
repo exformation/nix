@@ -22,7 +22,7 @@
       };
     };
     kernelModules = [ "amdgpu" ];
-    kernel = { systemctl = { "fs.inotify.max_user_instances" = 512; }; };
+    kernel = { sysctl = { "fs.inotify.max_user_instances" = 512; }; };
   };
   networking = {
     hostName = "nixos";
