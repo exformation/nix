@@ -23,7 +23,7 @@
       r =
         "cd $(cd ~ && fd -atd '^.git$' --hidden -E '.local/share' --max-depth=3 --exec dirname | rofi -dmenu)";
       pi = "kitty +kitten ssh pi@192.168.1.90";
-      zaphod = "gh run watch && rm *.uf2 && gh run download -n firmware && sudo mount /dev/$(lsblk -n -l --output NAME | rofi -dmenu) /tmp/kb && sudo cp zaphod.uf2 /tmp/kb && sleep 5 && sudo rm -rf /tmp/kb";
+      zaphod = "gh run watch && rm *.uf2 && gh run download -n firmware && sudo rm -rf /tmp/kb && mkdir /tmp/kb && sudo mount /dev/$(lsblk -n -l --output NAME | rofi -dmenu) /tmp/kb && sudo cp zaphod.uf2 /tmp/kb";
     };
     # zplug = {
     #   enable = true;
