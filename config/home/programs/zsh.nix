@@ -13,6 +13,7 @@
       l = "exa";
       c = "code .";
       tree = "exa --tree --level=5 .";
+      dr = "direnv reload";
       nr = "nix run";
       nrs =
         "g a && sudo nixos-rebuild switch --flake '/home/${user}/repos/nix#${user}'";
@@ -22,6 +23,7 @@
       r =
         "cd $(cd ~ && fd -atd '^.git$' --hidden -E '.local/share' --max-depth=3 --exec dirname | rofi -dmenu)";
       pi = "kitty +kitten ssh pi@192.168.1.90";
+      zaphod = "gg && gh watch && gh run download -n firmware && mkdir /tmp/kb && mount $(lsblk -n -l --output NAME | rofi -dmenu) /tmp/kb && cp zaphod.uf2 /tmp/kb";
     };
     # zplug = {
     #   enable = true;
