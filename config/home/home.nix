@@ -12,7 +12,7 @@
       ];
       wayland.windowManager.hyprland = {
         enable = true;
-        # package = hyprland.packages.${pkgs.system}.default;
+        package = hyprland.packages.${pkgs.system}.default;
         extraConfig = builtins.readFile ../../conf/hyprland.conf;
       };
       home = { stateVersion = version; };
