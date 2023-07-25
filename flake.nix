@@ -19,11 +19,11 @@
       # url = "github:hyprwm/Hyprland?rev=2e323a56716e7ac8f391579857a06d424bbed59b"; #good
       # url = "github:hyprwm/Hyprland?rev=833d73df09ee8925b7b4f5592611ad320b25e363"; #bad
       # url = "github:hyprwm/Hyprland?rev=7091d4e5979720ddb30f540b2d7da48080bf2487"; #good
-      url = "github:hyprwm/Hyprland?rev=3a1496b4ebc6f66eb85e509d2e1e90ee989b47bc"; #good
+      # url = "github:hyprwm/Hyprland?rev=3a1496b4ebc6f66eb85e509d2e1e90ee989b47bc"; #good
       # url = "github:hyprwm/Hyprland?rev=a3e1e5e8baaa805a84aa6274904cdc48aafe2374"; #good
       # url = "github:hyprwm/Hyprland?rev=ff598b0827ca179c57ff2e97806cd65b69374699"; #good
       # url = "github:hyprwm/Hyprland?rev=23eda1411b2dc990a159b64ad73ac182d12fb4f9"; #bad
-      # url = "github:hyprwm/Hyprland";
+      url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # discord-bot = {
