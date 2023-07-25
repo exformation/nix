@@ -59,7 +59,7 @@
     # };
     zsh.enable = true;
     hyprland = {
-      # enable = true;
+      enable = true;
       xwayland = {
         enable = true;
         hidpi = true;
