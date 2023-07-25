@@ -2,6 +2,8 @@
   imports =
     [ ./hardware-configuration.nix ./stylix.nix ./packages.nix ./services.nix ];
   sound = { enable = true; };
+  # what?
+  hardware.keyboard.qmk.enable = true;
   hardware = {
     pulseaudio.enable = false;
     bluetooth.enable = true;
