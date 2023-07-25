@@ -14,7 +14,8 @@
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
     hyprland = {
-      url = "github:hyprwm/Hyprland?rev=f6b340cc19d2b1fdca0ae2e72a18c87c63893507";
+      # url = "github:hyprwm/Hyprland?rev=f6b340cc19d2b1fdca0ae2e72a18c87c63893507";
+      url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # discord-bot = {
