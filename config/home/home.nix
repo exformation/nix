@@ -1,4 +1,4 @@
-{ user, version, stylix, hyprland, ... }: {
+{ pkgs, user, version, stylix, hyprland, ... }: {
   imports = [ ./packages.nix ./programs/programs.nix ];
   home-manager = {
     # why do I need to do this???
@@ -8,10 +8,11 @@
       imports = [
         # why doesn't this work for stylix? says things are already set
         # stylix.homeManagerModules.stylix
-        hyprland.homeManagerModules.default
+        # hyprland.homeManagerModules.default
       ];
       wayland.windowManager.hyprland = {
         enable = true;
+        # package = hyprland.packages.${pkgs.system}.default;
         extraConfig = builtins.readFile ../../conf/hyprland.conf;
       };
       home = { stateVersion = version; };
