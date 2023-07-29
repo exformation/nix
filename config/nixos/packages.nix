@@ -6,6 +6,7 @@
       # extraPkgs = [ ];
     })
     dolphin
+    mumble
     gotop
     usbutils
     lsof
