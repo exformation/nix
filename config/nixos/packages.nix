@@ -6,6 +6,7 @@
       # extraPkgs = [ ];
     })
     dolphin
+    ntfs3g
     mumble
     gotop
     usbutils

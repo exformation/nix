@@ -9,7 +9,7 @@
       "lacuna"
       "tutoring"
       "discord-bot"
-      # "osu"
+      "osu"
       # "nvim-iobuffers"
       # "qmk_firmware"
       # "layout-analysis"
