@@ -5,6 +5,7 @@
       # extraLibraries = [ ];
       # extraPkgs = [ ];
     })
+    protontricks
     dolphin
     ntfs3g
     kbd
