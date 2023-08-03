@@ -7,6 +7,7 @@
     })
     dolphin
     ntfs3g
+    kbd
     mumble
     gotop
     usbutils
@@ -38,6 +39,7 @@
     libnotify
     maim
     mpv
+    mpd
     neofetch
     nodejs_20
     obs-studio
