@@ -2,6 +2,7 @@
   imports =
     [ ./hardware-configuration.nix ./stylix.nix ./packages.nix ./services.nix ];
   sound = { enable = true; };
+  #boot.loader.efi.efiSysMountPoint to "/boot"
   # what?
   hardware.keyboard.qmk.enable = true;
   hardware = {
@@ -20,7 +21,7 @@
       systemd-boot.enable = true;
       efi = {
         canTouchEfiVariables = true;
-        efiSysMountPoint = "/boot/efi";
+        efiSysMountPoint = "/boot";
       };
     };
     kernelModules = [ "amdgpu" ];
@@ -64,7 +65,7 @@
       enable = true;
       xwayland = {
         enable = true;
-        hidpi = true;
+        #hidpi = true;
       };
       nvidiaPatches = false;
     };
