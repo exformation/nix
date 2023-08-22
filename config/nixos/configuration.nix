@@ -67,7 +67,7 @@
         enable = true;
         #hidpi = true;
       };
-      nvidiaPatches = false;
+      # nvidiaPatches = false;
     };
     steam = {
       enable = true;
