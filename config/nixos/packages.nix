@@ -5,6 +5,7 @@
       # extraLibraries = [ ];
       # extraPkgs = [ ];
     })
+    mangohud
     protontricks
     dolphin
     ntfs3g
