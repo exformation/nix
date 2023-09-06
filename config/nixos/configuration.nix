@@ -13,7 +13,7 @@
       driSupport = true;
       driSupport32Bit = true;
     };
-    uinput.enable = true;
+    # uinput.enable = true;
   };
   boot = {
     loader = {
@@ -50,7 +50,7 @@
       isNormalUser = true;
       # TODO: only have adbusers for flutter development
       # TODO: only have input and uinput for the user that's using an evdev thing 
-      extraGroups = [ "networkmanager" "wheel" "adbusers" "input" "uinput" ];
+      extraGroups = [ "networkmanager" "wheel" "adbusers"];# "input" "uinput" ];
     };
   };
   programs = {
