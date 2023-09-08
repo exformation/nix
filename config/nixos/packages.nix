@@ -5,6 +5,7 @@
       # extraLibraries = [ ];
       # extraPkgs = [ ];
     })
+    appimage-run
     mangohud
     protontricks
     dolphin
