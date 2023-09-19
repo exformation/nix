@@ -5,6 +5,9 @@
       # extraLibraries = [ ];
       # extraPkgs = [ ];
     })
+    anki
+    lmms
+    pavucontrol
     appimage-run
     mangohud
     protontricks
