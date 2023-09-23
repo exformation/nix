@@ -6,6 +6,7 @@
       # extraPkgs = [ ];
     })
     anki
+    libreoffice-fresh
     lmms
     pavucontrol
     appimage-run
