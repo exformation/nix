@@ -17,6 +17,7 @@
       # "epsilon"
       # "nixpkgs"
     ];
+    # TODO: replace zsh and nvim with SHELL and EDITOR
     process = repo: ''
       ${if repo != "nix" then "new_os_window" else ""}
       os_window_class ${repo}

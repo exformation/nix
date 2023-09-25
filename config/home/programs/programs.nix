@@ -37,6 +37,7 @@
     google-chrome.enable = true;
     jq.enable = true;
     lf.enable = true;
+    helix.enable = true;
     # spotify.enable = true;
     # mako.enable = true;
     # fd.enable = true;

@@ -7,6 +7,7 @@
     })
     anki
     libreoffice-fresh
+    # helix
     lmms
     pavucontrol
     appimage-run
