@@ -10,9 +10,9 @@
       g = "git";
       v = "nvim";
       vio = "nvim --cmd 'set rtp+=/home/${user}/repos/nvim-iobuffers'";
-      l = "exa";
+      l = "eza";
       c = "code .";
-      tree = "exa --tree --level=5 .";
+      tree = "eza --tree --level=5 .";
       dr = "direnv reload";
       nr = "nix run";
       nrs =

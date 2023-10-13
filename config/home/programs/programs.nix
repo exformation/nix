@@ -15,7 +15,7 @@
       enable = true;
       # config.theme = theme.bat-theme;
     };
-    exa = {
+    eza = {
       enable = true;
       git = true;
       icons = true;
