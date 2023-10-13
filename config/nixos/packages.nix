@@ -5,18 +5,18 @@
       # extraLibraries = [ ];
       # extraPkgs = [ ];
     })
-    anki
-    libreoffice-fresh
+    # anki
+    # libreoffice-fresh
     # helix
-    lmms
+    # lmms
     pavucontrol
-    appimage-run
+    # appimage-run
     mangohud
     protontricks
     dolphin
     ntfs3g
     kbd
-    mumble
+    # mumble
     gotop
     usbutils
     lsof
