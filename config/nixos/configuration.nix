@@ -85,7 +85,7 @@
       TERMINAL = "kitty";
       SHELL = "zsh";
       PAGER = "less";
-      BROWSER = "firefox";
+      BROWSER = "google-chrome-stable";
     };
     shells = with pkgs; [ zsh ];
   };
