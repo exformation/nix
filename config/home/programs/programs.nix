@@ -33,7 +33,7 @@
     };
     wofi.enable = true;
     ripgrep.enable = true;
-    firefox.enable = true;
+    # firefox.enable = true;
     google-chrome.enable = true;
     jq.enable = true;
     lf.enable = true;

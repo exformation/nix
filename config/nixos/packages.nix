@@ -5,6 +5,7 @@
       # extraLibraries = [ ];
       # extraPkgs = [ ];
     })
+    minecraft
     # anki
     # libreoffice-fresh
     # helix
