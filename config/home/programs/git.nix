@@ -5,7 +5,7 @@
       userName = user;
       userEmail = email;
       extraConfig = { init.defaultBranch = "main"; };
-      ignores = [ ".envrc" ".direnv/" ".vscode/" ];
+      ignores = [ ".env" ".envrc" ".direnv/" ".vscode/" ];
       aliases = {
         c = "commit -am";
         s = "status";
