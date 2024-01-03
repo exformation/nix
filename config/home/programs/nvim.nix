@@ -33,7 +33,7 @@
       nvim-surround
       friendly-snippets
       hop-nvim
-      nvim-ts-rainbow2
+      rainbow-delimiters-nvim
       flutter-tools-nvim
       trouble-nvim
 

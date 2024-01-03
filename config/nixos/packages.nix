@@ -6,6 +6,7 @@
       # extraPkgs = [ ];
     })
     minecraft
+    newsflash
     # anki
     # libreoffice-fresh
     # helix
