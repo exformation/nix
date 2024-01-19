@@ -102,8 +102,8 @@
       dates = "weekly";
       options = "--delete-older-than 7d";
     };
-    package = pkgs.nixVersions.;
-    # package = pkgs.nixVersions.unstable;
+    package = pkgs.nixVersions.unstable;
+    # package = pkgs.nixVersions.nix_2_19;
     extraOptions = ''
       experimental-features = nix-command flakes
     '';

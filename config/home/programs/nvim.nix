@@ -1,4 +1,4 @@
-{ user, pkgs, ... }:
+{ user, pkgs, neovim, ... }:
 # with builtins;
 # let
 #   # i'm a genius 
@@ -10,7 +10,7 @@
   home-manager.users."${user}".programs.neovim = {
     enable = true;
     # whether I'm using the flake or not
-    # package = neovim.packages.${pkgs.system}.default;
+    package = neovim.packages.${pkgs.system}.default;
     plugins = with pkgs.vimPlugins; [
       nvim-treesitter.withAllGrammars
       nvim-lspconfig
