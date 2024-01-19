@@ -16,10 +16,10 @@
         extraConfig = builtins.readFile ../../conf/hyprland.conf;
       };
       home = { stateVersion = version; };
-      xdg.configFile.nvim = {
-        source = config.lib.file.mkOutOfStoreSymlink /home/${user}/repos/nvim;
-        recursive = true;
-      };
+      # xdg.configFile.nvim = {
+      #   source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/repos/nvim";
+      #   recursive = true;
+      # };
     };
   };
 }

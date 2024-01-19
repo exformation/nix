@@ -13,6 +13,7 @@
       driSupport = true;
       driSupport32Bit = true;
     };
+    enableAllFirmware = true;
     # uinput.enable = true;
   };
   boot = {
