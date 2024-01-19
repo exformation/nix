@@ -17,8 +17,8 @@
       };
       home = { stateVersion = version; };
       # xdg.configFile.nvim = {
-      #   source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/repos/nvim";
-      #   recursive = true;
+        # source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/repos/nvim";
+        # recursive = true;
       # };
     };
   };

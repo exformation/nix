@@ -10,10 +10,10 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    neovim = {
-      url = "github:neovim/neovim?dir=contrib";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # neovim = {
+      # url = "github:neovim/neovim?dir=contrib";
+      # inputs.nixpkgs.follows = "nixpkgs";
+    # };
     hyprland = {
       url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -27,7 +27,7 @@
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
   };
-  outputs = { self, nixpkgs, hm, stylix, hyprland, neovim, ... }@inputs:
+  outputs = { self, nixpkgs, hm, stylix, hyprland, ... }@inputs:
     let
       pkgs = nixpkgs.legacyPackages.x86_64-linux.pkgs;
       system = "x86_64-linux";
