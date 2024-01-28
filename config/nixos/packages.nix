@@ -5,7 +5,6 @@
       # extraLibraries = [ ];
       # extraPkgs = [ ];
     })
-    minecraft
     newsflash
     # anki
     # libreoffice-fresh

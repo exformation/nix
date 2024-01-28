@@ -88,6 +88,16 @@
       PAGER = "less";
       BROWSER = "google-chrome-stable";
     };
+    etc = {
+      "pipewire/pipewire.conf.d/92-low-latency.conf".text = ''
+        context.properties = {
+          default.clock.rate = 48000
+          default.clock.quantum = 32
+          default.clock.min-quantum = 32
+          default.clock.max-quantum = 32
+        }
+      '';
+    };
     shells = with pkgs; [ zsh ];
   };
   # why do I need this for waybar if I have stylix?????

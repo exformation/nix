@@ -1,5 +1,6 @@
 { user, pkgs, ... }: {
   home-manager.users."${user}".home.packages = with pkgs; [
+    minecraft
     # acpi
     # brightnessctl
     # direnv
