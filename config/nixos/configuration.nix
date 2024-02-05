@@ -119,7 +119,7 @@
     package = pkgs.nixVersions.unstable;
     # package = pkgs.nixVersions.nix_2_19;
     extraOptions = ''
-      experimental-features = nix-command flakes configurable-impure-env
+      experimental-features = nix-command flakes
     '';
     settings = {
       auto-optimise-store = true;
