@@ -10,6 +10,8 @@
     # libreoffice-fresh
     # helix
     # lmms
+    glxinfo
+    vulkan-tools
     pavucontrol
     # appimage-run
     mangohud

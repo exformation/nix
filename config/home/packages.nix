@@ -1,6 +1,7 @@
 { user, pkgs, ... }: {
   home-manager.users."${user}".home.packages = with pkgs; [
-    minecraft
+    # minecraft
+    # prismlauncher
     # acpi
     # brightnessctl
     # direnv

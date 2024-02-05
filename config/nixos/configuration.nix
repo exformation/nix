@@ -1,4 +1,4 @@
-{ pkgs, user, version, ... }: {
+{ pkgs, user, version, nixpkgs, ... }: {
   imports =
     [ ./hardware-configuration.nix ./stylix.nix ./packages.nix ./services.nix ];
   sound = { enable = true; };
@@ -112,6 +112,9 @@
       automatic = true;
       dates = "weekly";
       options = "--delete-older-than 7d";
+    };
+    registry = {
+      nixpkgs.flake = nixpkgs;
     };
     package = pkgs.nixVersions.unstable;
     # package = pkgs.nixVersions.nix_2_19;
