@@ -80,5 +80,5 @@
     xorg.xinit
     zip
     zsh
-  ];
+  ] ++ osu-lazer.nativeBuildInputs;
 }
