@@ -80,5 +80,6 @@
     xorg.xinit
     zip
     zsh
+    dotnet-sdk_8
   ] ++ osu-lazer.nativeBuildInputs;
 }
