@@ -1,5 +1,5 @@
 { user, pkgs, ... }: {
-  home-manager.users."${user}".programs.waybar = {
+  waybar = {
     enable = true;
     settings = {
       mainBar = {

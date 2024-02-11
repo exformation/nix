@@ -1,7 +1,7 @@
 { user, ... }: {
-  home-manager.users."${user}".programs.zsh = {
+  zsh = {
     enable = true;
-    autocd = false;
+    autocd = true;
     enableAutosuggestions = true;
     enableCompletion = true;
     syntaxHighlighting = { enable = true; };

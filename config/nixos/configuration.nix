@@ -112,7 +112,7 @@
     gc = {
       automatic = true;
       dates = "weekly";
-      options = "--delete-older-than 7d";
+      options = "--delete-older-than 20d";
     };
     registry = {
       nixpkgs.flake = nixpkgs;
@@ -124,9 +124,6 @@
     '';
     settings = {
       auto-optimise-store = true;
-      # if you use a cache like cachix, hyperland's input should follow nixpkgs in the flake
-      # substituters = ["https://hyprland.cachix.org"];
-      # trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
     };
 
   };

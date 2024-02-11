@@ -1,40 +1,9 @@
 { user, ... }: {
-  home-manager.users."${user}".programs.kitty = let
-    repos = [
-      "nix"
-      # "pedd"
-      # "pedd-config"
-      "nvim"
-      # "journal"
-      # "lacuna"
-      # "tutoring"
-      # "discord-bot"
-      # "osu"
-      # "nvim-iobuffers"
-      # "qmk_firmware"
-      # "layout-analysis"
-      # "nvim-quicktree"
-      # "epsilon"
-      # "nixpkgs"
-    ];
-    # TODO: replace zsh and nvim with SHELL and EDITOR
-    process = repo: ''
-      ${if repo != "nix" then "new_os_window" else ""}
-      os_window_class ${repo}
-      new_tab ${repo}
-      cd ~/repos/${repo}
-      launch --title ${repo} direnv exec . zsh
-      launch --title ${repo} direnv exec . nvim
-
-    '';
-    startup = builtins.toFile "startup.conf"
-      (builtins.concatStringsSep "\n" (map process repos));
-  in {
+  kitty = {
     enable = true;
     keybindings = { "alt+tab" = "next_window"; };
     settings = {
       allow_remote_control = true;
-      startup_session = startup;
       confirm_os_window_close = "0";
       enabled_layouts = "stack";
     };

@@ -10,24 +10,12 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # neovim = {
-      # url = "github:neovim/neovim?dir=contrib";
-      # inputs.nixpkgs.follows = "nixpkgs";
-    # };
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
+    neovim = {
+      url = "github:neovim/neovim?dir=contrib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # discord-bot = {
-    #   url = "github:exformation/discord-bot";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
-    # pedd = {
-    #   url = "github:exformation/pedd";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
   };
-  outputs = { self, nixpkgs, hm, stylix, hyprland, ... }@inputs:
+  outputs = { self, nixpkgs, hm, stylix, ... }@inputs:
     let
       pkgs = nixpkgs.legacyPackages.x86_64-linux.pkgs;
       system = "x86_64-linux";
@@ -44,25 +32,16 @@
           ./config/home/home.nix
           hm.nixosModules.home-manager
           stylix.nixosModules.stylix
-          # hyprland.nixosModules.default
         ];
       };
       devShells.x86_64-linux.default =
-        # TODO: nixd can complete packages
         with pkgs; mkShell {
           packages = [
-            # nix
+            # nixd
             nil
             nixfmt
-            # bash
-            nodePackages.bash-language-server
-            shellcheck
-            shfmt
           ];
         };
     };
 }
 
-# nix repl
-# :lf .
-# inputs.<tab>

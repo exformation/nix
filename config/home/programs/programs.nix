@@ -1,6 +1,10 @@
-{ user, pkgs, ... }: {
-  imports = [ ./waybar.nix ./git.nix ./zsh.nix ./kitty.nix ./nvim.nix ];
-  home-manager.users."${user}".programs = {
+{ user, pkgs, neovim, ... }: {
+  programs = {
+    imports = [ ./waybar.nix ./git.nix ./zsh.nix ./kitty.nix ];
+    neovim = {
+      enable = true;
+      package = neovim.packages.${pkgs.system}.default;
+    };
     direnv = {
       enable = true;
       enableZshIntegration = true;
@@ -13,7 +17,6 @@
     };
     bat = {
       enable = true;
-      # config.theme = theme.bat-theme;
     };
     eza = {
       enable = true;
@@ -31,18 +34,9 @@
       enable = true;
       package = pkgs.rofi-wayland.override { plugins = [ ]; };
     };
-    wofi.enable = true;
     ripgrep.enable = true;
-    # firefox.enable = true;
     google-chrome.enable = true;
     jq.enable = true;
-    lf.enable = true;
-    helix.enable = true;
-    # spotify.enable = true;
-    # mako.enable = true;
-    # fd.enable = true;
-    # neofetch.enable = true;
-    # tldr.enable = true;
-
+    fd.enable = true;
   };
 }
