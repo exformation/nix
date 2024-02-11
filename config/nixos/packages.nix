@@ -6,6 +6,7 @@
       # extraPkgs = [ ];
     })
     newsflash
+    lazygit
     # anki
     # libreoffice-fresh
     # helix
