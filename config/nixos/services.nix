@@ -11,3 +11,4 @@
       pulse.enable = true;
     };
   };
+}

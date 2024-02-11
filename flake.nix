@@ -15,7 +15,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { self, nixpkgs, hm, stylix, ... }@inputs:
+  outputs = { self, nixpkgs, hm, stylix, neovim, ... }@inputs:
     let
       pkgs = nixpkgs.legacyPackages.x86_64-linux.pkgs;
       system = "x86_64-linux";

@@ -1,9 +1,9 @@
 { user, pkgs, neovim, ... }: {
-  programs = {
-    imports = [ ./waybar.nix ./git.nix ./zsh.nix ./kitty.nix ];
+  imports = [ ./waybar.nix ./git.nix ./zsh.nix ./kitty.nix ./wayland.nix ];
+  home-manager.users."${user}".programs = {
     neovim = {
       enable = true;
-      package = neovim.packages.${pkgs.system}.default;
+      #package = neovim.packages.${pkgs.system}.default;
     };
     direnv = {
       enable = true;
@@ -37,6 +37,5 @@
     ripgrep.enable = true;
     google-chrome.enable = true;
     jq.enable = true;
-    fd.enable = true;
   };
 }
