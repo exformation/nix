@@ -1,5 +1,5 @@
 { user, ... }: {
-  home-manager.users."${user}".programs = {
+  home-manager.users."${user}" = {
     wayland = {
       windowManager.hyprland = {
         enable = true;
@@ -10,7 +10,7 @@
             "workspace 11 silent,^(Google Chrome)$"
             "workspace 12 silent,^(kitty)$"
           ];
-          binds = [
+          bind = [
             "$mod, Return, exec, kitty --session none"
             "$mod SHIFT, Q, killactive,"
             "$mod SHIFT, R, exec, rofi -show drun"
@@ -47,7 +47,7 @@
           exec-once = [
             "waybar & kitty & google-chrome-stable"
           ];
-        }
+        };
       };
     };
   };
