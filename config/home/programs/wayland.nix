@@ -9,16 +9,16 @@
           "$mod" = "SUPER";
           monitor=",1920x1080@240,auto,auto";
           windowrule = [
-            "workspace 11 silent,title:^(.*)(Google Chrome)(.*)$"
-            "workspace 12 silent,^(kitty)$"
+            "workspace 11 silent,^(kitty)$"
+            "workspace 12 silent,^(steam)$"
             "workspace 13 silent,^(discord)$"
-            "workspace 14 silent,^(steam)$"
+            "workspace 14 silent,title:^(.*)(Google Chrome)(.*)$"
           ];
           bind = [
             "$mod, Return, exec, kitty --session none"
             "$mod SHIFT, Q, killactive,"
             "$mod SHIFT, R, exec, rofi -show drun"
-            "$mod SHIFT, S, exec, grim -g '$(slurp)' - | wl-copy -t image/png"
+            "$mod SHIFT, S, exec, grim -g \"$(slurp)\" - | wl-copy -t image/png"
             "$mod SHIFT, F, fullscreen"
             "$mod, TAB, focuscurrentorlast"
             "$mod, 1, workspace, 1"
@@ -31,10 +31,10 @@
             "$mod, 8, workspace, 8"
             "$mod, 9, workspace, 9"
             "$mod, 0, workspace, 10"
-            "$mod, C, workspace, 11"
-            "$mod, K, workspace, 12"
+            "$mod, A, workspace, 11"
+            "$mod, S, workspace, 12"
             "$mod, D, workspace, 13"
-            "$mod, S, workspace, 14"
+            "$mod, F, workspace, 14"
             "$mod SHIFT, 1, movetoworkspace, 1"
             "$mod SHIFT, 2, movetoworkspace, 2"
             "$mod SHIFT, 3, movetoworkspace, 3"
@@ -52,7 +52,7 @@
           ];
           exec-once = [
             "waybar & kitty & google-chrome-stable & discord & steam"
-            "hyprctl dispatch workspace 12"
+            "hyprctl dispatch workspace 11"
           ];
           animations = {
             enabled = false;

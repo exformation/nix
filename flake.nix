@@ -18,7 +18,7 @@
       specialArgs = inputs // {
         user = "exform";
         email = "mmillwood256@gmail.com";
-        version = "23.05";
+        version = "23.11";
       };
     in {
       nixosConfigurations."${specialArgs.user}" = nixpkgs.lib.nixosSystem {
