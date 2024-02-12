@@ -9,8 +9,10 @@
           "$mod" = "SUPER";
           monitor=",1920x1080@240,auto,auto";
           windowrule = [
-            "workspace 1 silent,^(Google Chrome)$"
-            "workspace 2 silent,^(kitty)$"
+            "workspace 11 silent,title:^(.*)(Google Chrome)(.*)$"
+            "workspace 12 silent,^(kitty)$"
+            "workspace 13 silent,^(discord)$"
+            "workspace 14 silent,^(steam)$"
           ];
           bind = [
             "$mod, Return, exec, kitty --session none"
@@ -29,6 +31,10 @@
             "$mod, 8, workspace, 8"
             "$mod, 9, workspace, 9"
             "$mod, 0, workspace, 10"
+            "$mod, F, workspace, 11"
+            "$mod, K, workspace, 12"
+            "$mod, D, workspace, 13"
+            "$mod, S, workspace, 14"
             "$mod SHIFT, 1, movetoworkspace, 1"
             "$mod SHIFT, 2, movetoworkspace, 2"
             "$mod SHIFT, 3, movetoworkspace, 3"
