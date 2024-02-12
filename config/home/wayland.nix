@@ -70,4 +70,3 @@
     };
   };
 }
-# TODO: pin chrome, organize wayland (not a program)
