@@ -31,7 +31,7 @@
             "$mod, 8, workspace, 8"
             "$mod, 9, workspace, 9"
             "$mod, 0, workspace, 10"
-            "$mod, F, workspace, 11"
+            "$mod, C, workspace, 11"
             "$mod, K, workspace, 12"
             "$mod, D, workspace, 13"
             "$mod, S, workspace, 14"
@@ -51,7 +51,8 @@
             "SUPER, mouse:273, resizewindow"
           ];
           exec-once = [
-            "waybar & kitty & google-chrome-stable"
+            "waybar & kitty & google-chrome-stable & discord & steam"
+            "hyprctl dispatch workspace 12"
           ];
           animations = {
             enabled = false;
