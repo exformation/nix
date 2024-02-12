@@ -1,5 +1,5 @@
 { pkgs, user, version, ... }: {
-  imports = [ ./programs/programs.nix ];
+  imports = [ ./programs/programs.nix ./wayland.nix ];
   home-manager = {
     useGlobalPkgs = true;
     users."${user}" = {

@@ -1,5 +1,5 @@
 { user, pkgs, neovim, ... }: {
-  imports = [ ./waybar.nix ./git.nix ./zsh.nix ./kitty.nix ./wayland.nix ];
+  imports = [ ./waybar.nix ./git.nix ./zsh.nix ./kitty.nix ];
   home-manager.users."${user}".programs = {
     neovim = {
       enable = true;
