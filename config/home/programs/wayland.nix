@@ -3,6 +3,8 @@
     wayland = {
       windowManager.hyprland = {
         enable = true;
+        systemd.enable = true;
+        xwayland.enable = true;
         settings = {
           "$mod" = "SUPER";
           monitor=",1920x1080@240,auto,auto";
@@ -47,8 +49,16 @@
           exec-once = [
             "waybar & kitty & google-chrome-stable"
           ];
+          animations = {
+            enabled = false;
+          };
+          general = {
+            gaps_in = 0;
+            gaps_out = 0;
+          };
         };
       };
     };
   };
 }
+# TODO: pin chrome, organize wayland (not a program)

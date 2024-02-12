@@ -1,5 +1,15 @@
-{ pkgs, user, lib, hyprland, discord-bot, ... }: {
+{ pkgs, user, lib, ... }: {
   services = {
+    greetd = {
+      enable = true;
+      settings = rec {
+        initial_session = {
+          command = "${pkgs.hyprland}/bin/Hyprland";
+          user = "exform";
+        };
+        default_session = initial_session;
+      };
+    };
     gnome.gnome-keyring.enable = true;
     # pcscd.enable = true;
     blueman.enable = true;
