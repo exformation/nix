@@ -6,11 +6,11 @@
       stylix.targets.vim.enable = false;
       home = { stateVersion = version; };
       xdg.configFile."nvim/lua" = {
-        source = ./nvim/lua;
+        source = nvim/lua;
 	recursive = true;
       };
       xdg.configFile."nvim/init.lua" = {
-        source = ./nvim/init.lua;
+        source = nvim/init.lua;
       };	
     };
   };
