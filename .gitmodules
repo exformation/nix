@@ -1,0 +1,3 @@
+[submodule "config/home/nvim"]
+	path = config/home/nvim
+	url = git@github.com:exformation/nvim.git

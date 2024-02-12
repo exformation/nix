@@ -16,7 +16,7 @@
         tree = "eza --tree --level=5 .";
         dr = "direnv reload";
         nr = "nix run";
-        # TODO: I don't like this needing ot be impure, should nvim be a submodule?
+        # TODO: I don't like this needing to be impure, should nvim be a submodule?
         nrs =
           "g a && sudo nixos-rebuild switch --flake '/home/${user}/repos/nix#${user}' --impure";
         nfu = "nix flake update";
