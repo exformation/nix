@@ -62,6 +62,9 @@
             gaps_out = 0;
             border_size = 0;
           };
+          misc = {
+            disable_hyprland_logo = true;
+          };
         };
       };
     };
