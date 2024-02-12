@@ -9,8 +9,8 @@
           "$mod" = "SUPER";
           monitor=",1920x1080@240,auto,auto";
           windowrule = [
-            "workspace 11 silent,^(Google Chrome)$"
-            "workspace 12 silent,^(kitty)$"
+            "workspace 1 silent,^(Google Chrome)$"
+            "workspace 2 silent,^(kitty)$"
           ];
           bind = [
             "$mod, Return, exec, kitty --session none"
@@ -29,8 +29,6 @@
             "$mod, 8, workspace, 8"
             "$mod, 9, workspace, 9"
             "$mod, 0, workspace, 10"
-            "$mod, F, workspace, 11"
-            "$mod, J, workspace, 12"
             "$mod SHIFT, 1, movetoworkspace, 1"
             "$mod SHIFT, 2, movetoworkspace, 2"
             "$mod SHIFT, 3, movetoworkspace, 3"
@@ -55,6 +53,7 @@
           general = {
             gaps_in = 0;
             gaps_out = 0;
+            border_size = 0;
           };
         };
       };
