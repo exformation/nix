@@ -35,7 +35,7 @@
   };
 
   # virtualization
-  virtualisation.virtualbox.host.enable = true;
+  virtualisation.virtualbox.host.enable = false;
   users.extraGroups.vboxusers.members = [ "${user}" ];
 
   time = { timeZone = "America/Chicago"; };

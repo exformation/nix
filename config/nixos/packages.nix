@@ -1,11 +1,11 @@
 { pkgs, ... }: {
   # TODO: how many of these can be moved to home.nix? and why?
   environment.systemPackages = with pkgs; [
-    (lutris.override {
+    #(lutris.override {
       # extraLibraries = [ ];
       # extraPkgs = [ ];
-    })
-    newsflash
+    #})
+    #newsflash
     lazygit
     # anki
     # libreoffice-fresh
@@ -17,7 +17,7 @@
     # appimage-run
     mangohud
     protontricks
-    dolphin
+    #dolphin
     ntfs3g
     kbd
     # mumble
@@ -25,7 +25,7 @@
     usbutils
     lsof
     gamemode
-    spotify
+    #spotify
     clipman
     wev
     dunst
