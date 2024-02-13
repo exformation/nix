@@ -30,8 +30,8 @@
           stylix.nixosModules.stylix
         ];
       };
-      devShells.x86_64-linux.default =
-        with pkgs; mkShell {
+      devShells.x86_64-linux.default = with pkgs;
+        mkShell {
           packages = [
             # nixd
             nil
@@ -40,4 +40,3 @@
         };
     };
 }
-
