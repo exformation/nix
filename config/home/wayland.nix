@@ -7,7 +7,7 @@
         xwayland.enable = true;
         settings = {
           "$mod" = "SUPER";
-          monitor=",1920x1080@240,auto,auto";
+          monitor = ",1920x1080@240,auto,auto";
           windowrule = [
             "workspace 11 silent,^(kitty)$"
             "workspace 12 silent,^(steam)$"
@@ -18,7 +18,7 @@
             "$mod, Return, exec, kitty --session none"
             "$mod SHIFT, Q, killactive,"
             "$mod SHIFT, R, exec, rofi -show drun"
-            "$mod SHIFT, S, exec, grim -g \"$(slurp)\" - | wl-copy -t image/png"
+            ''$mod SHIFT, S, exec, grim -g "$(slurp)" - | wl-copy -t image/png''
             "$mod SHIFT, F, fullscreen"
             "$mod, TAB, focuscurrentorlast"
             "$mod, 1, workspace, 1"
@@ -45,26 +45,24 @@
             "$mod SHIFT, 8, movetoworkspace, 8"
             "$mod SHIFT, 9, movetoworkspace, 9"
             "$mod SHIFT, 0, movetoworkspace, 10"
+            "$mod, l, movefocus, l"
+            "$mod, h, movefocus, r"
+            "$mod, k, movefocus, u"
+            "$mod, j, movefocus, d"
           ];
-          bindm = [
-            "SUPER, mouse:272, movewindow"
-            "SUPER, mouse:273, resizewindow"
-          ];
+          bindm =
+            [ "SUPER, mouse:272, movewindow" "SUPER, mouse:273, resizewindow" ];
           exec-once = [
             "waybar & kitty & google-chrome-stable & discord & steam"
             "hyprctl dispatch workspace 11"
           ];
-          animations = {
-            enabled = false;
-          };
+          animations = { enabled = false; };
           general = {
             gaps_in = 0;
             gaps_out = 0;
             border_size = 0;
           };
-          misc = {
-            disable_hyprland_logo = true;
-          };
+          misc = { disable_hyprland_logo = true; };
         };
       };
     };
