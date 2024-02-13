@@ -1,86 +1,91 @@
 { pkgs, ... }: {
   # TODO: how many of these can be moved to home.nix? and why?
-  environment.systemPackages = with pkgs; [
-    #(lutris.override {
-      # extraLibraries = [ ];
-      # extraPkgs = [ ];
-    #})
-    #newsflash
-    lazygit
-    # anki
-    # libreoffice-fresh
-    # helix
-    # lmms
-    glxinfo
-    vulkan-tools
-    pavucontrol
-    # appimage-run
-    mangohud
-    protontricks
-    #dolphin
-    ntfs3g
-    kbd
-    # mumble
-    gotop
-    usbutils
-    lsof
-    gamemode
-    #spotify
-    clipman
-    wev
-    dunst
-    mako
-    acpi
-    brightnessctl
-    direnv
-    discord
-    # exa
-    fd
-    feh
-    ffmpeg
-    file
-    # firefox
-    fzf
-    gimp
-    # google-chrome
-    # jq
-    killall
-    # kitty
-    # kitty-themes
-    # lf
-    libnotify
-    maim
-    mpv
-    mpd
-    neofetch
-    nodejs_20
-    obs-studio
-    pulseaudioFull
-    pamixer
-    # ripgrep
-    # rofi
-    tldr
-    osu-lazer
-    # amdgpu-pro
-    # linuxKernel.packages.linux_zen.amdgpu-pro
-    unzip
-    vlc
-    vscode
-    warpd
-    wget
-    wl-clipboard
-    # wl-clip-persists
-    grim
-    slurp
-    wmctrl
-    xclip
-    xdg-desktop-portal-hyprland
-    xdg-utils
-    xdotool
-    xkbset
-    xorg.xinit
-    zip
-    zsh
-    dotnet-sdk_8
-  ] ++ osu-lazer.nativeBuildInputs;
+  environment.systemPackages = with pkgs;
+    [
+      # amdgpu-pro
+      # anki
+      # appimage-run
+      # exa
+      # firefox
+      # google-chrome
+      # helix
+      # jq
+      # kitty
+      # kitty-themes
+      # lf
+      # libreoffice-fresh
+      # linuxKernel.packages.linux_zen.amdgpu-pro
+      # lmms
+      # mumble
+      # ripgrep
+      # rofi
+      # wl-clip-persists
+      #dolphin
+      #newsflash
+      #spotify
+      acpi
+      brightnessctl
+      clipman
+      direnv
+      discord
+      dotnet-sdk_8
+      dunst
+      fd
+      feh
+      ffmpeg
+      file
+      fzf
+      gamemode
+      gimp
+      glxinfo
+      gotop
+      grim
+      kbd
+      killall
+      lazygit
+      libnotify
+      lsof
+      lua-language-server
+      maim
+      mako
+      mangohud
+      marksman
+      mpd
+      mpv
+      neofetch
+      nil
+      nixfmt
+      nodePackages.alex
+      nodejs_20
+      ntfs3g
+      obs-studio
+      osu-lazer
+      pamixer
+      pavucontrol
+      proselint
+      protontricks
+      pulseaudioFull
+      slurp
+      stylua
+      tldr
+      unzip
+      usbutils
+      vlc
+      vscode
+      vulkan-tools
+      warpd
+      wev
+      wget
+      wl-clipboard
+      wmctrl
+      write-good
+      xclip
+      xdg-desktop-portal-hyprland
+      xdg-utils
+      xdotool
+      xkbset
+      xorg.xinit
+      zip
+      zsh
+    ] ++ osu-lazer.nativeBuildInputs;
 }
