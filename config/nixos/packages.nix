@@ -80,6 +80,7 @@
       pyright
       black
       isort
+      prettierd
       (python311.withPackages (p: [
         p.autopep8
         p.debugpy
