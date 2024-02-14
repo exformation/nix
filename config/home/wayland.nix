@@ -15,6 +15,7 @@
             "workspace 14 silent,title:^(.*)(Google Chrome)(.*)$"
           ];
           bind = [
+            "$mod, Escape, exec, systemctl suspend"
             "$mod, Return, exec, kitty --session none"
             "$mod SHIFT, Q, killactive,"
             "$mod SHIFT, R, exec, rofi -show drun"

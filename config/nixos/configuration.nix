@@ -6,14 +6,14 @@
   # what?
   hardware.keyboard.qmk.enable = true;
   hardware = {
-    pulseaudio.enable = false;
-    bluetooth.enable = true;
+    # pulseaudio.enable = false;
+    # bluetooth.enable = true;
     opengl = {
       enable = true;
       driSupport = true;
       driSupport32Bit = true;
     };
-    enableAllFirmware = true;
+    # enableAllFirmware = true;
     # uinput.enable = true;
   };
   boot = {
@@ -51,7 +51,8 @@
       isNormalUser = true;
       # TODO: only have adbusers for flutter development
       # TODO: only have input and uinput for the user that's using an evdev thing 
-      extraGroups = [ "networkmanager" "wheel" "adbusers"];# "input" "uinput" ];
+      extraGroups =
+        [ "networkmanager" "wheel" "adbusers" ]; # "input" "uinput" ];
     };
   };
   programs = {
@@ -101,7 +102,6 @@
     };
     shells = with pkgs; [ zsh ];
   };
-  # why do I need this for waybar if I have stylix?????
   fonts.packages = with pkgs; [
     noto-fonts
     noto-fonts-cjk
@@ -114,17 +114,12 @@
       dates = "weekly";
       options = "--delete-older-than 20d";
     };
-    registry = {
-      nixpkgs.flake = nixpkgs;
-    };
+    registry = { nixpkgs.flake = nixpkgs; };
     package = pkgs.nixVersions.unstable;
-    # package = pkgs.nixVersions.nix_2_19;
     extraOptions = ''
       experimental-features = nix-command flakes
     '';
-    settings = {
-      auto-optimise-store = true;
-    };
+    settings = { auto-optimise-store = true; };
 
   };
   system.stateVersion = version;

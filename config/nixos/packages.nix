@@ -29,7 +29,6 @@
       direnv
       discord
       dotnet-sdk_8
-      dunst
       fd
       feh
       ffmpeg
@@ -40,7 +39,6 @@
       glxinfo
       gotop
       grim
-      kbd
       killall
       lazygit
       libnotify
@@ -48,11 +46,9 @@
       lua-language-server
       maim
       mako
-      mangohud
       marksman
       mpd
       mpv
-      neofetch
       nil
       nixfmt
       nodePackages.alex
@@ -71,21 +67,35 @@
       unzip
       usbutils
       vlc
-      vscode
       vulkan-tools
-      warpd
       wev
       wget
       wl-clipboard
-      wmctrl
       write-good
-      xclip
       xdg-desktop-portal-hyprland
       xdg-utils
-      xdotool
-      xkbset
-      xorg.xinit
       zip
       zsh
+      python311
+      pyright
+      black
+      isort
+      (python311.withPackages (p: [
+        p.autopep8
+        p.debugpy
+        p.discordpy
+        p.evdev
+        p.fire
+        p.more-itertools
+        p.numpy
+        p.pandas
+        p.pynput
+        p.pytest
+        p.pytest-benchmark
+        p.requests
+        p.scipy
+        p.sympy
+        p.watchdog
+      ]))
     ] ++ osu-lazer.nativeBuildInputs;
 }
