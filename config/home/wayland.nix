@@ -15,13 +15,13 @@
             "workspace 14 silent,title:^(.*)(Google Chrome)(.*)$"
           ];
           bind = [
-            "$mod, Escape, exec, systemctl suspend"
-            "$mod, Return, exec, kitty --session none"
+            "$mod SHIFT, Escape, exec, systemctl suspend"
             "$mod SHIFT, Q, killactive,"
             "$mod SHIFT, R, exec, rofi -show drun"
             ''$mod SHIFT, S, exec, grim -g "$(slurp)" - | wl-copy -t image/png''
             "$mod SHIFT, F, fullscreen"
             "$mod, TAB, focuscurrentorlast"
+            "$mod, Return, exec, kitty --session none"
             "$mod, 1, workspace, 1"
             "$mod, 2, workspace, 2"
             "$mod, 3, workspace, 3"
