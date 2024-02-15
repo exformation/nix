@@ -29,6 +29,7 @@
       direnv
       discord
       dotnet-sdk_8
+      netcoredbg
       fd
       feh
       ffmpeg

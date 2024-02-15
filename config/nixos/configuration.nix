@@ -17,6 +17,7 @@
     # uinput.enable = true;
   };
   boot = {
+    kernelPackages = pkgs.linuxPackages_latest;
     loader = {
       timeout = 5;
       systemd-boot.enable = true;
@@ -26,7 +27,12 @@
       };
     };
     kernelModules = [ "amdgpu" ];
-    kernel = { sysctl = { "fs.inotify.max_user_instances" = 512; }; };
+    kernel = {
+      sysctl = {
+        "fs.inotify.max_user_instances" = 512;
+        # "usbcore.autosuspend" = -1;
+      };
+    };
   };
   networking = {
     hostName = "nixos";
