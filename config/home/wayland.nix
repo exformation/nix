@@ -9,7 +9,7 @@
           "$mod" = "SUPER";
           monitor = ",1920x1080@240,auto,auto";
           windowrule = [
-            "workspace 11 silent,^(kitty)$"
+            "workspace 11 silent,^(main-terminal)$"
             "workspace 12 silent,^(steam)$"
             "workspace 13 silent,^(discord)$"
             "workspace 14 silent,title:^(.*)(Google Chrome)(.*)$"
@@ -54,7 +54,7 @@
           bindm =
             [ "SUPER, mouse:272, movewindow" "SUPER, mouse:273, resizewindow" ];
           exec-once = [
-            "waybar & kitty & google-chrome-stable & discord & steam"
+            "waybar & kitty --title 'main-terminal' & google-chrome-stable & discord & steam"
             "hyprctl dispatch workspace 11"
           ];
           animations = { enabled = false; };
