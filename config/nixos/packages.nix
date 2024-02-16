@@ -77,7 +77,6 @@
       xdg-utils
       zip
       zsh
-      python311
       pyright
       black
       isort
