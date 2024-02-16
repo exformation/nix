@@ -5,7 +5,7 @@
       process = repo: ''
         new_tab ${repo}
         cd ~/${repo}
-        launch --title ${repo} zsh -c nvim
+        launch --title ${repo} zsh
       '';
       startup = builtins.toFile "startup.conf"
         (builtins.concatStringsSep "\n" (map process repos));
