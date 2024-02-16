@@ -5,8 +5,7 @@
       process = repo: ''
         new_tab ${repo}
         cd ~/${repo}
-        launch --title ${repo} zsh
-        launch nvim
+        launch --title ${repo} zsh -c nvim
       '';
       startup = builtins.toFile "startup.conf"
         (builtins.concatStringsSep "\n" (map process repos));
@@ -20,6 +19,8 @@
         allow_remote_control = true;
         confirm_os_window_close = "0";
         enabled_layouts = "stack";
+        tab_bar_edge = "top";
+        tab_bar_style = "slant";
         startup_session = startup;
       };
     };
