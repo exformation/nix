@@ -13,6 +13,7 @@
             "workspace 12 silent,^(steam)$"
             "workspace 13 silent,^(discord)$"
             "workspace 14 silent,title:^(.*)(Google Chrome)(.*)$"
+            "workspace 15 silent,^(osu)$"
           ];
           bind = [
             "$mod SHIFT, Escape, exec, systemctl suspend"
@@ -36,6 +37,7 @@
             "$mod, S, workspace, 12"
             "$mod, D, workspace, 13"
             "$mod, F, workspace, 14"
+            "$mod, O, workspace, 15"
             "$mod SHIFT, 1, movetoworkspace, 1"
             "$mod SHIFT, 2, movetoworkspace, 2"
             "$mod SHIFT, 3, movetoworkspace, 3"
