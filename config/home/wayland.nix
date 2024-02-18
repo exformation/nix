@@ -13,7 +13,7 @@
             "workspace 12 silent,^(steam)$"
             "workspace 13 silent,^(discord)$"
             "workspace 14 silent,title:^(.*)(Google Chrome)(.*)$"
-            "workspace 15 silent,^(osu)$"
+            "workspace 15 silent,^(.*)(osu!)(.*)$"
           ];
           bind = [
             "$mod SHIFT, Escape, exec, systemctl suspend"
@@ -64,6 +64,7 @@
             gaps_in = 0;
             gaps_out = 0;
             border_size = 1;
+            no_cursor_warps = true;
           };
           misc = { disable_hyprland_logo = true; };
         };
