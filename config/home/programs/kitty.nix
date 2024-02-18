@@ -1,7 +1,7 @@
 { user, ... }: {
   home-manager.users."${user}".programs = {
     kitty = let
-      repos = [ ".config/nvim" "repos/nix" "repos/lacuna" ];
+      repos = [ ".config/nvim" "repos/nix" "repos/lacuna" "repos/osu" ];
       process = repo: ''
         new_tab ${repo}
         cd ~/${repo}
