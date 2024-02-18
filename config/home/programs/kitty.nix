@@ -3,9 +3,9 @@
     kitty = let
       repos = [ ".config/nvim" "repos/nix" "repos/lacuna" "repos/osu" ];
       process = repo: ''
-        new_tab ${repo}
+        new_tab ${builtins.baseNameOf repo}
         cd ~/${repo}
-        launch --title ${repo} zsh
+        launch zsh
       '';
       startup = builtins.toFile "startup.conf"
         (builtins.concatStringsSep "\n" (map process repos));
