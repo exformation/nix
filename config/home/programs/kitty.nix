@@ -14,6 +14,10 @@
       keybindings = {
         "alt+tab" = "next_tab";
         "alt+shift+tab" = "previous_tab";
+        "alt+v" = "goto_tab 1";
+        "alt+n" = "goto_tab 2";
+        "alt+l" = "goto_tab 3";
+        "alt+o" = "goto_tab 4";
       };
       settings = {
         allow_remote_control = true;
