@@ -94,6 +94,7 @@
       SHELL = "zsh";
       PAGER = "less";
       BROWSER = "google-chrome-stable";
+      DEFAULT_BROWSER = "google-chrome-stable";
       LD_LIBRARY_PATH = lib.makeLibraryPath pkgs.osu-lazer.runtimeDeps;
     };
     etc = {

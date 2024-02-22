@@ -5,6 +5,13 @@
     users."${user}" = { config, ... }: {
       stylix.targets.vim.enable = false;
       home = { stateVersion = version; };
+      xdg = {
+        portal = {
+          # enable = true;
+          xdgOpenUsePortal = true;
+          # wlr.enable = true;
+        };
+      };
       #xdg.configFile."nvim/lua" = {
       #  source = config.lib.file.mkOutOfStoreSymlink "/home/exform/repos/nvim/lua";
       #	recursive = true;
