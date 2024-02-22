@@ -1,7 +1,13 @@
 { user, ... }: {
   home-manager.users."${user}".programs = {
     kitty = let
-      repos = [ ".config/nvim" "repos/nix" "repos/lacuna" "repos/osu" ];
+      repos = [
+        ".config/nvim"
+        "repos/flash-hints"
+        "repos/nix"
+        "repos/lacuna"
+        "repos/osu"
+      ];
       process = repo: ''
         new_tab ${builtins.baseNameOf repo}
         cd ~/${repo}
@@ -15,9 +21,10 @@
         "alt+tab" = "next_tab";
         "alt+shift+tab" = "previous_tab";
         "alt+v" = "goto_tab 1";
-        "alt+n" = "goto_tab 2";
-        "alt+l" = "goto_tab 3";
-        "alt+o" = "goto_tab 4";
+        "alt+f" = "goto_tab 2";
+        "alt+n" = "goto_tab 3";
+        "alt+l" = "goto_tab 4";
+        "alt+o" = "goto_tab 5";
       };
       settings = {
         allow_remote_control = true;
