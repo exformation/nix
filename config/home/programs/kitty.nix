@@ -3,8 +3,8 @@
     kitty = let
       repos = [
         ".config/nvim"
-        "repos/file-hints"
-        "repos/ts-hints"
+        "repos/file-hints.nvim"
+        "repos/ts-hints.nvim"
         "repos/nix"
         "repos/lacuna"
         "repos/osu"
