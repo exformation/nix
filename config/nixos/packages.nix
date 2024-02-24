@@ -82,7 +82,9 @@
       black
       isort
       prettierd
+      ollama
       (python311.withPackages (p: [
+        p.huggingface-hub
         p.autopep8
         p.debugpy
         p.discordpy
