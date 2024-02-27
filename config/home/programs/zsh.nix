@@ -10,21 +10,18 @@
       shellAliases = {
         g = "git";
         v = "nvim";
-        vio = "nvim --cmd 'set rtp+=/home/${user}/repos/nvim-iobuffers'";
         l = "eza";
-        c = "code .";
         tree = "eza --tree --level=5 .";
-        dr = "direnv reload";
-        nr = "nix run";
         nrs =
-          "g a && sudo nixos-rebuild switch --flake '/home/${user}/repos/nix?submodules=1#${user}'";
+          "g a && sudo nixos-rebuild switch --flake '/home/${user}/repos/nix?${user}'";
         nfu = "nix flake update";
         nfurs = "nfu && nrs && reboot";
         gg = "g a && g c 'boop' && g p";
         r =
           "cd $(cd ~ && fd -atd '^.git$' --hidden -E '.local/share' --max-depth=3 --exec dirname | rofi -dmenu)";
         pi = "kitty +kitten ssh pi@192.168.1.90";
-        zaphod = "gh run watch && rm *.uf2 && gh run download -n firmware && sudo rm -rf /tmp/kb && mkdir /tmp/kb && sudo mount /dev/$(lsblk -n -l --output NAME | rofi -dmenu) /tmp/kb && sudo cp zaphod.uf2 /tmp/kb";
+        zaphod =
+          "gh run watch && rm *.uf2 && gh run download -n firmware && sudo rm -rf /tmp/kb && mkdir /tmp/kb && sudo mount /dev/$(lsblk -n -l --output NAME | rofi -dmenu) /tmp/kb && sudo cp zaphod.uf2 /tmp/kb";
       };
       oh-my-zsh = {
         enable = true;
