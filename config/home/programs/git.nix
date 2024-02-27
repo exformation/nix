@@ -12,7 +12,7 @@
         a = "add .";
         i = "init";
         d = "diff";
-        p = "push origin main";
+        p = "push origin $(git branch --show-current)";
         ig = "rm --cached -r .";
       };
     };
