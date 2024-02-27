@@ -8,6 +8,7 @@
         "repos/nix"
         "repos/lacuna"
         "repos/osu"
+        "repos/qmk_firmware"
       ];
       process = repo: ''
         new_tab ${builtins.baseNameOf repo}
@@ -27,6 +28,7 @@
         "alt+n" = "goto_tab 4";
         "alt+l" = "goto_tab 5";
         "alt+o" = "goto_tab 6";
+        "alt+q" = "goto_tab 7";
       };
       settings = {
         allow_remote_control = true;
