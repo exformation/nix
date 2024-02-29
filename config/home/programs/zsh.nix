@@ -13,7 +13,7 @@
         l = "eza";
         tree = "eza --tree --level=5 .";
         nrs =
-          "g a && sudo nixos-rebuild switch --flake '/home/${user}/repos/nix?${user}'";
+          "g a && sudo nixos-rebuild switch --flake '/home/${user}/repos/nix#${user}'";
         nfu = "nix flake update";
         nfurs = "nfu && nrs && reboot";
         gg = "g a && g c 'boop' && g p";
@@ -29,6 +29,12 @@
         plugins = [ "command-not-found" "git" "history" ];
       };
       initExtra = ''
+        function copy-last-command-to-clipboard {
+            print -rn -- $history[$[HISTCMD-1]] | wl-copy
+        }
+        zle -N copy-last-command-to-clipboard
+
+        bindkey '^o' copy-last-command-to-clipboard
         bindkey '^ ' autosuggest-accept
         bindkey -s '^Z' 'fg^M'
         setopt HIST_IGNORE_ALL_DUPS
