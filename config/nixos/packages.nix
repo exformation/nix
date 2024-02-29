@@ -23,6 +23,7 @@
       #dolphin
       #newsflash
       #spotify
+      gettext
       gnumake
       acpi
       brightnessctl

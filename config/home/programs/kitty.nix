@@ -20,8 +20,13 @@
     in {
       enable = true;
       keybindings = {
+        # https://sw.kovidgoyal.net/kitty/actions
         "alt+tab" = "next_tab";
         "alt+shift+tab" = "previous_tab";
+        "ctrl+shift+t" = "new_tab";
+        "ctrl+shift+c" = "copy_to_clipboard";
+        "ctrl+shift+v" = "paste_from_clipboard";
+        "ctrl+shift+o" = "pass_selection_to_program";
         "alt+v" = "goto_tab 1";
         "alt+f" = "goto_tab 2";
         "alt+t" = "goto_tab 3";
@@ -37,6 +42,7 @@
         tab_bar_edge = "top";
         tab_bar_style = "slant";
         startup_session = startup;
+        clear_all_shortcuts = true;
       };
     };
   };
