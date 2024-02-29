@@ -23,6 +23,7 @@
       #dolphin
       #newsflash
       #spotify
+      gnumake
       acpi
       brightnessctl
       clipman
@@ -100,6 +101,7 @@
         p.scipy
         p.sympy
         p.watchdog
+        p.cmake
       ]))
     ] ++ osu-lazer.nativeBuildInputs;
 }
