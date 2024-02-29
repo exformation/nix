@@ -16,14 +16,14 @@
             "workspace 15 silent,^(.*)(osu!)(.*)$"
           ];
           bind = [
-            "$mod SHIFT, Escape, exec, systemctl suspend"
+            "$mod SHIFT, Backspace, exec, systemctl suspend"
             "$mod SHIFT, Q, killactive,"
             "$mod SHIFT, R, exec, rofi -show drun"
             ''$mod SHIFT, S, exec, grim -g "$(slurp)" - | wl-copy -t image/png''
             "$mod SHIFT, F, fullscreen"
             "$mod, TAB, focuscurrentorlast"
             "$mod, Return, exec, kitty --session none"
-            "$mod CTRL, Return, exec, kitty --session main-terminal"
+            "$mod SHIFT, Return, exec, kitty --title main-terminal"
             "$mod, 1, workspace, 1"
             "$mod, 2, workspace, 2"
             "$mod, 3, workspace, 3"
