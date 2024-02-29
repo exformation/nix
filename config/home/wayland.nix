@@ -23,6 +23,7 @@
             "$mod SHIFT, F, fullscreen"
             "$mod, TAB, focuscurrentorlast"
             "$mod, Return, exec, kitty --session none"
+            "$mod CTRL, Return, exec, kitty --session main-terminal"
             "$mod, 1, workspace, 1"
             "$mod, 2, workspace, 2"
             "$mod, 3, workspace, 3"
