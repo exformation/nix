@@ -1,7 +1,20 @@
 { pkgs, ... }: {
   # TODO: how many of these can be moved to home.nix? and why?
   environment.systemPackages = with pkgs;
-    [
+    let
+      customOsuLazer = pkgs.osu-lazer-bin.overrideAttrs (oldAttrs: rec {
+        pname = "osu-lazer-bin";
+        version = "2024.302.0";
+        src = {
+          x86_64-linux = fetchurl {
+            url =
+              "https://github.com/ppy/osu/releases/download/${version}/osu.AppImage";
+            hash = "sha256-XzrrtzoxLJ/uKNDi8IuCg3JRRHDq/jFo344ngII/x9g=";
+          };
+        }.${stdenv.system} or (throw
+          "${pname}-${version}: ${stdenv.system} is unsupported.");
+      });
+    in [
       # amdgpu-pro
       # anki
       # appimage-run
@@ -59,7 +72,7 @@
       nodejs_20
       ntfs3g
       obs-studio
-      osu-lazer
+      customOsuLazer
       pamixer
       pavucontrol
       proselint

@@ -97,16 +97,6 @@
       DEFAULT_BROWSER = "google-chrome-stable";
       LD_LIBRARY_PATH = lib.makeLibraryPath pkgs.osu-lazer.runtimeDeps;
     };
-    etc = {
-      "pipewire/pipewire.conf.d/92-low-latency.conf".text = ''
-        context.properties = {
-          default.clock.rate = 48000
-          default.clock.quantum = 32
-          default.clock.min-quantum = 32
-          default.clock.max-quantum = 32
-        }
-      '';
-    };
     shells = with pkgs; [ zsh ];
   };
   fonts.packages = with pkgs; [
