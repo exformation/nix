@@ -68,7 +68,7 @@
       mpv
       nil
       nixfmt
-      nodePackages.alex
+      # nodePackages.alex
       nodejs_20
       ntfs3g
       obs-studio
