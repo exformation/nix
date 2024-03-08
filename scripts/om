@@ -1,0 +1,11 @@
+.PHONY: test debug release
+
+RULESET := $(firstword $(wildcard osu.Game.Rulesets.*))
+
+test:
+	dotnet run --project $(RULESET).Tests
+
+debug release:
+	cd $(RULESET) && \
+	dotnet publish -c $@ && \
+	cp bin/$@/net8.0/publish/$(notdir $(RULESET)).dll ~/.local/share/osu/rulesets/$(notdir $(RULESET)).dll

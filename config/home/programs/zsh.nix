@@ -22,6 +22,10 @@
         pi = "kitty +kitten ssh pi@192.168.1.90";
         zaphod =
           "gh run watch && rm *.uf2 && gh run download -n firmware && sudo rm -rf /tmp/kb && mkdir /tmp/kb && sudo mount /dev/$(lsblk -n -l --output NAME | rofi -dmenu) /tmp/kb && sudo cp zaphod.uf2 /tmp/kb";
+        om = "make -f ~/repos/nix/scripts/om";
+        omt = "make -f ~/repos/nix/scripts/om test";
+        omd = "make -f ~/repos/nix/scripts/om debug";
+        omr = "make -f ~/repos/nix/scripts/om release";
       };
       oh-my-zsh = {
         enable = true;
