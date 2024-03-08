@@ -5,10 +5,10 @@
         ".config/nvim"
         "repos/file-hints.nvim"
         "repos/nix"
+        "repos/qmk_firmware"
         "repos/lacuna"
         "repos/osu"
         "repos/osu-rulesets/taipo"
-        "repos/qmk_firmware"
       ];
       process = repo: ''
         new_tab ${builtins.baseNameOf repo}
@@ -30,10 +30,10 @@
         "alt+v" = "goto_tab 1";
         "alt+f" = "goto_tab 2";
         "alt+n" = "goto_tab 3";
-        "alt+l" = "goto_tab 4";
-        "alt+o" = "goto_tab 5";
-        "alt+t" = "goto_tab 6";
-        "alt+q" = "goto_tab 7";
+        "alt+q" = "goto_tab 4";
+        "alt+l" = "goto_tab 5";
+        "alt+o" = "goto_tab 6";
+        "alt+t" = "goto_tab 7";
       };
       settings = {
         allow_remote_control = true;

@@ -28,7 +28,7 @@
         omd = "make -f ~/repos/nix/scripts/om debug";
         omr = "make -f ~/repos/nix/scripts/om release";
         ro = "~/repos/nix/scripts/restart-osu";
-        # omc && omd && ro
+        # omc && omr && ro &
       };
       oh-my-zsh = {
         enable = true;

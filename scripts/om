@@ -11,4 +11,4 @@ debug release:
 	cp bin/$@/*/publish/$(notdir $(RULESET)).dll ~/.local/share/osu/rulesets/$(notdir $(RULESET)).dll
 
 clean:
-  rm -f ~/.local/share/osu/rulesets/*
+	rm -f ~/.local/share/osu/rulesets/*
