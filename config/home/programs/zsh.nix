@@ -23,9 +23,12 @@
         zaphod =
           "gh run watch && rm *.uf2 && gh run download -n firmware && sudo rm -rf /tmp/kb && mkdir /tmp/kb && sudo mount /dev/$(lsblk -n -l --output NAME | rofi -dmenu) /tmp/kb && sudo cp zaphod.uf2 /tmp/kb";
         om = "make -f ~/repos/nix/scripts/om";
+        omc = "make -f ~/repos/nix/scripts/om clean";
         omt = "make -f ~/repos/nix/scripts/om test";
         omd = "make -f ~/repos/nix/scripts/om debug";
         omr = "make -f ~/repos/nix/scripts/om release";
+        ro = "~/repos/nix/scripts/restart-osu";
+        # omc && omd && ro
       };
       oh-my-zsh = {
         enable = true;

@@ -8,4 +8,7 @@ test:
 debug release:
 	cd $(RULESET) && \
 	dotnet publish -c $@ && \
-	cp bin/$@/net8.0/publish/$(notdir $(RULESET)).dll ~/.local/share/osu/rulesets/$(notdir $(RULESET)).dll
+	cp bin/$@/*/publish/$(notdir $(RULESET)).dll ~/.local/share/osu/rulesets/$(notdir $(RULESET)).dll
+
+clean:
+  rm -f ~/.local/share/osu/rulesets/*
