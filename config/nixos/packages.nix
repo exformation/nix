@@ -36,6 +36,7 @@
       #dolphin
       #newsflash
       #spotify
+      jetbrains.rider
       gettext
       gnumake
       acpi

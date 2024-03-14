@@ -2,6 +2,9 @@
 
 RULESET := $(firstword $(wildcard osu.Game.Rulesets.*))
 
+default:
+	dotnet run --project osu.Desktop
+
 test:
 	dotnet run --project $(RULESET).Tests
 
