@@ -3,12 +3,12 @@
     kitty = let
       repos = [
         ".config/nvim"
-        "repos/file-hints.nvim"
+        "repos/nvim-plugins"
+        "repos/osu"
+        "repos/osu-rulesets"
         "repos/nix"
         "repos/qmk_firmware"
         "repos/lacuna"
-        "repos/osu"
-        "repos/osu-rulesets/taipo"
       ];
       process = repo: ''
         new_tab ${builtins.baseNameOf repo}
@@ -21,19 +21,21 @@
       enable = true;
       keybindings = {
         # https://sw.kovidgoyal.net/kitty/actions
-        "alt+tab" = "next_tab";
-        "alt+shift+tab" = "previous_tab";
-        "ctrl+shift+t" = "new_tab";
         "ctrl+shift+c" = "copy_to_clipboard";
         "ctrl+shift+v" = "paste_from_clipboard";
-        "ctrl+shift+o" = "pass_selection_to_program";
+        "alt+shift+j" = "next_tab";
+        "alt+shift+k" = "previous_tab";
+        "alt+enter" = "new_tab";
+        "alt+x" = "close_tab";
+        "alt+b" = "goto_tab 0";
         "alt+v" = "goto_tab 1";
-        "alt+f" = "goto_tab 2";
-        "alt+n" = "goto_tab 3";
-        "alt+q" = "goto_tab 4";
-        "alt+l" = "goto_tab 5";
-        "alt+o" = "goto_tab 6";
-        "alt+t" = "goto_tab 7";
+        "alt+p" = "goto_tab 2";
+        "alt+o" = "goto_tab 3";
+        "alt+r" = "goto_tab 4";
+        "alt+n" = "goto_tab 5";
+        "alt+q" = "goto_tab 6";
+        "alt+l" = "goto_tab 7";
+        "alt+e" = "goto_tab 99";
       };
       settings = {
         allow_remote_control = true;
