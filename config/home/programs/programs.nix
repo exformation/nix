@@ -3,7 +3,7 @@
   home-manager.users."${user}".programs = {
     neovim = {
       enable = true;
-      #package = neovim.packages.${pkgs.system}.default;
+      package = neovim.packages.${pkgs.system}.default;
     };
     direnv = {
       enable = true;
@@ -15,9 +15,7 @@
       enable = true;
       enableZshIntegration = true;
     };
-    bat = {
-      enable = true;
-    };
+    bat = { enable = true; };
     eza = {
       enable = true;
       git = true;
