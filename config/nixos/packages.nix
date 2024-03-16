@@ -36,7 +36,7 @@
       #dolphin
       #newsflash
       #spotify
-      godot_4
+      # godot_4
       jetbrains.rider
       gettext
       gnumake
