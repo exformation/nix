@@ -3,7 +3,7 @@
   home-manager.users."${user}".programs = {
     neovim = {
       enable = true;
-      package = neovim.packages.${pkgs.system}.default;
+      # package = neovim.packages.${pkgs.system}.default;
     };
     direnv = {
       enable = true;
