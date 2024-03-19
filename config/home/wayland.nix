@@ -53,6 +53,7 @@
             "$mod, h, movefocus, r"
             "$mod, k, movefocus, u"
             "$mod, j, movefocus, d"
+            "$mod, g, exec, ${./scripts/lgh}"
           ];
           bindm =
             [ "SUPER, mouse:272, movewindow" "SUPER, mouse:273, resizewindow" ];
