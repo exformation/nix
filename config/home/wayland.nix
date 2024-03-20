@@ -1,4 +1,4 @@
-{ user, ... }: {
+{ self, user, ... }: {
   home-manager.users."${user}" = {
     wayland = {
       windowManager.hyprland = {
@@ -53,7 +53,7 @@
             "$mod, h, movefocus, r"
             "$mod, k, movefocus, u"
             "$mod, j, movefocus, d"
-            "$mod, g, exec, ${./scripts/lgh}"
+            "$mod, g, exec, ${self}/scripts/lgh"
           ];
           bindm =
             [ "SUPER, mouse:272, movewindow" "SUPER, mouse:273, resizewindow" ];

@@ -16,7 +16,7 @@
   # in [
     [
       # amdgpu-pro
-      # anki
+      anki
       # appimage-run
       # exa
       # firefox
