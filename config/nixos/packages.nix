@@ -37,7 +37,7 @@
       #newsflash
       #spotify
       # godot_4
-      jetbrains.rider
+      # jetbrains.rider
       gettext
       gnumake
       acpi
