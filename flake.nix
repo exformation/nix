@@ -17,7 +17,7 @@
   };
   outputs = { self, nixpkgs, hm, stylix, ... }@inputs:
     let
-      personal = builtins.fromJSON (builtins.readFile ./.env);
+      personal = builtins.fromJSON (builtins.readFile ./../.env);
       specialArgs = inputs // personal;
     in {
       nixosConfigurations."${specialArgs.user}" = nixpkgs.lib.nixosSystem {
