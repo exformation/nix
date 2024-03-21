@@ -94,7 +94,7 @@
       xdg-desktop-portal-hyprland
       xdg-utils
       zip
-      zsh
+      fish
       pyright
       black
       isort

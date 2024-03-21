@@ -15,11 +15,11 @@
         process = repo: ''
           new_tab ${baseNameOf (last repo)}
           cd ~/${last repo}
-          launch zsh
+          launch fish
         '';
         startup =
           toFile "startup.conf" (concatStringsSep "\n" (map process repos));
-        binds = listToAttrs (lib.lists.imap0 (i: repo: {
+        binds = listToAttrs (imap0 (i: repo: {
           name = "alt+${head repo}";
           value = "goto_tab ${toString (1 + i)}";
         }) repos);
@@ -45,6 +45,7 @@
           startup_session = startup;
           clear_all_shortcuts = true;
         };
+        shellIntegration.enableFishIntegration = true;
       };
   };
 }

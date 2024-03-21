@@ -52,7 +52,7 @@
   };
   # sudo nmcli dev wifi connect "..." password "..."
   users = {
-    defaultUserShell = pkgs.zsh;
+    defaultUserShell = pkgs.fish;
     users."${user}" = {
       isNormalUser = true;
       # TODO: only have adbusers for flutter development
@@ -68,7 +68,7 @@
     #   pinentryFlavor = "curses";
     #   enableSSHSupport = true;
     # };
-    zsh.enable = true;
+    fish.enable = true;
     hyprland = {
       enable = true;
       xwayland = {
@@ -91,13 +91,14 @@
       EDITOR = "nvim";
       VISUAL = "nvim";
       TERMINAL = "kitty";
-      SHELL = "zsh";
+      SHELL = "fish";
       PAGER = "less";
       BROWSER = "google-chrome-stable";
       DEFAULT_BROWSER = "google-chrome-stable";
+      # TODO: this is stinky but I can't put this in a devshell
       LD_LIBRARY_PATH = lib.makeLibraryPath pkgs.osu-lazer.runtimeDeps;
     };
-    shells = with pkgs; [ zsh ];
+    shells = with pkgs; [ fish ];
   };
   fonts.packages = with pkgs; [
     noto-fonts
