@@ -13,12 +13,12 @@
           [ "l" "repos/lacuna" ]
         ];
         process = repo: ''
-          new_tab ${builtins.baseNameOf (last repo)}
+          new_tab ${baseNameOf (last repo)}
           cd ~/${last repo}
           launch zsh
         '';
-        startup = builtins.toFile "startup.conf"
-          (builtins.concatStringsSep "\n" (map process repos));
+        startup =
+          toFile "startup.conf" (concatStringsSep "\n" (map process repos));
         binds = listToAttrs (lib.lists.imap0 (i: repo: {
           name = "alt+${head repo}";
           value = "goto_tab ${toString (1 + i)}";
