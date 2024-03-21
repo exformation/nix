@@ -25,7 +25,7 @@
           set -g __fish_git_prompt_showupstream auto
           set -g __fish_git_prompt_show_informative_status true
           set -g __fish_git_prompt_showdirtystate true
-          printf '\\n%s%s%s %s%s\\n%s$ ' (set_color magenta) (fish_git_prompt) (set_color $fish_color_cwd) (prompt_pwd --full-length-dirs 2) (set_color normal) $status
+          printf '\\n%s%s%s %s%s\\n$ ' (set_color magenta) (fish_git_prompt) (set_color $fish_color_cwd) (prompt_pwd --full-length-dirs 2) (set_color normal)
         '';
         mkcd = "mkdir -p $argv; and cd $argv";
       };

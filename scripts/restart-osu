@@ -2,4 +2,4 @@
 
 pid=$(pgrep -f osu!)
 [ ! -z "$pid" ] && kill -SIGTERM "$pid" && while kill -0 "$pid" >/dev/null 2>&1; do sleep 1; done
-osu\!
+osu\! &
