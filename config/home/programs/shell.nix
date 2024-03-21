@@ -19,6 +19,7 @@
       };
       shellInit = ''
         set fish_greeting
+        bind \ck 'fg'
       '';
       functions = {
         fish_prompt = ''
