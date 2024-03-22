@@ -17,6 +17,7 @@
   };
   outputs = { self, nixpkgs, hm, stylix, ... }@inputs:
     let
+      # TODO: stupid and impure cba
       personal = builtins.fromJSON (builtins.readFile /home/exform/repos/.env);
       specialArgs = inputs // personal;
     in {
