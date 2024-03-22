@@ -1,0 +1,7 @@
+don't hardcode hardware config
+
+better way to read secrets 
+
+hardware abstractions, if amd elseif nvidia etc
+
+iso releases
