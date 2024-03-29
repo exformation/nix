@@ -101,6 +101,8 @@
       prettierd
       ollama
       (python311.withPackages (p: [
+        p.beautifulsoup4
+        p.lxml
         p.huggingface-hub
         p.autopep8
         p.debugpy
