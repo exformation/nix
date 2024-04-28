@@ -68,6 +68,7 @@
             border_size = 1;
             no_cursor_warps = true;
           };
+          input = { follow_mouse = 0; };
           misc = { disable_hyprland_logo = true; };
         };
       };
