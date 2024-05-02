@@ -53,7 +53,6 @@
       ffmpeg
       file
       fzf
-      gamemode
       gimp
       glxinfo
       gotop
