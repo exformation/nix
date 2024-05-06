@@ -17,6 +17,8 @@
     [
       # amdgpu-pro
       anki
+      cargo
+      rustc
       # appimage-run
       # exa
       # firefox

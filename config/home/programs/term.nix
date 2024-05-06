@@ -11,6 +11,7 @@
           [ "n" "repos/nix" ]
           [ "q" "repos/qmk_firmware" ]
           [ "l" "repos/lacuna" ]
+          [ "b" "bevy" ]
         ];
         process = repo: ''
           new_tab ${baseNameOf (last repo)}
