@@ -11,7 +11,7 @@
           [ "n" "repos/nix" ]
           [ "q" "repos/qmk_firmware" ]
           [ "l" "repos/lacuna" ]
-          [ "b" "bevy" ]
+          [ "b" "repos/bevy" ]
         ];
         process = repo: ''
           new_tab ${baseNameOf (last repo)}
@@ -34,7 +34,7 @@
           "alt+shift+k" = "previous_tab";
           "alt+enter" = "new_tab";
           "alt+x" = "close_tab";
-          "alt+b" = "goto_tab 0";
+          "alt+0" = "goto_tab 0";
           "alt+e" = "goto_tab 99";
         } // binds;
         settings = {

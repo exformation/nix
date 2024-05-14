@@ -19,6 +19,19 @@
       anki
       cargo
       rustc
+      rust-analyzer
+      rustfmt
+      udev
+      alsa-lib
+      vulkan-loader
+      xorg.libX11
+      xorg.libXcursor
+      xorg.libXi
+      xorg.libXrandr
+      libxkbcommon
+      wayland
+      pkg-config
+
       # appimage-run
       # exa
       # firefox
@@ -102,6 +115,8 @@
       prettierd
       ollama
       (python311.withPackages (p: [
+        p.genanki
+        p.pygments
         p.beautifulsoup4
         p.lxml
         p.huggingface-hub

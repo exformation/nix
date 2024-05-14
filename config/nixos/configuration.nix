@@ -98,7 +98,7 @@
       BROWSER = "google-chrome-stable";
       DEFAULT_BROWSER = "google-chrome-stable";
       # TODO: this is stinky but I can't put this in a devshell
-      LD_LIBRARY_PATH = lib.makeLibraryPath pkgs.osu-lazer.runtimeDeps;
+      # LD_LIBRARY_PATH = lib.makeLibraryPath pkgs.osu-lazer.runtimeDeps;
     };
     shells = with pkgs; [ fish ];
   };
@@ -115,7 +115,7 @@
       options = "--delete-older-than 20d";
     };
     registry = { nixpkgs.flake = nixpkgs; };
-    package = pkgs.nixVersions.unstable;
+    package = pkgs.nixVersions.latest;
     extraOptions = ''
       experimental-features = nix-command flakes
     '';

@@ -15,6 +15,7 @@
         pi = "kitty +kitten ssh pi@192.168.1.90";
         om = "make -f ${self}/scripts/om";
         ro = "${self}/scripts/restart-osu";
+        cr = "cargo run --features bevy/dynamic-linking";
         # om clean && om release && ro &
       };
       shellInit = ''

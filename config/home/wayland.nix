@@ -7,7 +7,7 @@
         xwayland.enable = true;
         settings = {
           "$mod" = "SUPER";
-          monitor = ",1920x1080@240,auto,auto";
+          monitor = "DP-3,2560x1440@240.00,auto,1";
           windowrule = [
             "workspace 11 silent,^(main-terminal)$"
             "workspace 12 silent,^(steam)$"
