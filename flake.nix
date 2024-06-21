@@ -32,6 +32,3 @@
       };
     };
 }
-
-
-# something broke my styling with stlyix. check their docs again
