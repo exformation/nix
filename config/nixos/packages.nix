@@ -31,6 +31,8 @@
       libxkbcommon
       wayland
       pkg-config
+      godot_4
+      blender
 
       # appimage-run
       # exa
@@ -83,7 +85,7 @@
       mpd
       mpv
       nil
-      nixfmt
+      nixfmt-classic
       # nodePackages.alex
       nodejs_20
       ntfs3g

@@ -8,10 +8,10 @@
   hardware = {
     # pulseaudio.enable = false;
     # bluetooth.enable = true;
-    opengl = {
+    graphics = {
       enable = true;
-      driSupport = true;
-      driSupport32Bit = true;
+      # driSupport = true;
+      enable32Bit = true;
     };
     # enableAllFirmware = true;
     # uinput.enable = true;
