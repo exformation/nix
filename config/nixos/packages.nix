@@ -119,6 +119,7 @@
       (python311.withPackages (p: [
         p.genanki
         p.pygments
+        p.scikit-learn
         p.beautifulsoup4
         p.lxml
         p.huggingface-hub
