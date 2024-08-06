@@ -17,6 +17,7 @@
     [
       # amdgpu-pro
       anki
+      gcc
       cargo
       rustc
       rust-analyzer
@@ -110,6 +111,7 @@
       xdg-desktop-portal-hyprland
       xdg-utils
       zip
+      zed-editor
       fish
       pyright
       black
@@ -118,6 +120,7 @@
       ollama
       (python311.withPackages (p: [
         p.genanki
+        p.git-filter-repo
         p.pygments
         p.scikit-learn
         p.beautifulsoup4
