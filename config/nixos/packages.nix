@@ -34,6 +34,7 @@
       pkg-config
       godot_4
       blender
+      alacritty
 
       # appimage-run
       # exa
