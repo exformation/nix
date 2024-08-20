@@ -10,7 +10,7 @@
         nrs =
           "g a && sudo nixos-rebuild switch --flake '/home/${user}/repos/nix#${user}' --impure";
         nfu = "nix flake update";
-        nfurs = "nfu && nrs --upgrade && reboot";
+        nfurs = "nfu && nrs --upgrade && sleep 3 && reboot";
         gg = "g a && g c 'boop' && g p";
         pi = "kitty +kitten ssh pi@192.168.1.90";
         om = "make -f ${self}/scripts/om";
