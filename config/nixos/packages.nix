@@ -109,7 +109,7 @@
       wget
       wl-clipboard
       write-good
-      xdg-desktop-portal-hyprland
+      xdg-desktop-portal-gtk
       xdg-utils
       zip
       zed-editor

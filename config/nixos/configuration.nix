@@ -11,11 +11,13 @@
       enable = true;
       # driSupport = true;
       enable32Bit = true;
+      # driSupport32Bit = true;
     };
     # enableAllFirmware = true;
     # uinput.enable = true;
   };
   boot = {
+    initrd.kernelModules = [ "amdgpu" ];
     kernelPackages = pkgs.linuxPackages_latest;
     loader = {
       timeout = 5;
@@ -84,7 +86,7 @@
       # dedicatedServer.openFirewall = true;
       gamescopeSession.enable = true;
     };
-    gamemode.enable = true;
+    # gamemode.enable = true;
   };
   nixpkgs = { config.allowUnfree = true; };
   environment = {

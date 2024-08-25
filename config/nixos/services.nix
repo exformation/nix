@@ -1,5 +1,9 @@
 { pkgs, user, lib, ... }: {
   services = {
+    xserver = {
+      enable = true;
+      videoDrivers = [ "amdgpu" ];
+    };
     greetd = {
       enable = true;
       settings = rec {
