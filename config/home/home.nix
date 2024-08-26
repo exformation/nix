@@ -4,7 +4,7 @@
     backupFileExtension = "hm-backup";
     useGlobalPkgs = true;
     users."${user}" = { config, ... }: {
-      stylix.targets.vim.enable = false;
+      stylix.targets.neovim.enable = false;
       home = { stateVersion = version; };
       xdg = { portal = { xdgOpenUsePortal = true; }; };
       #xdg.configFile."nvim/lua" = {
