@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   # TODO: how many of these can be moved to home.nix? and why?
-  nixpkgs.overlays = [ (import ./overlay.nix) ];
+  # nixpkgs.overlays = [ (import ./overlay.nix) ];
   environment.systemPackages = with pkgs;
   # let
   #   # overrideAttrs, overrideDerivation
