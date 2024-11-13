@@ -42,7 +42,7 @@
   };
 
   # virtualization
-  virtualisation.virtualbox.host.enable = false;
+  virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members = [ "${user}" ];
 
   time = { timeZone = "America/Chicago"; };
@@ -105,7 +105,7 @@
   };
   fonts.packages = with pkgs; [
     noto-fonts
-    noto-fonts-cjk
+    noto-fonts-cjk-sans
     noto-fonts-emoji
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];

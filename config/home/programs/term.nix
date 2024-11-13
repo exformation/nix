@@ -5,13 +5,14 @@
       let
         repos = [
           [ "v" ".config/nvim" ]
-          [ "p" "repos/nvim-plugins/prsr.nvim" ]
-          [ "o" "repos/osu" ]
-          [ "r" "repos/osu-rulesets" ]
+          # [ "p" "repos/nvim-plugins/prsr.nvim" ]
+          # [ "o" "repos/osu" ]
+          # [ "r" "repos/osu-rulesets" ]
           [ "n" "repos/nix" ]
-          [ "q" "repos/qmk_firmware" ]
+          # [ "q" "repos/qmk_firmware" ]
           [ "l" "repos/lacuna" ]
-          [ "b" "repos/bevy" ]
+          [ "c" "repos/code2cards" ]
+          [ "b" "repos/bevy_learning" ]
         ];
         process = repo: ''
           new_tab ${baseNameOf (last repo)}

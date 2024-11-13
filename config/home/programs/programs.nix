@@ -18,7 +18,7 @@
     eza = {
       enable = true;
       git = true;
-      icons = true;
+      # icons = true;
       extraOptions = [
         "--long"
         "--header"

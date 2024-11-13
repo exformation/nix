@@ -18,10 +18,6 @@
       # amdgpu-pro
       anki
       gcc
-      cargo
-      rustc
-      rust-analyzer
-      rustfmt
       udev
       alsa-lib
       vulkan-loader
@@ -33,7 +29,7 @@
       wayland
       pkg-config
       godot_4
-      blender
+      # blender
       alacritty
 
       # appimage-run
