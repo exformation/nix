@@ -31,6 +31,7 @@
     kernel = {
       sysctl = {
         "fs.inotify.max_user_instances" = 512;
+        # "fs.file-max" = 65535;
         # "usbcore.autosuspend" = -1;
       };
     };
