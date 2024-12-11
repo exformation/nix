@@ -13,6 +13,7 @@
           [ "l" "repos/lacuna" ]
           [ "c" "repos/code2cards" ]
           [ "b" "repos/bevy_learning" ]
+          [ "g" "repos/nimSRG" ]
         ];
         process = repo: ''
           new_tab ${baseNameOf (last repo)}

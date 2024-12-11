@@ -84,6 +84,7 @@
       mpv
       nil
       nixfmt-classic
+      # nimpretty # nph https://github.com/arnetheduck/nph
       # nodePackages.alex
       nodejs_20
       ntfs3g
@@ -116,6 +117,8 @@
       prettierd
       ollama
       (python311.withPackages (p: [
+        # p.playsound
+        p.pygame
         p.genanki
         p.git-filter-repo
         p.pygments

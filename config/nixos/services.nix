@@ -19,10 +19,10 @@
     blueman.enable = true;
     printing.enable = true;
     pipewire = {
-      enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
-      pulse.enable = true;
+      enable = false;
+      # alsa.enable = true;
+      # alsa.support32Bit = true;
+      # pulse.enable = true;
       # extraConfig = {
       #   "pipewire/pipewire.conf.d/92-low-latency.conf".text = ''
       #     context.properties = {

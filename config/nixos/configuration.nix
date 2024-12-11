@@ -5,7 +5,8 @@
   # what?
   hardware.keyboard.qmk.enable = true;
   hardware = {
-    # pulseaudio.enable = false;
+    pulseaudio.enable = true;
+    pulseaudio.support32Bit = true;
     # bluetooth.enable = true;
     graphics = {
       enable = true;
@@ -60,7 +61,7 @@
       # TODO: only have adbusers for flutter development
       # TODO: only have input and uinput for the user that's using an evdev thing 
       extraGroups =
-        [ "networkmanager" "wheel" "adbusers" ]; # "input" "uinput" ];
+        [ "networkmanager" "wheel" "adbusers" "audio" ]; # "input" "uinput" ];
     };
   };
   programs = {
