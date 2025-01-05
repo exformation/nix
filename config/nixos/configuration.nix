@@ -65,6 +65,7 @@
     };
   };
   programs = {
+    nix-ld.enable = true;
     # adb.enable = true;
     # gnupg.agent = {
     #   enable = true;
@@ -109,7 +110,8 @@
     noto-fonts
     noto-fonts-cjk-sans
     noto-fonts-emoji
-    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    # (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    nerd-fonts.fira-code
   ];
   nix = {
     gc = {
